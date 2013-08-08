@@ -1,0 +1,240 @@
+/*.btn.btn-primary{color:#ffffff!important;background-color:#883ced;background-repeat:repeat-x;background-image:-khtml-gradient(linear, left top, left bottom, from(#fd6ef7), to(#883ced));background-image:-moz-linear-gradient(top, #fd6ef7, #883ced);background-image:-ms-linear-gradient(top, #fd6ef7, #883ced);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6ef7), color-stop(100%, #883ced));background-image:-webkit-linear-gradient(top, #fd6ef7, #883ced);background-image:-o-linear-gradient(top, #fd6ef7, #883ced);background-image:linear-gradient(top, #fd6ef7, #883ced);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd6ef7', endColorstr='#883ced', GradientType=0);text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);border-color:#883ced #883ced #003f81;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);}*/
+		/*body { margin: 0px 0px 40px 0px; }*/
+html, body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url("../img/pattern.png");
+	background-size: 300px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #eeeeee;
+}
+p,li{
+	font-family: font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+h2{
+	font-size: 21px;
+	margin: 20px 0 0 10px;
+}
+h3{
+	font-size: 14px;
+}
+.content p{
+	margin: 10px 0 0 10px;
+	width: 280px;
+}
+#logo{
+	display: block;
+	background-image: url("../img/carsignite.png");
+	background-size: 185px;
+	background-repeat: no-repeat;
+	width: 185px;
+	height: 45px;
+	margin: 25px 0 0 50px;
+	float: left;
+	
+}
+header{
+	background-color: #000000;
+	height: 75px;
+	width: 100%;
+}
+header .row{
+	/*width: 940px;*/
+	margin: 0 auto;
+}
+ul{
+	list-style: none;
+	margin: 0 0 0 50px;
+}
+li{
+	margin: 27px 0 0 50px;
+	font-size: 14px;
+	float: left;
+	color: #eeeeee;
+}
+li:hover{
+	color: #1193ff;
+}
+.buttons{
+	margin: 17px 50px 0 0;
+	float: right;
+}
+button:hover{
+	color: #1193ff;
+}
+button:active{
+	color: #ffffff;
+	background-color: #1193ff;
+}
+.registerBtn{
+	border: solid 1px #1193ff;
+	color: #ffffff;
+	background-color: #000000;
+	width: 100px;
+	height: 40px;
+}
+.loginBtn{
+	border: solid 1px #555555;
+	color: #ffffff;
+	background-color: #000000;
+	width: 100px;
+	height: 40px;
+}
+.container{
+	
+	/*height: 900px;*/
+	/*position: relative;*/
+}
+.feed{
+	position: inherit;
+	padding: 70px 0 0 125px;
+}
+.post{
+	width: 300px;
+	height: 450px;
+	background-color: #111111;
+	float: left;
+	margin: 0 15px 15px 0;
+}
+.content{
+	/*margin-top: -5px;*/
+	height: 225px;
+}
+.postImgMask{
+	overflow: hidden;
+	width: 300px;
+	height: 225px;
+}
+.postImg{
+	height: 225px;
+}
+.postUserInfo{
+	position: relative;
+	bottom: -20px;
+}
+.postAvatarMask{
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	margin: 20px 0 0 10px; 
+	float: left;
+}
+.postAvatar{
+	height: 30px;
+}
+.postCar{
+	float: left;
+	margin: 25px 0 0 10px;
+}
+.post:hover .content{
+	border: solid 1px #1193ff;
+}
+.post:hover .postImg{
+}
+.post:hover .likeNum{
+	display: block;
+	position: absolute;
+	margin: -30px 0 0 -1px;
+	width: 300px;
+	height: 30px;
+	text-align: right;
+	background-color: rgba(17,147,255,.5);
+}
+.likeNum{
+	display: none;
+}
+.likeNum p{
+	padding: 5px 10px;
+	margin: 0;
+	font-size: 18px;
+}
+p{
+	color: #eeeeee;
+}
+a{
+	color: #eeeeee;
+	text-decoration: none;
+}
+a:hover{
+	color: #1193ff;
+}
+footer{
+	background-color: #000000;
+	height: 50px;
+	/*margin-top: -16px;*/
+	clear: left;
+	bottom: 0;
+}
+
+.copyright{
+	float: left;
+	margin: 0 0 0 30px;
+}
+.footerLinks{
+	position: relative;
+	top: 15px;
+}
+.footerLinks p{
+	width: 100%;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Media Queries */
+/*--------------------------------------------------------------------------------*/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+.subnav ul{
+	margin: 50px 0 0 0px;
+	padding: 0 0 0 0;
+}
+
+.subnav li{
+	margin: 0 0 0 33px;
+}
+
+.buttons{
+	margin: 17px 60px 0 0;
+}
+
+nav ul{
+	margin: 0 0 0 5px;
+}
+
+header{
+	height: 120px;
+}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+#logo{
+	display: none;
+}
+
+.feed{
+	padding: 70px 0 0 10px;
+}
+
+}
