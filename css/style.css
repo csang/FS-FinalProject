@@ -15,6 +15,7 @@ h1,h2,h3,h4,h5,h6{
 p,li{
 	font-family: font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
+	color: #eeeeee;
 }
 h2{
 	font-size: 21px;
@@ -27,7 +28,7 @@ h3{
 	margin: 10px 0 0 10px;
 	width: 280px;
 }
-#logo{
+.logo{
 	display: block;
 	background-image: url("../img/carsignite.png");
 	background-size: 185px;
@@ -47,17 +48,22 @@ header .row{
 	/*width: 940px;*/
 	margin: 0 auto;
 }
-ul{
+nav, .subNav{
 	list-style: none;
+}
+nav{
 	margin: 0 0 0 50px;
 }
-li{
-	margin: 27px 0 0 50px;
+a{
+	text-decoration: none;
 	font-size: 14px;
-	float: left;
 	color: #eeeeee;
 }
-li:hover{
+nav a, .subNav a{
+	margin: 27px 0 0 50px;
+	float: left;
+}
+a:hover{
 	color: #1193ff;
 }
 .buttons{
@@ -77,6 +83,9 @@ button:active{
 	background-color: #000000;
 	width: 100px;
 	height: 40px;
+	cursor: pointer;
+	font-size: 14px;
+	margin: 0 -4px 0 0;
 }
 .loginBtn{
 	border: solid 1px #555555;
@@ -84,15 +93,19 @@ button:active{
 	background-color: #000000;
 	width: 100px;
 	height: 40px;
+	cursor: pointer;
+	font-size: 14px;
 }
 .container{
-	
-	/*height: 900px;*/
-	/*position: relative;*/
+
+}
+.subNav{
+	height: 70px;
+	margin: 0 0 0 80px;
 }
 .feed{
 	position: inherit;
-	padding: 70px 0 0 125px;
+	padding: 0 0 0 125px;
 }
 .post{
 	width: 300px;
@@ -100,9 +113,9 @@ button:active{
 	background-color: #111111;
 	float: left;
 	margin: 0 15px 15px 0;
+	cursor: pointer;
 }
 .content{
-	/*margin-top: -5px;*/
 	height: 225px;
 }
 .postImgMask{
@@ -156,10 +169,7 @@ button:active{
 p{
 	color: #eeeeee;
 }
-a{
-	color: #eeeeee;
-	text-decoration: none;
-}
+
 a:hover{
 	color: #1193ff;
 }
@@ -183,6 +193,100 @@ footer{
 	width: 100%;
 	text-align: center;
 }
+.carSelector{
+	clear: both;
+	height: 50px;
+	margin: 0 0 0 0;
+	padding: 0 0 20px 130px;
+	background-color: #000000;
+}
+.carSelector input{
+	border: solid 1px #1193ff;
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 14px;
+	margin: 25px 10px 0 0;
+}
+.active{
+	color: #1193ff;
+}
+
+/*_Login Page____________________________________________________*/
+
+.loginBox{
+	width: 300px;
+	text-align: center;
+	height: 170px;
+	background-color: #111111;
+	margin: 70px auto 130px;
+}
+label{
+	color: #eeeeee;
+}
+input{
+	margin: 25px 0 0 0;
+	border: solid 1px #1193ff;
+	font-size: 14px;
+}
+input.submit{
+	background-color: #000000;
+	color: #ffffff;
+	width: 200px;
+	height: 30px;
+	cursor: pointer;
+}
+input.submit:hover{
+	color: #1193ff;
+}
+input.submit:active{
+	background-color: #1193ff;
+	color: #ffffff;
+}
+
+/*_Register Page____________________________________________________*/
+
+
+.registerBox{
+	width: 600px;
+	text-align: left;
+	height: 300px;
+	background-color: #111111;
+	margin: 70px auto 205px;
+	padding: 20px;
+}
+
+.registerBox form{
+	width: 290px;
+	float: left;
+}
+
+.registerBox p{
+	margin: 0;
+}
+
+.registerBox input{
+	margin: 2px 0 15px;
+}
+
+.registerBox input.submit{
+	margin: 20px 0 0;
+}
+
+.registerBox .vLine{
+	width: 1px;
+	height: 290px;
+	background-color: #1193ff;
+	float: left;
+}
+
+.features{
+	width: 250px;
+	float: left;
+}
+
+.features li{
+	margin: 10px 0 0;
+}
 
 /*--------------------------------------------------------------------------------*/
 /* Media Queries */
@@ -203,12 +307,12 @@ footer{
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 
-.subnav ul{
+.subNav{
 	margin: 50px 0 0 0px;
 	padding: 0 0 0 0;
 }
 
-.subnav li{
+.subNav a{
 	margin: 0 0 0 33px;
 }
 
@@ -229,12 +333,43 @@ header{
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
-#logo{
+.logo{
 	display: none;
 }
 
+.carSelector{
+	height: 160px;
+	margin: 0 0 20px 0;
+	padding: 0 0 20px 20px;
+	background-color: #000000;
+}
+.carSelector input{
+	border: solid 1px #1193ff;
+	background-color: #ffffff;
+	color: #000000;
+	width: 260px;
+}
+
 .feed{
-	padding: 70px 0 0 10px;
+	padding: 0 0 0 10px;
+}
+
+.registerBox{
+	width: 300px;
+	margin: 20px auto;
+}
+
+.registerBox input{
+	width: 270px;
+}
+
+.registerBox input.submit{
+	margin: 20px 0 0;
+	width: 285px;
+}
+
+.registerBox .vLine, .registerBox .features{
+	display: none;
 }
 
 }
