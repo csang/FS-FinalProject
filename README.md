@@ -18,3 +18,5 @@ Database name: carsignite
 =================
 
 For the moment I am not using the Fuel framework. Right now i'm just using the files inside of the prototype folder.
+
+root/prototype/index.html

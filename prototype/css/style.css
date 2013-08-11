@@ -100,7 +100,9 @@ button:active{
 }
 .feed{
 	position: inherit;
-	padding: 0 0 0 100px;
+	padding: 0 0 0 30px;
+	width: 960px;
+	margin: 0 auto;
 }
 .post{
 	width: 300px;
@@ -147,8 +149,6 @@ button:active{
 	border-top: solid 1px #1193ff;
 	border-bottom: solid 1px #1193ff;
 }
-.post:hover .postImg{
-}
 
 .likeNum{
 	display: block;
@@ -160,9 +160,17 @@ button:active{
 	background-color: rgba(0,0,0,.5);
 }
 .likeNum p{
-	padding: 5px 10px;
+	width: 270px;
+	padding: 3px 0 0 0;
 	margin: 0;
 	font-size: 18px;
+	float: left;
+}
+
+.likeNum img{
+	float: left;
+	width: 20px;
+	margin: 5px;
 }
 p{
 	color: #eeeeee;
@@ -249,7 +257,6 @@ input.submit:active{
 
 /*_Register Page____________________________________________________*/
 
-
 .registerBox{
 	width: 600px;
 	text-align: left;
@@ -292,6 +299,175 @@ input.submit:active{
 	margin: 10px 0 0;
 }
 
+/*_Profile Page____________________________________________________*/
+
+.poster{
+	width: 960px;
+	height: 360px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.poster img{
+	width: 960px;
+	margin: -120px 0 0;
+}
+
+.userId{
+	width: 960px;
+	height: 125px;
+	margin: 0 auto 15px;
+	background-color: #111111;
+}
+
+.idAvatarMask{
+	width: 125px;
+	height: 125px;
+	overflow: hidden;
+	float: left;
+}
+
+.idAvatar{
+	height: 125px;
+}
+
+.mainInfo{
+	height: 50px;
+	margin: -5px 0 15px;
+}
+
+.mainInfo, .hLine, .bio{
+	width: 835px;
+}
+
+.mainInfo, .mainInfo .left, .mainInfo h2, .mainInfo img{
+	float: left;
+}
+
+.mainInfo img, .bio img{
+	width: 30px;
+	margin: 20px 0 10px 25px;
+}
+
+.bio img{
+	float: right;
+	margin: 15px 25px 10px 0;
+}
+
+.mainInfo .left{
+	width: 350px;
+	padding: 0 0 0 15px;
+}
+
+.mainInfo .right{
+	float: right;
+	width: 330px;
+}
+
+.hLine{
+	height: 3px;
+	background-color: #1193ff;
+	float: left;
+}
+
+.userId .bio{
+	float: left;
+}
+
+.userId .bio p{
+	margin: 0;
+	padding: 10px 0 0 10px;
+	width: 700px;
+	float: left;
+}
+
+/*_Post Detail Page____________________________________________________*/
+
+.postDetail{
+	width: 80%;
+	background-color: #111111;
+	float: left;
+	margin: 15px 10%;
+}
+
+.contentDetail{
+	border: solid 1px #111111;
+	margin: 0 0 0;
+	padding: 0 0 0;
+}
+
+.contentDetail p{
+	margin: 10px;
+	width: 600px;
+}
+
+.postDImgMask{
+	overflow: hidden;
+	width: 100%;
+	height: 225px;
+}
+
+.postDImg{
+	width: 100%;
+	margin: -30% 0 0;
+}
+
+.postDUserInfo{
+	position: relative;
+	bottom: 10px;
+}
+
+.dLikeNum{
+	display: block;
+	position: absolute;
+	margin: -31px 0 0 -1px;
+	width: 80%;
+	height: 30px;
+	text-align: right;
+	background-color: rgba(0,0,0,.5);
+}
+
+.dLikeNum p{
+	padding: 3px 0;
+	margin: 0;
+	font-size: 18px;
+	width: 95%;
+	float: left;
+}
+
+.dLikeNum img{
+	float: left;
+	width: 20px;
+	margin: 5px;
+}
+
+.postButtons{
+	width: 100%;
+	background-color: #000000;
+	height: 40px;
+	margin: 50px 0 0;
+}
+
+.postButtons button{
+	float: right;
+	width: 100px;
+	height: 40px;
+	background-color: #000000;
+	color: #ffffff;
+	border: solid 1px #1193ff;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.postButtons button:hover{
+	color: #1193ff;
+}
+
+.postButtons button:active{
+	background-color: #1193ff;
+	color: #ffffff;
+}
+
 /*--------------------------------------------------------------------------------*/
 /* Media Queries */
 /*--------------------------------------------------------------------------------*/
@@ -328,14 +504,29 @@ nav ul{
 	margin: 0 0 0 5px;
 }
 
-header{
-	height: 120px;
+.postDImg{
+	margin: -20% 0 0;
+}
+
+.contentDetail p{
+	margin: 10px;
+	width: 90%;
+}
+
+.dLikeNum p{
+	padding: 0;
+	margin: 3px 0 0 0;
+	width: 92%;
 }
 
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+header{
+	height: 120px;
+}
 
 .logo{
 	display: none;
@@ -374,6 +565,27 @@ header{
 
 .registerBox .vLine, .registerBox .features{
 	display: none;
+}
+
+.postDetail{
+	width: 300px;
+}
+
+.postDImg{
+	margin: 0;
+}
+
+.dLikeNum{
+	width: 300px;
+}
+
+.dLikeNum p{
+	width: 270px;
+}
+
+.postDImg{
+	height: 225px;
+	width: 300px;
 }
 
 }
