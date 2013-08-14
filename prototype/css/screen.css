@@ -1,0 +1,831 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* @import "compass/reset"; */
+/* line 10, ../sass/screen.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 15, ../sass/screen.scss */
+body {
+  background-image: url("../img/pattern.png");
+  background-size: 300px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 21, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #eeeeee;
+}
+
+/* line 26, ../sass/screen.scss */
+p, li {
+  font-size: 14px;
+  color: #eeeeee;
+}
+
+/* line 31, ../sass/screen.scss */
+h2 {
+  font-size: 21px;
+  margin: 20px 0 0 10px;
+}
+
+/* line 36, ../sass/screen.scss */
+h3 {
+  font-size: 14px;
+}
+
+/* line 40, ../sass/screen.scss */
+.content p {
+  margin: 10px 0 0 10px;
+  width: 280px;
+}
+
+/* line 45, ../sass/screen.scss */
+.logo {
+  display: block;
+  background-repeat: no-repeat;
+  width: 185px;
+  margin: 25px 0 0 50px;
+  float: left;
+}
+
+/* line 54, ../sass/screen.scss */
+header {
+  background-color: black;
+  height: 75px;
+  width: 100%;
+}
+/* line 58, ../sass/screen.scss */
+header .row {
+  margin: 0 auto;
+}
+
+/* line 63, ../sass/screen.scss */
+nav, .subNav {
+  list-style: none;
+}
+
+/* line 67, ../sass/screen.scss */
+nav {
+  margin: 0 0 0 50px;
+}
+
+/* line 71, ../sass/screen.scss */
+.subNav {
+  height: 70px;
+  margin: 0 auto;
+  width: 990px;
+}
+
+/* line 77, ../sass/screen.scss */
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #eeeeee;
+}
+
+/* line 83, ../sass/screen.scss */
+nav a, .subNav a {
+  float: left;
+}
+
+/* line 87, ../sass/screen.scss */
+nav a {
+  margin: 27px 0 0 50px;
+}
+
+/* line 91, ../sass/screen.scss */
+.subNav a {
+  margin: 27px 20px 0 30px;
+}
+
+/* line 95, ../sass/screen.scss */
+a:hover {
+  color: #1193ff;
+}
+
+/* line 99, ../sass/screen.scss */
+.buttons, .loggedIn {
+  margin: 17px 50px 0 0;
+  float: right;
+}
+
+/* line 104, ../sass/screen.scss */
+button:hover {
+  color: #1193ff;
+}
+
+/* line 108, ../sass/screen.scss */
+button:active {
+  color: white;
+  background-color: #1193ff;
+  border: solid 1px #1193ff;
+}
+
+/* line 114, ../sass/screen.scss */
+.registerBtn {
+  border: solid 1px #1193ff;
+  color: white;
+  background-color: black;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 -4px 0 0;
+}
+
+/* line 125, ../sass/screen.scss */
+.loginBtn, .postBtn {
+  border: solid 1px #555555;
+  color: white;
+  background-color: black;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* line 135, ../sass/screen.scss */
+.feed {
+  position: inherit;
+  padding: 0 0 0 30px;
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 142, ../sass/screen.scss */
+.post {
+  width: 300px;
+  height: 450px;
+  background-color: #111111;
+  float: left;
+  margin: 0 15px 15px 0;
+  cursor: pointer;
+}
+
+/* line 151, ../sass/screen.scss */
+.content {
+  height: 223px;
+  border: solid 1px #111111;
+  margin: 0 0 0;
+  padding: 0 0 0;
+}
+
+/* line 158, ../sass/screen.scss */
+.postImgMask {
+  overflow: hidden;
+  width: 300px;
+  height: 225px;
+}
+
+/* line 164, ../sass/screen.scss */
+.postImg {
+  height: 225px;
+}
+
+/* line 168, ../sass/screen.scss */
+.postUserInfo {
+  position: relative;
+  bottom: -10px;
+}
+
+/* line 173, ../sass/screen.scss */
+.postAvatarMask {
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  margin: 19px 0 0 9px;
+  float: left;
+  border: solid 1px #111111;
+}
+
+/* line 182, ../sass/screen.scss */
+.postAvatar {
+  height: 30px;
+}
+
+/* line 186, ../sass/screen.scss */
+.postCar {
+  float: left;
+  margin: 25px 0 0 10px;
+}
+
+/* line 191, ../sass/screen.scss */
+.post:hover .content {
+  border-top: solid 1px #1193ff;
+  border-bottom: solid 1px #1193ff;
+}
+
+/* line 196, ../sass/screen.scss */
+.likeNum {
+  display: block;
+  position: absolute;
+  margin: -31px 0 0 -1px;
+  width: 300px;
+  height: 30px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 205, ../sass/screen.scss */
+.likeNum p {
+  width: 270px;
+  padding: 3px 0 0 0;
+  margin: 0;
+  font-size: 18px;
+  float: left;
+}
+/* line 213, ../sass/screen.scss */
+.likeNum img {
+  float: left;
+  width: 20px;
+  margin: 5px;
+}
+
+/* line 220, ../sass/screen.scss */
+p {
+  color: #eeeeee;
+}
+
+/* line 224, ../sass/screen.scss */
+a:hover {
+  color: #1193ff;
+}
+
+/* line 228, ../sass/screen.scss */
+footer {
+  background-color: #000000;
+  height: 50px;
+  clear: left;
+  bottom: 0;
+}
+
+/* line 235, ../sass/screen.scss */
+.copyright {
+  float: left;
+  margin: 0 0 0 30px;
+}
+
+/* line 240, ../sass/screen.scss */
+.footerLinks {
+  position: relative;
+  top: 15px;
+}
+/* line 244, ../sass/screen.scss */
+.footerLinks p {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 250, ../sass/screen.scss */
+.carSelector {
+  height: 50px;
+  margin: 0 auto 20px;
+  padding: 0 0 20px 5px;
+  background-color: black;
+}
+/* line 256, ../sass/screen.scss */
+.carSelector .carInputs {
+  margin: 0 auto;
+  width: 990px;
+}
+/* line 261, ../sass/screen.scss */
+.carSelector input {
+  border: solid 1px #1193ff;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  margin: 25px 0 0 25px;
+}
+
+/* line 270, ../sass/screen.scss */
+.active {
+  color: #1193ff;
+}
+
+/* line 274, ../sass/screen.scss */
+.postCar:hover {
+  color: #1193ff;
+}
+
+/* line 278, ../sass/screen.scss */
+.postAvatarMask:hover {
+  border: solid 1px #1193ff;
+}
+
+/*_Login Page____________________________________________________*/
+/* line 284, ../sass/screen.scss */
+.loginBox {
+  width: 300px;
+  text-align: center;
+  height: 170px;
+  background-color: #111111;
+  margin: 70px auto 376px;
+}
+
+/* line 292, ../sass/screen.scss */
+label {
+  color: #eeeeee;
+}
+
+/* line 296, ../sass/screen.scss */
+input {
+  margin: 25px 0 0 0;
+  border: solid 2px #1193ff;
+  font-size: 14px;
+}
+
+/* line 302, ../sass/screen.scss */
+input.submit {
+  background-color: black;
+  border: solid 1px #1193ff;
+  color: white;
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* line 311, ../sass/screen.scss */
+input.submit:hover {
+  color: #1193ff;
+}
+
+/* line 315, ../sass/screen.scss */
+input.submit:active {
+  background-color: #1193ff;
+  color: white;
+}
+
+/*_Register Page____________________________________________________*/
+/* line 322, ../sass/screen.scss */
+.registerBox {
+  width: 600px;
+  text-align: left;
+  height: 300px;
+  background-color: #111111;
+  margin: 70px auto 205px;
+  padding: 20px;
+}
+/* line 330, ../sass/screen.scss */
+.registerBox form {
+  width: 290px;
+  float: left;
+}
+/* line 335, ../sass/screen.scss */
+.registerBox p {
+  margin: 0;
+}
+/* line 339, ../sass/screen.scss */
+.registerBox input {
+  margin: 2px 0 15px;
+}
+/* line 343, ../sass/screen.scss */
+.registerBox input.submit {
+  margin: 20px 0 0;
+}
+/* line 347, ../sass/screen.scss */
+.registerBox .vLine {
+  width: 1px;
+  height: 290px;
+  background-color: #1193ff;
+  float: left;
+}
+
+/* line 355, ../sass/screen.scss */
+.features {
+  width: 250px;
+  float: left;
+}
+/* line 359, ../sass/screen.scss */
+.features li {
+  margin: 10px 0 0;
+}
+
+/*_Add Post Page____________________________________________________*/
+/* line 366, ../sass/screen.scss */
+.postBox {
+  width: 90%;
+  text-align: left;
+  height: 620px;
+  background-color: #111111;
+  margin: 30px auto 30px;
+  padding: 20px;
+}
+/* line 374, ../sass/screen.scss */
+.postBox form {
+  width: 290px;
+  float: left;
+}
+/* line 379, ../sass/screen.scss */
+.postBox p {
+  margin: 0;
+}
+/* line 383, ../sass/screen.scss */
+.postBox textarea {
+  border: solid 2px #1193ff;
+  background-color: white;
+  margin: 2px 0 15px;
+  resize: none;
+  font-size: 14px;
+}
+/* line 391, ../sass/screen.scss */
+.postBox input {
+  margin: 2px 0 15px;
+  width: 200px;
+}
+/* line 396, ../sass/screen.scss */
+.postBox input.submit {
+  margin: 20px 0 0 450px;
+  width: 100px;
+}
+/* line 401, ../sass/screen.scss */
+.postBox input.file {
+  border: none;
+  color: #eeeeee;
+}
+
+/*_Profile Page____________________________________________________*/
+/* line 409, ../sass/screen.scss */
+.poster {
+  width: 960px;
+  height: 360px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+/* line 415, ../sass/screen.scss */
+.poster img {
+  width: 960px;
+  margin: -120px 0 0;
+}
+
+/* line 421, ../sass/screen.scss */
+.userId {
+  width: 960px;
+  height: 125px;
+  margin: 0 auto 15px;
+  background-color: #111111;
+}
+/* line 427, ../sass/screen.scss */
+.userId .bio {
+  float: left;
+}
+/* line 430, ../sass/screen.scss */
+.userId .bio p {
+  margin: 0;
+  padding: 10px 0 0 10px;
+  width: 700px;
+  float: left;
+}
+
+/* line 439, ../sass/screen.scss */
+.idAvatarMask {
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+  float: left;
+}
+
+/* line 446, ../sass/screen.scss */
+.idAvatar {
+  height: 125px;
+}
+
+/* line 450, ../sass/screen.scss */
+.mainInfo {
+  height: 50px;
+  margin: -5px 0 15px;
+}
+/* line 454, ../sass/screen.scss */
+.mainInfo .left {
+  width: 350px;
+  padding: 0 0 0 15px;
+}
+/* line 459, ../sass/screen.scss */
+.mainInfo .right {
+  float: right;
+  width: 330px;
+}
+
+/* line 465, ../sass/screen.scss */
+.mainInfo, .hLine, .bio {
+  width: 835px;
+}
+
+/* line 469, ../sass/screen.scss */
+.mainInfo, .mainInfo .left, .mainInfo h2, .mainInfo img {
+  float: left;
+}
+
+/* line 473, ../sass/screen.scss */
+.mainInfo img, .bio img {
+  width: 30px;
+  margin: 20px 0 10px 25px;
+}
+
+/* line 478, ../sass/screen.scss */
+.bio img {
+  float: right;
+  margin: 15px 25px 10px 0;
+}
+
+/* line 483, ../sass/screen.scss */
+.hLine {
+  height: 3px;
+  background-color: #1193ff;
+  float: left;
+}
+
+/* line 489, ../sass/screen.scss */
+.postBtn {
+  float: left;
+}
+
+/* line 493, ../sass/screen.scss */
+.profileAvatar {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  float: left;
+  margin: -3px 0 0 15px;
+}
+/* line 500, ../sass/screen.scss */
+.profileAvatar img {
+  height: 50px;
+}
+
+/* line 505, ../sass/screen.scss */
+.loggedIn {
+  width: 275px;
+  margin: 15px 0 0;
+}
+
+/* line 510, ../sass/screen.scss */
+.dropdown {
+  width: 100px;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 75px;
+  display: none;
+}
+
+/* line 519, ../sass/screen.scss */
+.dropdownBtn img {
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin: 10px 0 0 15px;
+}
+
+/* line 526, ../sass/screen.scss */
+.dropdownBtn {
+  height: 60px;
+  width: 100px;
+  float: right;
+}
+
+/* line 532, ../sass/screen.scss */
+.dropdownBtn:hover .dropdown {
+  display: block;
+}
+
+/*_Post Detail Page____________________________________________________*/
+/* line 538, ../sass/screen.scss */
+.postDetail {
+  width: 80%;
+  background-color: #111111;
+  float: left;
+  margin: 15px 10%;
+}
+
+/* line 545, ../sass/screen.scss */
+.contentDetail {
+  border: solid 1px #111111;
+  margin: 0 0 0;
+  padding: 0 0 0;
+}
+
+/* line 551, ../sass/screen.scss */
+.contentDetail p {
+  margin: 10px;
+  width: 600px;
+}
+
+/* line 556, ../sass/screen.scss */
+.postDImgMask {
+  overflow: hidden;
+  width: 100%;
+  height: 225px;
+}
+
+/* line 562, ../sass/screen.scss */
+.postDImg {
+  width: 100%;
+  margin: -30% 0 0;
+}
+
+/* line 567, ../sass/screen.scss */
+.postDUserInfo {
+  position: relative;
+  bottom: 10px;
+}
+
+/* line 572, ../sass/screen.scss */
+.dLikeNum {
+  display: block;
+  position: absolute;
+  margin: -31px 0 0 -1px;
+  width: 80%;
+  height: 30px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 582, ../sass/screen.scss */
+.dLikeNum p {
+  padding: 3px 0;
+  margin: 0;
+  font-size: 18px;
+  width: 95%;
+  float: left;
+}
+
+/* line 590, ../sass/screen.scss */
+.dLikeNum img {
+  float: left;
+  width: 20px;
+  margin: 5px;
+}
+
+/* line 596, ../sass/screen.scss */
+.postButtons {
+  width: 100%;
+  background-color: black;
+  height: 40px;
+  margin: 50px 0 0;
+}
+
+/* line 603, ../sass/screen.scss */
+.postButtons button {
+  float: right;
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: solid 1px #1193ff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* line 614, ../sass/screen.scss */
+.postButtons button:hover {
+  color: #1193ff;
+}
+
+/* line 618, ../sass/screen.scss */
+.postButtons button:active {
+  background-color: #1193ff;
+  color: white;
+}
+
+/*_Car Detail Page____________________________________________________*/
+/* line 625, ../sass/screen.scss */
+.mainInfo select {
+  margin-top: 22px;
+  border: solid 1px #1193ff;
+  font-size: 18px;
+  background-color: black;
+  color: #eeeeee;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Media Queries */
+/*--------------------------------------------------------------------------------*/
+/* Large desktop */
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  /* line 652, ../sass/screen.scss */
+  .subNav {
+    margin: 50px 0 0 0px;
+    padding: 0 0 0 0;
+  }
+
+  /* line 657, ../sass/screen.scss */
+  .subNav a {
+    margin: 0 0 0 33px;
+  }
+
+  /* line 661, ../sass/screen.scss */
+  .buttons {
+    margin: 17px 60px 0 0;
+  }
+
+  /* line 665, ../sass/screen.scss */
+  nav ul {
+    margin: 0 0 0 5px;
+  }
+
+  /* line 669, ../sass/screen.scss */
+  .postDImg {
+    margin: -20% 0 0;
+  }
+
+  /* line 673, ../sass/screen.scss */
+  .contentDetail p {
+    margin: 10px;
+    width: 90%;
+  }
+
+  /* line 678, ../sass/screen.scss */
+  .dLikeNum p {
+    padding: 0;
+    margin: 3px 0 0 0;
+    width: 92%;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  /* line 689, ../sass/screen.scss */
+  header {
+    height: 120px;
+  }
+
+  /* line 693, ../sass/screen.scss */
+  .logo {
+    display: none;
+  }
+
+  /* line 697, ../sass/screen.scss */
+  .carSelector {
+    height: 160px;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 20px;
+    background-color: black;
+  }
+
+  /* line 704, ../sass/screen.scss */
+  .carSelector input {
+    border: solid 1px #1193ff;
+    background-color: white;
+    color: black;
+    width: 260px;
+  }
+
+  /* line 711, ../sass/screen.scss */
+  .feed {
+    padding: 0 0 0 10px;
+  }
+
+  /* line 715, ../sass/screen.scss */
+  .registerBox {
+    width: 300px;
+    margin: 20px auto;
+  }
+
+  /* line 720, ../sass/screen.scss */
+  .registerBox input {
+    width: 270px;
+  }
+
+  /* line 724, ../sass/screen.scss */
+  .registerBox input.submit {
+    margin: 20px 0 0;
+    width: 285px;
+  }
+
+  /* line 729, ../sass/screen.scss */
+  .registerBox .vLine, .registerBox .features {
+    display: none;
+  }
+
+  /* line 733, ../sass/screen.scss */
+  .postDetail {
+    width: 300px;
+  }
+
+  /* line 737, ../sass/screen.scss */
+  .postDImg {
+    margin: 0;
+  }
+
+  /* line 741, ../sass/screen.scss */
+  .dLikeNum {
+    width: 300px;
+  }
+
+  /* line 745, ../sass/screen.scss */
+  .dLikeNum p {
+    width: 270px;
+  }
+
+  /* line 749, ../sass/screen.scss */
+  .postDImg {
+    height: 225px;
+    width: 300px;
+  }
+}

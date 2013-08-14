@@ -6,7 +6,7 @@
 	<title>Carsignite</title>
 	<link rel="icon" type="image/gif" href="img/carsignite_icon.gif" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/screen.css">
 </head>
 <body>
 	<header>
@@ -15,9 +15,17 @@
 			<a href="index.html">World</a>
 			<a href="index.html">Friends</a>
 		</nav>
-		<div class="login register buttons">
-			<a href="register.html"><button class="registerBtn" type="button">Sign up</button></a>
-			<a href="login.html"><button class="loginBtn" type="button">Log in</button></a>
+		<div class="loggedIn">
+			<a href="post.html"><button class="postBtn" type="button">+ Post</button></a>
+			<a href="profile.html"><div class="profileAvatar"><img src="img/avatar.JPG" /></div></a>
+			<div class="dropdownBtn">
+				<img src="img/icons/arrow-down.png" />
+				<div class="dropdown">
+					<a href="post.html"><button class="postBtn" type="button">+ Post</button></a>
+					<a href="settings.html"><button class="postBtn" type="button">Settings</button></a>
+					<a href="index.html"><button class="postBtn" type="button">Log out</button></a>
+				</div>
+			</div>
 		</div>
 	</header>
 	<div class="container">
@@ -38,18 +46,18 @@
 						</div>
 					</div>
 					<div class="right">
-						<div class="carNum">
+						<a href="carList.html"><div class="carNum">
 							<img src="img/icons/vinyl.png" />
 							<h2>2</h2>
-						</div>
-						<div class="followsNum">
+						</div></a>
+						<a href="userList.html"><div class="followsNum">
 							<img src="img/icons/arrow-right.png" />
 							<h2>257</h2>
-						</div>
-						<div class="followersNum">
+						</div></a>
+						<a href="userList.html"><div class="followersNum">
 							<img src="img/icons/arrow-left.png" />
 							<h2>10K</h2>
-						</div>
+						</div></a>
 					</div>
 				</div>
 				<div class="hLine">
@@ -76,7 +84,7 @@
 					</div>
 				</div>
 			</div></a>
-			<div class="post">
+			<a href="postDetail.html"><div class="post">
 				<div class="postImgMask">
 					<img class="postImg" src="img/post_img.png" alt="" />
 				</div>
@@ -88,8 +96,8 @@
 						<a href="carDetail.html"><h3 class="postCar">Honda Accord, 2008</h3></a>
 					</div>
 				</div>
-			</div>
-			<div class="post">
+			</div></a>
+			<a href="postDetail.html"><div class="post">
 				<div class="postImgMask">
 					<img class="postImg" src="img/car4.png" alt="" />
 				</div>
@@ -101,8 +109,8 @@
 						<a href="carDetail.html"><h3 class="postCar">Honda Accord, 2008</h3></a>
 					</div>
 				</div>
-			</div>
-			<div class="post">
+			</div></a>
+			<a href="postDetail.html"><div class="post">
 				<div class="postImgMask">
 					<img class="postImg" src="img/post_img.png" alt="" />
 				</div>
@@ -114,8 +122,8 @@
 						<a href="carDetail.html"><h3 class="postCar">Honda Accord, 2008</h3></a>
 					</div>
 				</div>
-			</div>
-			<div class="post">
+			</div></a>
+			<a href="postDetail.html"><div class="post">
 				<div class="postImgMask">
 					<img class="postImg" src="img/car6.png" alt="" />
 				</div>
@@ -127,8 +135,8 @@
 						<a href="carDetail.html"><h3 class="postCar">Honda Accord, 2008</h3></a>
 					</div>
 				</div>
-			</div>
-			<div class="post">
+			</div></a>
+			<a href="postDetail.html"><div class="post">
 				<div class="postImgMask">
 					<img class="postImg" src="img/car5.png" alt="" />
 				</div>
@@ -140,7 +148,7 @@
 						<a href="carDetail.html"><h3 class="postCar">Honda Accord, 2008</h3></a>
 					</div>
 				</div>
-			</div>
+			</div></a>
 		</div>
 	</div>
 	<footer>
