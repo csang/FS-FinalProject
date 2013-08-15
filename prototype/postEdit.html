@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carsignite</title>
+	<link rel="icon" type="image/gif" href="img/carsignite_icon.gif" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/screen.css">
+</head>
+<body>
+	<header>
+		<img class="logo" src="img/carsignite.png" />
+		<nav>
+			<a href="index.html">World</a>
+			<a href="index.html">Friends</a>
+		</nav>
+		<div class="loggedIn">
+			<a href="post.html"><button class="postBtn" type="button">+ Post</button></a>
+			<a href="profile.html"><div class="profileAvatar"><img src="img/avatar.JPG" /></div></a>
+			<div class="dropdownBtn">
+				<img src="img/icons/arrow-down.png" />
+				<div class="dropdown">
+					<a href="post.html"><button class="postBtn" type="button">+ Post</button></a>
+					<a href="settings.html"><button class="postBtn" type="button">Settings</button></a>
+					<a href="index.html"><button class="postBtn" type="button">Log out</button></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="postDetail">
+			<div class="postDImgMask">
+				<img class="postDImg" src="img/detail.jpeg" alt="" />
+			</div>
+			<div class="contentDetail postEdit">
+				<span class="dLikeNum"><p>20</p><img src="img/icons/tick.png" /></span>
+				<input type="text" class="title" name="title" value="Title" /></br>
+				<textarea cols="70" rows="20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</textarea></br>
+				<div class="postDUserInfo">
+					<div class="postAvatarMask">
+						<a href="profile.html"><img class="postAvatar" src="img/avatar.JPG" alt="" /></a>
+					</div>
+					<a href="carDetail.html"><h3 class="postCar">Honda Accord, 2008</h3></a>
+				</div>
+			</div>
+			<div class="postButtons postEditButtons">
+				<input type="submit" class="submit" value="Save" />
+				<a href="postDetail.html"><button type="button">Cancel</button></a>
+			</div>
+		</div>
+	<footer>
+		<div class="copyright">
+			<p>&copy;CARSIGNITE</p>
+		</div>
+		<div class="footerLinks">
+			<p><a href="#">About Us</a> | <a href="#">Help</a> | <a href="#">Contact Us</a></p>
+		</div>
+	</footer>
+</body>
+</html>

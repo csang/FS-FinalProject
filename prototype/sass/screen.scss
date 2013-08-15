@@ -620,6 +620,35 @@ input.submit:active{
 	color: $white;
 }
 
+/*_Post Edit Page____________________________________________________*/
+
+.postEdit{
+	input, textarea{
+		background-color: $lBlack;
+		border: solid 1px $blue;
+		color: $dWhite;
+		margin: 15px 10px 0;
+	}
+
+	input{
+		font-size: 18px;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: bold;
+	}
+
+	textarea{
+		font-size: 14px;
+		resize: none;
+	}
+}
+
+.postEditButtons input.submit{
+	width: 100px;
+	height: 40px;
+	float: right;
+	margin: 0;
+}
+
 /*_Car Detail Page____________________________________________________*/
 
 .mainInfo select{
