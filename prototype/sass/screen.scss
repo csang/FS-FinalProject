@@ -420,7 +420,6 @@ input.submit:active{
 
 .userId, .carId{
 	width: 960px;
-	height: 125px;
 	margin: 0 auto 15px;
 	background-color: $lBlack;
 
@@ -434,6 +433,10 @@ input.submit:active{
 			float: left;
 		}
 	} 
+
+	.top{
+		height: 125px;
+	}
 }
 
 .idAvatarMask{
@@ -462,7 +465,7 @@ input.submit:active{
 	}
 }
 
-.mainInfo, .hLine, .bio{
+.mainInfo, .hLine, .bio, .extra{
 	width: 835px;
 }
 
@@ -531,6 +534,37 @@ input.submit:active{
 
 .dropdownBtn:hover .dropdown{
 	display: block;
+}
+
+.bio{
+	margin: 0 0 22px 0;
+}
+
+.extra img{
+	float: right;
+	margin: 15px 25px 10px 0;
+	width: 30px;
+}
+
+.extra{
+	float: left;
+	margin: -60px 0 15px 125px;
+	padding: 0 0 ;
+	background-color: $lBlack;
+
+	p{
+		float: left;
+		margin: 15px 25px 0 25px;
+		font-size: 14px;
+	}
+}
+
+.bottom{
+	width: 930px;
+	background-color: $lBlack;
+	padding: 10px 15px;
+	position: relative;
+	margin: 0;
 }
 
 /*_Post Detail Page____________________________________________________*/
