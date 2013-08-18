@@ -17,6 +17,20 @@ Database name: carsignite
 
 =================
 
-For the moment I am not using the Fuel framework. Right now i'm just using the files inside of the prototype folder.
+I am currently working with the Fuel framework.
 
-root/prototype/index.html
+Index:
+root/public/index.php
+
+Assets:
+root/public/assets/...
+
+Views:
+root/fuel/app/views/...
+
+Classes:
+root/fuel/app/classes/...
+
+=================
+
+I still need to work on the views and the icons. I'm expecting to have this done by tuesday, but there are a few things in my views that I'm not 100% sure how to do.

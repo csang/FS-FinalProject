@@ -1,0 +1,855 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/* @import "compass/reset"; */
+@import "compass/css3";
+@import "colors";
+
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url("../img/pattern.png");
+	background-size: 300px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+	clear: both;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: $dWhite;
+}
+
+p,li{
+	font-size: 14px;
+	color: $dWhite;
+}
+
+h2{
+	font-size: 21px;
+	margin: 20px 0 0 10px;
+}
+
+h3{
+	font-size: 14px;
+}
+
+.content p{
+	margin: 10px 0 0 10px;
+	width: 280px;
+}
+
+.logo{
+	display: block;
+	background-repeat: no-repeat;
+	width: 185px;
+	margin: 25px 0 0 50px;
+	float: left;
+	
+}
+
+header{
+	background-color: $black;
+	height: 75px;
+	width: 100%;
+	clear: both;
+
+	.row{
+		margin: 0 auto;
+	}
+}
+
+nav, .subNav{
+	list-style: none;
+}
+
+nav{
+	margin: 0 0 0 50px;
+	clear: right;
+}
+
+.subNav{
+	height: 70px;
+	margin: 0 auto;
+	width: 990px;
+	clear: both;
+}
+
+a{
+	text-decoration: none;
+	font-size: 14px;
+	color: $dWhite;
+}
+
+nav a, .subNav a{
+	float: left;
+}
+
+nav a{
+	margin: 27px 0 0 50px;
+}
+
+.subNav a{
+	margin: 27px 20px 0 30px;
+}
+
+a:hover{
+	color: $blue;
+}
+
+.buttons, .loggedIn{
+	margin: 17px 50px 0 0;
+	float: right;
+}
+
+button:hover{
+	color: $blue;
+}
+
+button:active{
+	color: $white;
+	background-color: $blue;
+	border: solid 1px $blue;
+}
+
+.registerBtn{
+  border: solid 1px #1193ff;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 10px 0 0;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 -4px 0 0;
+  display: inline-block;
+}
+
+.loginBtn, .postBtn{
+  border: solid 1px #555555;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 10px 0 0;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.feed{
+	position: inherit;
+	padding: 0 0 0 30px;
+	width: 960px;
+	margin: 0 auto;
+	clear: both;
+}
+
+.post{
+	width: 300px;
+	height: 450px;
+	background-color: $lBlack;
+	float: left;
+	margin: 0 15px 15px 0;
+	cursor: pointer;
+}
+
+.content{
+	height: 223px;
+	border: solid 1px $lBlack;
+	margin: 0 0 0;
+	padding: 0 0 0;
+}
+
+.postImgMask{
+	overflow: hidden;
+	width: 300px;
+	height: 225px;
+}
+
+.postImg{
+	height: 225px;
+}
+
+.postUserInfo{
+	position: relative;
+	bottom: -10px;
+	clear: both;
+}
+
+.postAvatarMask{
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	margin: 19px 0 0 9px; 
+	float: left;
+	border: solid 1px $lBlack;
+}
+
+.postAvatar{
+	height: 30px;
+}
+
+.postCar{
+	float: left;
+	margin: 25px 0 0 10px;
+}
+
+.post:hover .content{
+	border-top: solid 1px $blue;
+	border-bottom: solid 1px $blue;
+}
+
+.likeNum{
+	display: block;
+	position: absolute;
+	margin: -31px 0 0 -1px;
+	width: 300px;
+	height: 30px;
+	text-align: right;
+	background-color: rgba(0,0,0,.5);
+	clear: both;
+
+	p{
+		width: 270px;
+		padding: 3px 0 0 0;
+		margin: 0;
+		font-size: 18px;
+		float: left;
+	}
+
+	img{
+		float: left;
+		width: 20px;
+		margin: 5px;
+	}
+}
+
+p{
+	color: $dWhite;
+}
+
+a:hover{
+	color: $blue;
+}
+
+footer{
+	background-color: #000000;
+	height: 50px;
+	clear: left;
+	bottom: 0;
+	clear: both;
+
+	.copyright{
+		float: left;
+		margin: 0 0 0 30px;
+	}
+
+	.footerLinks{
+		position: relative;
+		top: 15px;
+
+		p{
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+.carSelector{
+	height: 50px;
+	margin: 0 auto 20px;
+	padding: 0 0 20px 5px;
+	background-color: $black;
+
+	.carInputs{
+		margin: 0 auto;
+		width: 990px;
+	}
+
+	input{
+		border: solid 1px #1193ff;
+		background-color: $white;
+		color: $black;
+		font-size: 14px;
+		margin: 25px 0 0 25px;
+	}
+}
+
+.active{
+	color: $blue;
+}
+
+.postCar:hover{
+	color: $blue;
+}
+
+.postAvatarMask:hover{
+	border: solid 1px $blue;
+}
+
+/*_Login Page____________________________________________________*/
+
+.loginBox{
+	width: 300px;
+	text-align: center;
+	height: 170px;
+	background-color: $lBlack;
+	margin: 70px auto 376px;
+}
+
+label{
+	color: $dWhite;
+}
+
+input{
+	margin: 25px 0 0 0;
+	border: solid 2px $blue;
+	font-size: 14px;
+}
+
+input.submit{
+	background-color: $black;
+	border: solid 1px $blue;
+	color: $white;
+	width: 200px;
+	height: 30px;
+	cursor: pointer;
+}
+
+input.submit:hover{
+	color: $blue;
+}
+
+input.submit:active{
+	background-color: $blue;
+	color: $white;
+}
+
+/*_Register Page____________________________________________________*/
+
+.registerBox{
+	width: 600px;
+	text-align: left;
+	height: 300px;
+	background-color: $lBlack;
+	margin: 70px auto 205px;
+	padding: 20px;
+	clear: both;
+
+	form{
+		width: 290px;
+		float: left;
+	}
+
+	p{
+		margin: 0;
+	}
+
+	input{
+		margin: 2px 0 15px;
+	}
+
+	input.submit{
+		margin: 20px 0 0;
+	}
+
+	.vLine{
+		width: 1px;
+		height: 290px;
+		background-color: $blue;
+		float: left;
+	}
+
+	.features{
+		width: 250px;
+		float: left;
+
+		li{
+			margin: 10px 0 0;
+		}
+	}
+}
+
+/*_Add Post Page____________________________________________________*/
+
+.postBox{
+	width: 90%;
+	text-align: left;
+	height: 670px;
+	background-color: $lBlack;
+	margin: 30px auto 30px;
+	padding: 20px;
+	clear: both;
+
+	form{
+		width: 290px;
+		float: left;
+	}
+
+	p{
+		margin: 0;
+	}
+
+	textarea{
+		border: solid 2px $blue;
+		background-color: $white;
+		margin: 2px 0 15px;
+		resize: none;
+		font-size: 14px;
+	}
+
+	input{
+		margin: 2px 0 15px;
+		width: 200px;
+	}
+
+	input.submit{
+		margin: 20px 0 0 480px;
+		width: 100px;
+	}
+
+	input.file{
+		border: none;
+		color: $dWhite;
+	}
+}
+
+/*_Profile Page____________________________________________________*/
+
+.poster{
+	width: 960px;
+	height: 360px;
+	overflow: hidden;
+	margin: 0 auto;
+
+	img{
+		width: 960px;
+		margin: -120px 0 0;
+	}
+}
+
+.userId, .carId{
+	width: 960px;
+	margin: 0 auto 15px;
+	background-color: $lBlack;
+	clear: both;
+
+
+	.bio{
+		float: left;
+		clear: right;
+
+		p{
+			margin: 0;
+			padding: 10px 0 0 10px;
+			width: 700px;
+			float: left;
+		}
+
+		img{
+			float: right;
+			margin: 20px 25px 10px 0;
+		}
+	} 
+
+	.top{
+		height: 125px;
+		clear: both;
+
+		.idAvatarMask{
+			width: 125px;
+			height: 125px;
+			overflow: hidden;
+			float: left;
+
+			.idAvatar{
+				height: 125px;
+			}
+		}
+
+		.mainInfo{
+			height: 50px;
+			margin: -5px 0 15px;
+			clear: right;
+
+			.left{
+				width: 350px;
+				padding: 0 0 0 15px;
+			}
+
+			.right{
+				float: right;
+				width: 330px;
+			}
+		}
+
+		.hLine{
+			height: 3px;
+			background-color: $blue;
+			float: left;
+		}
+	}
+}
+
+.mainInfo, .hLine, .bio, .extra{
+	width: 835px;
+}
+
+.mainInfo, .mainInfo .left, .mainInfo h2, .mainInfo img{
+	float: left;
+}
+
+.mainInfo img, .bio img{
+	width: 20px;
+	margin: 20px 0 10px 25px;
+}
+
+/*--------------------------------------------------------------------------------------
+
+	Don't forget to clear these floats:
+
+-----------------------------------------------------------------------------------------*/
+.postBtn{
+	float: left;
+}
+
+.profileAvatar{
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	float: left;
+	margin: -3px 0 0 15px;
+
+	img{
+		height: 50px;
+	}
+}
+
+.loggedIn{
+	width: 275px;
+	margin: 15px 0 0;
+}
+
+.dropdown{
+	width: 100px;
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 75px;
+	display: none;
+}
+
+.dropdownBtn img{
+	width: 25px;
+	height: 25px;
+	float: left;
+	margin: 10px 0 0 15px;
+}
+
+.dropdownBtn{
+	height: 60px;
+	width: 100px;
+	float: right;
+}
+
+.dropdownBtn:hover .dropdown{
+	display: block;
+}
+
+.bio{
+	margin: 0 0 22px 0;
+}
+
+.extra img{
+	float: right;
+	margin: 15px 25px 10px 0;
+	width: 30px;
+}
+
+.extra{
+	float: left;
+	margin: -60px 0 15px 125px;
+	padding: 0 0 ;
+	background-color: $lBlack;
+
+	p{
+		float: left;
+		margin: 15px 25px 0 25px;
+		font-size: 14px;
+	}
+}
+
+.bottom{
+	width: 930px;
+	background-color: $lBlack;
+	padding: 10px 15px;
+	position: relative;
+	margin: 0;
+}
+
+/*_Post Detail Page____________________________________________________*/
+
+.postDetail{
+	width: 80%;
+	background-color: $lBlack;
+	float: left;
+	margin: 15px 10%;
+
+	.postDImgMask{
+		overflow: hidden;
+		width: 100%;
+		height: 225px;
+
+		.postDImg{
+			width: 100%;
+			margin: -30% 0 0;
+		}
+	}
+
+	.postButtons{
+		width: 100%;
+		background-color: $black;
+		height: 40px;
+		margin: 50px 0 0;
+		clear: both;
+
+		button, .button{
+			float: right;
+			width: 100px;
+			height: 40px;
+			background-color: $black;
+			color: $white;
+			border: solid 1px $blue;
+			cursor: pointer;
+			font-size: 14px;
+		}
+
+		.button{
+			text-align: center;
+			padding: 9px 0 0;
+			height: 29px;
+		}
+
+		button:hover, .button:hover{
+			color: $blue;
+		}
+
+		button:active, .button:active{
+			background-color: $blue;
+			color: $white;
+		}
+	}
+
+	.contentDetail{
+		border: solid 1px $lBlack;
+		margin: 0 0 0;
+		padding: 0 0 0;
+
+		p{
+			margin: 10px;
+			width: 600px;
+		}
+
+		.dLikeNum{
+			display: block;
+			position: absolute;
+			margin: -31px 0 0 -1px;
+			width: 80%;
+			height: 30px;
+			text-align: right;
+			background-color: rgba(0,0,0,.5);
+			clear: right;
+
+			p{
+				padding: 3px 0;
+				margin: 0;
+				font-size: 18px;
+				width: 95%;
+				float: left;
+			}
+
+			img{
+				float: left;
+				width: 20px;
+				margin: 5px;
+			}
+		}
+
+		.postDUserInfo{
+			position: relative;
+			bottom: 10px;
+		}
+	}
+}
+
+/*_Post Edit Page____________________________________________________*/
+
+.postEdit{
+	input, textarea{
+		background-color: $lBlack;
+		border: solid 1px $blue;
+		color: $dWhite;
+		margin: 15px 10px 0;
+	}
+
+	input{
+		font-size: 18px;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: bold;
+	}
+
+	textarea{
+		font-size: 14px;
+		resize: none;
+	}
+}
+
+.postEditButtons input.submit{
+	width: 100px;
+	height: 40px;
+	float: right;
+	margin: 0;
+}
+
+/*_Car Detail Page____________________________________________________*/
+
+.mainInfo select{
+	margin-top: 22px;
+	border: solid 1px $blue;
+	font-size: 18px;
+	background-color: $black;
+	color: $dWhite;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Media Queries */
+/*--------------------------------------------------------------------------------*/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+.subNav{
+	margin: 50px 0 0 0px;
+	padding: 0 0 0 0;
+}
+
+.subNav a{
+	margin: 0 0 0 33px;
+}
+
+.buttons{
+	margin: 17px 60px 0 0;
+}
+
+nav ul{
+	margin: 0 0 0 5px;
+}
+
+.postDImg{
+	margin: -20% 0 0;
+}
+
+.contentDetail p{
+	margin: 10px;
+	width: 90%;
+}
+
+.dLikeNum p{
+	padding: 0;
+	margin: 3px 0 0 0;
+	width: 92%;
+}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+header{
+	height: 120px;
+}
+
+.logo{
+	display: none;
+}
+
+.carSelector{
+	height: 160px;
+	margin: 0 0 20px 0;
+	padding: 0 0 20px 20px;
+	background-color: $black;
+}
+
+.carSelector input{
+	border: solid 1px $blue;
+	background-color: $white;
+	color: $black;
+	width: 260px;
+}
+
+.feed{
+	padding: 0 0 0 10px;
+}
+
+.registerBox{
+	width: 300px;
+	margin: 20px auto;
+}
+
+.registerBox input{
+	width: 270px;
+}
+
+.registerBox input.submit{
+	margin: 20px 0 0;
+	width: 285px;
+}
+
+.registerBox .vLine, .registerBox .features{
+	display: none;
+}
+
+.postDetail{
+	width: 300px;
+}
+
+.postDImg{
+	margin: 0;
+}
+
+.dLikeNum{
+	width: 300px;
+}
+
+.dLikeNum p{
+	width: 270px;
+}
+
+.postDImg{
+	height: 225px;
+	width: 300px;
+}
+
+}
