@@ -15,10 +15,9 @@
 			<?= Html::anchor('/', 'World') ?>
 			<?= Html::anchor('/', 'Friends') ?>
 		</nav>
-		<div class="login register buttons">
-			<?= Html::anchor('user/signup', 'Sign up', array('class'=>'registerBtn button')) ?>
-			<?= Html::anchor('user/login', 'Log in', array('class'=>'loginBtn button')) ?>
-		</div>
+
+		<?= isset($user_nav) ? $user_nav : null ?>
+
 	</header>
 	<div class="container">
 		<?= isset($sub_nav) ? $sub_nav : null ?>
@@ -27,7 +26,7 @@
 
 		<?= isset($detail) ? $detail : null ?>
 
-		<?= $body ?>
+		<?= isset($body) ? $body : null ?>
 
 	</div>
 	<footer>

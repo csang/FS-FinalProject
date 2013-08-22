@@ -1,7 +1,12 @@
 <?php
 
-class Controller_User extends Controller_Template
+class Controller_User extends Controller_App
 {
+
+// Login page: 		carsignite.com/login/
+// Signup page: 	carsignite.com/signup/
+// Settings: 		carsignite.com/settings/
+
 	public function get_login()
 	{
 		$this->template->body = View::forge('user/login');
@@ -12,9 +17,8 @@ class Controller_User extends Controller_Template
 		$this->template->body = View::forge('user/signup');
 	}
 
-	public function get_profile()
+	public function get_create()
 	{
-		$this->template->detail = View::forge('user/profile');
-		$this->template->body    = View::forge('site/index');
+		$this->template->body = View::forge('user/create_profile');
 	}
 }

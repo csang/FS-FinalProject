@@ -1,14 +1,11 @@
 		<div class="registerBox">
 			<form action="user/create" method="post" enctype="multipart/form-data">
-				<p>Username:</p>
-				<input type="text" name="username" /></br>
-				<p>Email:</p>
-				<input type="email" name="email" /></br>
-				<p>Password:</p>
-				<input type="password" name="password" /></br>
-				<p>Password:</p>
-				<input type="password" name="password" placeholder="repeat" /></br>
-				<input type="submit" class="submit" value="Next" />
+				<p>Name:</p>
+				<input type="text" name="name" /></br>
+				<p>Bio:</p>
+				<textarea name="bio"></textarea></br>
+				<input type="button" class="submit" value="Skip" />
+				<input type="submit" class="submit" value="Finish" />
 			</form>
 			<div class="vLine"></div>
 			<div class="features">

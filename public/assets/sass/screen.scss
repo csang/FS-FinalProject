@@ -113,7 +113,7 @@ button:hover{
 	color: $blue;
 }
 
-button:active{
+button:active, .button:active{
 	color: $white;
 	background-color: $blue;
 	border: solid 1px $blue;
@@ -511,7 +511,7 @@ input.submit:active{
 
 .mainInfo img, .bio img{
 	width: 20px;
-	margin: 20px 0 10px 25px;
+	margin: 25px 0 10px 35px;
 }
 
 /*--------------------------------------------------------------------------------------
@@ -729,6 +729,12 @@ input.submit:active{
 	font-size: 18px;
 	background-color: $black;
 	color: $dWhite;
+}
+
+/*_List Pages____________________________________________________*/
+
+.list{
+	margin: 15px auto 0;
 }
 
 /*--------------------------------------------------------------------------------*/
