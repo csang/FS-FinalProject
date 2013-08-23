@@ -50,7 +50,7 @@ h3{
 	display: block;
 	background-repeat: no-repeat;
 	width: 185px;
-	margin: 25px 0 0 50px;
+	margin: 26px 0 0 50px;
 	float: left;
 	
 }
@@ -104,23 +104,31 @@ a:hover{
 	color: $blue;
 }
 
+.button{
+	background-color: $white;
+	color: $black;
+	border: solid 1px $gray;
+	width: 100px;
+	height: 40px;
+}
+
 .buttons, .loggedIn{
 	margin: 17px 50px 0 0;
 	float: right;
 }
 
-button:hover{
+.button:hover{
 	color: $blue;
 }
 
-button:active, .button:active{
+.button:active, .button:active{
 	color: $white;
 	background-color: $blue;
 	border: solid 1px $blue;
 }
 
 .registerBtn{
-  border: solid 1px #1193ff;
+  border: solid 1px $blue;
   color: white;
   background-color: black;
   text-align: center;
@@ -134,9 +142,9 @@ button:active, .button:active{
 }
 
 .loginBtn, .postBtn{
-  border: solid 1px #555555;
-  color: white;
-  background-color: black;
+  border: solid 1px $gray;
+  color: $white;
+  background-color: $black;
   text-align: center;
   padding: 10px 0 0;
   width: 100px;
@@ -144,6 +152,25 @@ button:active, .button:active{
   cursor: pointer;
   font-size: 14px;
   display: inline-block;
+}
+
+.userBtns{
+  border: solid 1px $white;
+  color: $black;
+  background-color: $white;
+  text-align: center;
+  padding: 10px 0 0;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.userBtns:active{
+	border: solid 1px $blue;
+	background-color: $blue;
+	color: $white;
 }
 
 .feed{
@@ -357,10 +384,13 @@ input.submit:active{
 
 	input{
 		margin: 2px 0 15px;
+		width: 200px;
 	}
 
 	input.submit{
-		margin: 20px 0 0;
+		margin: 20px 25px 0 0;
+		width: 100px;
+		float: right;
 	}
 
 	.vLine{
@@ -377,6 +407,46 @@ input.submit:active{
 		li{
 			margin: 10px 0 0;
 		}
+	}
+}
+
+.profileCreateBox{
+
+	height: 400px;
+
+	textarea{
+		border: solid 2px $blue;
+		background-color: $white;
+		margin: 2px 0 15px;
+		resize: none;
+		font-size: 14px;
+	}
+
+	.vLine{
+		height: 390px;
+	}
+
+	.skip{
+		margin: 20px 0 0;
+		border: solid 1px $gray;
+		background-color: $black;
+		color: $dWhite;
+		width: 100px;
+		height: 25px;
+		float: left;
+		cursor: pointer;
+		text-align: center;
+		padding: 3px 0 0;
+	}
+
+	.skip:hover{
+		color: $blue;
+	}
+
+	.skip:active{
+		border: solid 1px $blue;
+		color: $white;
+		background-color: $blue;
 	}
 }
 
@@ -550,10 +620,10 @@ input.submit:active{
 }
 
 .dropdownBtn img{
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 	float: left;
-	margin: 10px 0 0 15px;
+	margin: 15px 0 0 40px;
 }
 
 .dropdownBtn{

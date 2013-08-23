@@ -1,6 +1,6 @@
 		<div class="subNav">
-			<?= Html::anchor('site/index', 'Recent', array('class'=>'active')) ?>
-			<?= Html::anchor('site/index', 'Popular', array('class'=>'')) ?>
-			<?= Html::anchor('site/index', 'Featured', array('class'=>'')) ?>
-			<?= Html::anchor('site/cars', 'Cars', array('class'=>'')) ?>
+			<?= Html::anchor('recent', 'Recent', array('class'=>'active')) ?>
+			<?= Html::anchor('popular', 'Popular', array('class'=>'')) ?>
+			<?= Html::anchor('featured', 'Featured', array('class'=>'')) ?>
+			<?= Html::anchor('cars', 'Cars', array('class'=>'')) ?>
 		</div>

@@ -23,7 +23,7 @@ class Controller_Profile extends Controller_App
 		$this->template->detail = View::forge('profile/profile', array(
 			'user_profile' => $user_profile,
 		));
-		
+
 		$this->template->body 	= View::forge('profile/post_list');
 	}
 
@@ -46,6 +46,4 @@ class Controller_Profile extends Controller_App
 	{
 		$this->template->body   = View::forge('profile/user_list');
 	}
-
-	
 }

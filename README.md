@@ -33,4 +33,7 @@ root/fuel/app/classes/...
 
 =================
 
-I still need to work on the views and the icons. I'm expecting to have this done by tuesday, but there are a few things in my views that I'm not 100% sure how to do.
+Completed CRUD actions:
+
+- Sign up
+- Log in

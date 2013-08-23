@@ -1,5 +1,5 @@
 		<div class="registerBox">
-			<form action="user/create" method="post" enctype="multipart/form-data">
+			<?= Form::open('user/create'); ?>
 				<p>Username:</p>
 				<input type="text" name="username" /></br>
 				<p>Email:</p>
@@ -7,9 +7,9 @@
 				<p>Password:</p>
 				<input type="password" name="password" /></br>
 				<p>Password:</p>
-				<input type="password" name="password" placeholder="repeat" /></br>
+				<input type="password" name="password_repeat" placeholder="repeat" /></br>
 				<input type="submit" class="submit" value="Next" />
-			</form>
+			<?= Form::close(); ?>
 			<div class="vLine"></div>
 			<div class="features">
 				<ul>
