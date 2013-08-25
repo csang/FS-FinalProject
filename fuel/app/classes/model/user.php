@@ -8,6 +8,7 @@ class Model_User extends \Orm\Model
 		'name',
 		'password',
 		'email',
+		'site',
 		'birth',
 		'avatar',
 		'poster',

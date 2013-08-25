@@ -17,11 +17,12 @@ return array(
 	'user/profile' => 'user/create_profile',
 	'user' => 'user/user',
 
+	'post_detail'  => 'profile/article',
 	'(:segment)/cars'  => 'profile/cars/$1',
 	'(:segment)/friends'  => 'profile/friends/$1',
 	'(:segment)/followers'  => 'profile/followers/$1',
-	'(:segment)/article/(:segment)'  => 'profile/article/$1/$2',
 
+	'(:segment)/article/(:segment)'  => 'profile/article/$1/$2',
 	'(:segment)/(:any)' => 'car/view/$1/$2',
 	'(:segment)'  => 'profile/view/$1',
 );

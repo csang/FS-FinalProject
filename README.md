@@ -37,3 +37,7 @@ Completed CRUD actions:
 
 - Sign up
 - Log in
+
+Other actions:
+
+- Log out
