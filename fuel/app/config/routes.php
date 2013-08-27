@@ -3,10 +3,10 @@ return array(
 	'_root_'  => 'site/index',  // The default route
 	'_404_'   => 'welcome/404',    // The main 404 route
 	
-	'recent' => 'site/index',
-	'popular' => 'site/index',
-	'featured' => 'site/index',
-	'cars' => 'site/cars',
+	'world/recent' => 'site/index',
+	'world/popular' => 'site/index',
+	'world/featured' => 'site/index',
+	'world/cars' => 'site/cars',
 
 	'post' => 'articles/post_create',
 
