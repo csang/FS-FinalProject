@@ -8,6 +8,11 @@ return array(
 	'world/featured' => 'site/index',
 	'world/cars' => 'site/cars',
 
+	'friends/recent' => 'site/index',
+	'friends/popular' => 'site/index',
+	'friends/featured' => 'site/index',
+	'friends/cars' => 'site/cars',
+
 	'post' => 'articles/post_create',
 
 	'login' => 'user/login',
@@ -15,7 +20,8 @@ return array(
 	'signup' => 'user/signup',
 	'user/create' => 'user/create',
 	'user/profile' => 'user/create_profile',
-	'user' => 'user/user',
+	'user/profile/update' => 'user/profile_update',
+	'users' => 'user/user',
 
 	'post_detail'  => 'profile/article',
 	'(:segment)/cars'  => 'profile/cars/$1',

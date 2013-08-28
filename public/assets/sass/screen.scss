@@ -414,6 +414,11 @@ input.submit:active{
 
 	height: 400px;
 
+	input.file{
+		border: none;
+		color: $dWhite;
+	}
+
 	textarea{
 		border: solid 2px $blue;
 		background-color: $white;

@@ -4,12 +4,12 @@
 		<div class="userId">
 			<div class="top">
 				<div class="idAvatarMask">
-					<?= Asset::img('avatar.jpg', array('class' => 'idAvatar')) ?>
+					<?= Asset::img($user->avatar_url(), array('class' => 'idAvatar')) ?>
 				</div>
 				<div class="mainInfo">
 					<div class="left">
 						<div class="names">
-							<h2><?= $user_profile->name ?> (<?= $user_profile->username ?>)</h2>
+							<h2><?= $user->name ?> (<?= $user->username ?>)</h2>
 							<?= Asset::img('icons/arrow-right.png') ?>
 						</div>
 					</div>

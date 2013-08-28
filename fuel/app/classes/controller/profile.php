@@ -13,15 +13,15 @@ class Controller_Profile extends Controller_App
 
 	public function get_view($username)
 	{
-		$user_profile = Model_User::query()->where('username', $username)->get_one();
+		$user = Model_User::query()->where('username', $username)->get_one();
 
-		if (! isset($user_profile))
+		if (! isset($user))
 		{
 			throw new HttpNotFoundException;
 		}
 
 		$this->template->detail = View::forge('profile/profile', array(
-			'user_profile' => $user_profile,
+			'user' => $user,
 		));
 
 		$this->template->body 	= View::forge('profile/post_list');
