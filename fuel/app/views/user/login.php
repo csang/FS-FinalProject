@@ -1,5 +1,5 @@
 		<div class="loginBox">
-			<?= Form::open('user'); ?>
+			<?= Form::open('users'); ?>
 				<label>Username:</label>
 				<input type="text" name="username" /></br>
 				<label>Password:</label>

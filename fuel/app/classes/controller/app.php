@@ -34,5 +34,5 @@ class Controller_App extends Controller_Template
 		}
 
 		$this->template->set_global('user', $this->user, false);
-	} 
+	}
 }

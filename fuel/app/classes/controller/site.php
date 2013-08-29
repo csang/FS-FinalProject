@@ -10,8 +10,12 @@ class Controller_Site extends Controller_App
 
 	public function get_index()
 	{
-		$this->template->sub_nav 		= View::forge('nav/filters');
-		$this->template->body   		= View::forge('site/index');
+		$posts = Model_article::find_all(10,20);
+
+		var_dump($posts);
+
+		// $this->template->sub_nav 		= View::forge('nav/filters');
+		// $this->template->body   		= View::forge('site/index');
 	}
 
 	public function get_cars()

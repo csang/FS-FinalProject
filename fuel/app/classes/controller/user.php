@@ -102,7 +102,7 @@ class Controller_User extends Controller_App
 			'path' 			=> DOCROOT.'assets/img/avatars',
 			'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png'),
 			'randomize' 	=> true,
-			'overwrite' 	=> true,
+			'auto_process'	=> false,
 		);
 
 		Upload::process($config);
@@ -112,6 +112,8 @@ class Controller_User extends Controller_App
 		    Upload::save();
 
 		    $avatar = Upload::get_files(0)['saved_as'];
+
+		    // Image::load(DOCROOT.'assets/img/avatars/'.$avatar)->preset('test');
 		}
 
 		$user = Model_User::get_by_id($this->user->id);
