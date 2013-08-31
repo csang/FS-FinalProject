@@ -12,8 +12,8 @@
 	<header>
 		<?= Html::anchor('/', Asset::img('carsignite.png', array('class' => 'logo'))) ?>
 		<nav>
-			<?= Html::anchor('/', 'World') ?>
-			<?= Html::anchor('/', 'Friends') ?>
+			<?= Html::anchor('world/recent', 'World') ?>
+			<?= Html::anchor('friends/recent', 'Friends') ?>
 		</nav>
 
 		<?= isset($user_nav) ? $user_nav : null ?>

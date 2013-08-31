@@ -6,12 +6,12 @@ return array(
 	'world/recent' => 'site/index',
 	'world/popular' => 'site/index',
 	'world/featured' => 'site/index',
-	'world/cars' => 'site/cars',
+	'world/search' => 'site/search',
 
-	'friends/recent' => 'site/index',
-	'friends/popular' => 'site/index',
-	'friends/featured' => 'site/index',
-	'friends/cars' => 'site/cars',
+	'friends/recent' => 'site/friends',
+	'friends/popular' => 'site/friends',
+	'friends/featured' => 'site/friends',
+	'friends/search' => 'site/search',
 
 	'post' => 'articles/post_create',
 

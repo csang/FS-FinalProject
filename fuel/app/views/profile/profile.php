@@ -31,7 +31,7 @@
 				<div class="hLine">
 				</div>
 				<div class="bio">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. aspernatur aut odit aut fugit, qui ratione voluptatem sequi nesciunt...</p>
+					<p><?= $user->bio ?></p>
 					<?= Html::anchor('profile/profile.php', Asset::img('icons/down.png')) ?>
 				</div>
 			</div>

@@ -88,6 +88,10 @@ a{
 	color: $dWhite;
 }
 
+a, button, input.submit{
+	cursor: pointer;
+}
+
 nav a, .subNav a{
 	float: left;
 }
@@ -226,8 +230,15 @@ a:hover{
 	height: 30px;
 }
 
-.postCar{
+.postCar, .postUser{
 	float: left;
+}
+
+.postCar{
+	margin: 5px 0 0 10px;
+}
+
+.postUser{
 	margin: 25px 0 0 10px;
 }
 
@@ -247,15 +258,15 @@ a:hover{
 	clear: both;
 
 	p{
-		width: 270px;
+		width: 35px;
 		padding: 3px 0 0 0;
 		margin: 0;
 		font-size: 18px;
-		float: left;
+		float: right;
 	}
 
 	img{
-		float: left;
+		float: right;
 		width: 20px;
 		margin: 5px;
 	}
