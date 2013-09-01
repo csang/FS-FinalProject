@@ -1,5 +1,5 @@
 3.2.10 (Media Mark)
-a2572929852de44b4fa9d988ebbd087d395d50f2
+541674c963e8595992098cfc41fb0ff1b626f6b2
 o:Sass::Tree::RootNode
 :@template"Â0/* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
@@ -603,8 +603,8 @@ input.submit:active{
 }
 
 .mainInfo img, .bio img{
-	width: 20px;
-	margin: 25px 0 10px 35px;
+	width: 25px;
+	margin: 20px 0 10px 35px;
 }
 
 /*--------------------------------------------------------------------------------------
@@ -1414,7 +1414,7 @@ float;o;;;;"	left;@;;;@;i ;	[ ;iW;iV;["<.mainInfo, .mainInf
 ;[o; 	;!0;["h2;"@ö;iV;"@ö;#o;$;%{ ;iV;&0o;;[o;
 ;[o;,;["mainInfo;"@ö;iV;"@ö;#o;$;%{ ;iV;&0o;
 ;[o; 	;!0;["img;"@ö;iV;"@ö;#o;$;%{ ;iV;&0;"@ö;iVo;;T;@;i ;	[o;;["
-width;o;;;;"	20px;@;;;@;i ;	[ ;i[o;;["margin;o;;;;"25px 0 10px 35px;@;;;@;i ;	[ ;i\;iZ;[".mainInfo img, .bio img;o;;[o;;[o;
+width;o;;;;"	25px;@;;;@;i ;	[ ;i[o;;["margin;o;;;;"20px 0 10px 35px;@;;;@;i ;	[ ;i\;iZ;[".mainInfo img, .bio img;o;;[o;;[o;
 ;[o;,;["mainInfo;"" ;iZ;"@B;#o;$;%{ ;iZ;&0o;
 ;[o; 	;!0;["img;"@B;iZ;"@B;#o;$;%{ ;iZ;&0o;;[o;
 ;[o;,;["bio;"@B;iZ;"@B;#o;$;%{ ;iZ;&0o;

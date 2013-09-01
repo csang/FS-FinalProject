@@ -650,8 +650,8 @@ input.submit:active {
 
 /* line 602, ../sass/screen.scss */
 .mainInfo img, .bio img {
-  width: 20px;
-  margin: 25px 0 10px 35px;
+  width: 25px;
+  margin: 20px 0 10px 35px;
 }
 
 /*--------------------------------------------------------------------------------------

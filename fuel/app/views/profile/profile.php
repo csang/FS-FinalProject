@@ -15,7 +15,7 @@
 					</div>
 					<div class="right">
 						<a href="<?= Uri::create('profile/car_list') ?>"><div class="carNum">
-							<?= Asset::img('icons/vinyl.png') ?>
+							<?= Asset::img('icons/car_icon.png') ?>
 							<h2>3</h2>
 						</div></a>
 						<a href="<?= Uri::create('profile/user_list') ?>"><div class="followsNum">
