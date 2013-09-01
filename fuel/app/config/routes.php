@@ -14,10 +14,12 @@ return array(
 	'friends/search' => 'site/search',
 
 	'post' => 'articles/post_create',
+	'post/create' => 'articles/create',
 
 	'login' => 'user/login',
 	'logout' => 'user/logout',
 	'signup' => 'user/signup',
+
 	'user/create' => 'user/create',
 	'user/profile' => 'user/create_profile',
 	'user/profile/update' => 'user/profile_update',

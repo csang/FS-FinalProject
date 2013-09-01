@@ -51,7 +51,6 @@ class Model_User extends \Orm\Model
 
 			return "icons/avatar.png";
 		}
-		
 	}
 
 	public static function get_by_id($id)

@@ -49,4 +49,14 @@ class Model_Car extends \Orm\Model
 			'cascade_delete' => false,
 		)
 	);
+
+	public function make()
+	{
+		return $this->make->name;
+	}
+
+	public function model()
+	{
+		return $this->model->name;
+	}
 }
