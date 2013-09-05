@@ -54,6 +54,7 @@ class Controller_Articles extends Controller_App
 		}
 
 		$search_car = Model_Car::find_by('user_id', $this->user->id);
+		$search_car_count = 0;
 
 		foreach ($search_car as $search)
 		{
@@ -62,25 +63,61 @@ class Controller_Articles extends Controller_App
 				$search->year 		 == $year)
 			{
 				$car_id = $search->id;
+
+				$post = Model_Article::forge()->set(array(
+					'user_id'	 => $this->user->id,
+					'car_id'     => $car_id,
+					'mods' 		 => $mods,
+					'title' 	 => $title,
+					'content' 	 => $content,
+					'images' 	 => $image,
+					'created_at' => time(),
+				));
+
+				$result = $post->save();
+
+				Response::redirect('world/recent');
 			}
 			else
 			{
-				var_dump('no match, Add car to user\'s car list if such car exists. If it doesn\'t exist, take user back to the post creation form');
+				$search_car_count += 1;
+
+				if(count($search_car) == $search_car_count){
+					
+					$search_make = Model_Vehicle_Make::find_by('name', $make);
+					$search_model = Model_Vehicle_Model::find_by('name', $model);
+
+					if($search_make && $search_model){
+						
+						$add_car = Model_Car::forge()->set(array(
+							'user_id'	 => $this->user->id,
+							'make_id'    => $search_make[1]['id'],
+							'model_id' 	 => $search_model[1]['id'],
+							'year' 	 	 => $year,
+							'image' 	 => $image,
+							'created_at' => time(),
+						));
+
+						$result = $add_car->save();
+
+						$post = Model_Article::forge()->set(array(
+							'user_id'	 => $this->user->id,
+							'car_id'     => $add_car->id,
+							'mods' 		 => $mods,
+							'title' 	 => $title,
+							'content' 	 => $content,
+							'images' 	 => $image,
+							'created_at' => time(),
+						));
+
+						$result = $post->save();
+
+						Response::redirect('world/recent');
+					}
+
+					// var_dump('no match, Add car to user\'s car list if such car exists. If it doesn\'t exist, take user back to the post creation form');	
+				}
 			}
 		}
-
-		$post = Model_Article::forge()->set(array(
-			'user_id'	 => $this->user->id,
-			'car_id'     => $car_id,
-			'mods' 		 => $mods,
-			'title' 	 => $title,
-			'content' 	 => $content,
-			'images' 	 => $image,
-			'created_at' => time(),
-		));
-
-		$result = $post->save();
-
-		Response::redirect('world/recent');
 	}
 }
