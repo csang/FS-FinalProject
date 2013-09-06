@@ -20,13 +20,13 @@ class Controller_Site extends Controller_App
 
 	public function get_friends()
 	{
-		// $articles = Model_Article::get_index();
-
+		$articles = Model_Article::query()->where('user_id', 'in', $this->user->friend_ids())->get();
+		
 		$this->template->sub_nav 		= View::forge('nav/filters');
 		$this->template->body   		= View::forge('site/index');
-		// $this->template->body   		= View::forge('site/index', array(
-		// 	'articles' => $articles,
-		// ));
+		$this->template->body   		= View::forge('site/index', array(
+			'articles' => $articles,
+		));
 	}
 
 	public function get_search()

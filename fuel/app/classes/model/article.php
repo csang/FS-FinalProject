@@ -16,17 +16,17 @@ class Model_Article extends \Orm\Model
 
 	protected static $_belongs_to = array(
 		'user' => array(
-			'key_from' => 'user_id',
-			'model_to' => 'Model_User',
-			'key_to' => 'id',
-			'cascade_save' => true,
+			'key_from'		 => 'user_id',
+			'model_to'		 => 'Model_User',
+			'key_to'		 => 'id',
+			'cascade_save'	 => true,
 			'cascade_delete' => false,
 		),
 		'car' => array(
-			'key_from' => 'car_id',
-			'model_to' => 'Model_Car',
-			'key_to' => 'id',
-			'cascade_save' => true,
+			'key_from'		 => 'car_id',
+			'model_to'		 => 'Model_Car',
+			'key_to'		 => 'id',
+			'cascade_save'	 => true,
 			'cascade_delete' => false,
 		)
 	);

@@ -115,7 +115,7 @@ class Controller_Articles extends Controller_App
 						Response::redirect('world/recent');
 					}
 
-					// var_dump('no match, Add car to user\'s car list if such car exists. If it doesn\'t exist, take user back to the post creation form');	
+					//var_dump('no match, Add car to user\'s car list if such car exists. If it doesn\'t exist, take user back to the post creation form');	
 				}
 			}
 		}
