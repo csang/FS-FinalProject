@@ -39,6 +39,13 @@ class Model_User extends \Orm\Model
 			'key_to'		 => 'follower',
 			'cascade_save'	 => true,
 			'cascade_delete' => false,
+		),
+		'likes' => array(
+			'key_from'		 => 'id',
+			'model_to'		 => 'Model_Like',
+			'key_to'		 => 'user_id',
+			'cascade_save'	 => true,
+			'cascade_delete' => false,
 		)
 	);
 

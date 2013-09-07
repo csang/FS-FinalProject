@@ -7,7 +7,7 @@
 				<div class="content">
 					<div class="likeNum">
 						<?= Html::anchor('car/view.php', $article->car->make->name . " " . $article->car->model->name, array('class'=>'postCar')) ?>
-						<?= Asset::img('icons/tick.png') ?><p>20</p>
+						<?= Asset::img('icons/tick.png') ?><p><?= $article->likes ?></p>
 					</div>
 					<h2><?= $article->title ?></h2>
 					<p><?= $article->content_short() ?></p>
@@ -19,7 +19,7 @@
 					</div>
 				</div>
 			</div></a>
-			<? }}else if(Uri::segment(1) == "friends"){;?>
+			<? }}else if(!$user){;?>
 			<h2>In here you'll see articles from the users you follow. Check out for cars you like and follow it's owner!</h2></br>
 			<div class="poster">
 				<?= Asset::img('poster.jpg'); ?>

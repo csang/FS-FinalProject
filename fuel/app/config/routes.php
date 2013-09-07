@@ -1,17 +1,17 @@
 <?php
 return array(
-	'_root_'  => 'site/index',  // The default route
+	'_root_'  => 'world/recent',  // The default route
 	'_404_'   => 'welcome/404',    // The main 404 route
 	
-	'world/recent' => 'site/index',
-	'world/popular' => 'site/index',
-	'world/featured' => 'site/index',
-	'world/search' => 'site/search',
+	'world/recent' => 'world/recent',
+	'world/popular' => 'world/popular',
+	'world/featured' => 'world/featured',
+	'world/search' => 'world/search',
 
-	'friends/recent' => 'site/friends',
-	'friends/popular' => 'site/friends',
-	'friends/featured' => 'site/friends',
-	'friends/search' => 'site/search',
+	'friends/recent' => 'friends/recent',
+	'friends/popular' => 'friends/popular',
+	'friends/featured' => 'friends/featured',
+	'friends/search' => 'friends/search',
 
 	'post' => 'articles/post_create',
 	'post/create' => 'articles/create',
