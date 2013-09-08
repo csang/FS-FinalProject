@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header>
-		<?= Html::anchor('/', Asset::img('carsignite.png', array('class' => 'logo'))) ?>
+		<?= Html::anchor('world/recent', Asset::img('carsignite.png', array('class' => 'logo'))) ?>
 		<nav>
 			<?= Html::anchor('world/recent', 'World') ?>
 			<?= Html::anchor('friends/recent', 'Friends') ?>
