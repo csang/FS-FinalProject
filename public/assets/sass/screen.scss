@@ -34,17 +34,11 @@ p,li{
 
 h2{
 	font-size: 21px;
-	margin: 20px 0 0 10px;
+	margin: 10px 0 0 10px;
 }
 
 h3{
 	font-size: 14px;
-}
-
-.content p{
-	margin: 10px 0 0 10px;
-	width: 280px;
-	height: 95px;
 }
 
 .logo{
@@ -200,6 +194,19 @@ a:hover{
 	border: solid 1px $lBlack;
 	margin: 0 0 0;
 	padding: 0 0 0;
+
+	p{
+		margin: 15px 0 0 10px;
+		width: 280px;
+		height: 95px;
+	}
+
+	.timestamp{
+		color: #aaaaaa;
+		font-size: 10px;
+		margin: 0 0 0 10px;
+		height: 10px;
+	}
 }
 
 .postImgMask{
@@ -218,7 +225,7 @@ a:hover{
 
 .postUserInfo{
 	position: relative;
-	bottom: -10px;
+	bottom: -5px;
 	clear: both;
 }
 
@@ -259,7 +266,7 @@ a:hover{
 	width: 300px;
 	height: 30px;
 	text-align: right;
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.7);
 	clear: both;
 
 	p{
@@ -512,6 +519,52 @@ input.submit:active{
 	input.file{
 		border: none;
 		color: $dWhite;
+	}
+
+	.addedCarForm{
+
+		.selectCar{
+			margin: 2px 0 15px;
+			width: 206px;
+			height: 26px;
+			border: solid 2px $blue;
+			background-color: $white;
+		}
+
+		.addCarBtn{
+			margin: 0 0 0 10px;
+			width: 50px;
+			height: 25px;
+			color: $dWhite;
+			border: solid 1px $dWhite;
+			background-color: $blue;
+		}
+
+		.addCarBtn:hover{
+			color: $blue;
+			border: solid 1px $blue;
+			background-color: $dWhite;
+		}
+
+	}
+
+	.addCarForm{
+		display: none;
+
+		.hideCarFormBtn{
+			margin: 0 0 0 10px;
+			width: 50px;
+			height: 25px;
+			color: $dWhite;
+			border: solid 1px $dWhite;
+			background-color: $blue;
+		}
+
+		.hideCarFormBtn:hover{
+			color: $blue;
+			border: solid 1px $blue;
+			background-color: $dWhite;
+		}
 	}
 }
 

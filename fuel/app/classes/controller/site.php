@@ -2,14 +2,6 @@
 
 class Controller_Site extends Controller_App
 {
-
-// Home/World: 		carsignite.com/
-//					carsignite.com/popular
-//					carsignite.com/featured
-//					carsignite.com/cars
-
-	
-
 	public function get_friends()
 	{
 		$this->template->sub_nav 		= View::forge('nav/filters');

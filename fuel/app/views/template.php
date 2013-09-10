@@ -12,8 +12,16 @@
 	<header>
 		<?= Html::anchor('world/recent', Asset::img('carsignite.png', array('class' => 'logo'))) ?>
 		<nav>
-			<?= Html::anchor('world/recent', 'World') ?>
-			<?= Html::anchor('friends/recent', 'Friends') ?>
+			<? if(Uri::segment(1) == 'world'){
+				echo Html::anchor('world/recent', 'World', array('class'=> 'active'));
+			}else{
+				echo Html::anchor('world/recent', 'World');
+			} ?>
+			<? if(Uri::segment(1) == 'friends'){
+				echo Html::anchor('friends/recent', 'Friends', array('class'=> 'active'));
+			}else{
+				echo Html::anchor('friends/recent', 'Friends');
+			} ?>
 		</nav>
 
 		<?= isset($user_nav) ? $user_nav : null ?>
@@ -37,5 +45,7 @@
 			<p><?= Html::anchor('extra/about_us', 'About Us') ?> | <?= Html::anchor('extra/help', 'Help') ?> | <?= Html::anchor('extra/contact_us', 'Contact Us') ?></p>
 		</div>
 	</footer>
+	<?= Asset::js('jquery-1.10.2.min.js') ?>
+	<?= Asset::js('main.js') ?>
 </body>
 </html>

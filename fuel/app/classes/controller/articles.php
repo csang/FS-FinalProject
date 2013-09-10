@@ -24,11 +24,12 @@ class Controller_Articles extends Controller_App
 
 	public function post_create()
 	{
-		$car 	 = explode(":", Input::post('car'));
+		$car 	 = Input::post('car');
 
-		$make	 =	$car[0];
-		$model	 =	$car[1];
-		$year	 =	$car[2];
+		$make	 = Input::post('make');
+		$model	 = Input::post('model');
+		$trim	 = Input::post('trim');
+		$year	 = Input::post('year');
 
 		$title 	 = Input::post('title');
 		$mods 	 = Input::post('mods');
@@ -52,21 +53,61 @@ class Controller_Articles extends Controller_App
 
 		    // Image::load(DOCROOT.'assets/img/post_images/'.$avatar)->preset('test');
 		}
-
-		$search_car = Model_Car::find_by('user_id', $this->user->id);
-		$search_car_count = 0;
-
-		foreach ($search_car as $search)
+		
+		if($car == 'NULL')
 		{
-			if($search->make->name 	 == $make &&
-				$search->model->name == $model &&
-				$search->year 		 == $year)
-			{
-				$car_id = $search->id;
+			$search_make = Model_Vehicle_Make::find_by('name', $make);
+			$search_model = Model_Vehicle_Model::find_by('name', $model);
+
+			foreach ($search_make as $make_id) {
+				$make_id = $make_id['id'];
+			}
+
+			foreach ($search_model as $model_id) {
+				$model_id = $model_id['id'];
+			}
+
+			if($search_make && $search_model){
+				
+				$add_car = Model_Car::forge()->set(array(
+					'user_id'	 => $this->user->id,
+					'make_id'    => $make_id,
+					'model_id' 	 => $model_id,
+					'trim'		 => $trim,
+					'year' 	 	 => $year,
+					'image' 	 => $image,
+					'created_at' => time(),
+				));
+
+				$result = $add_car->save();
 
 				$post = Model_Article::forge()->set(array(
 					'user_id'	 => $this->user->id,
-					'car_id'     => $car_id,
+					'car_id'     => $add_car->id,
+					'mods' 		 => $mods,
+					'title' 	 => $title,
+					'content' 	 => $content,
+					'images' 	 => $image,
+					'likes'		 => 0,
+					'created_at' => time(),
+				));
+
+				$result = $post->save();
+
+				Response::redirect('world/recent');
+
+				//var_dump('no match, Add car to user\'s car list if such car exists. If it doesn\'t exist, take user back to the post creation form');	
+			}
+		}
+		else
+		{
+			$search_car = Model_Car::find_by('id', $car);
+
+			if($search_car)
+			{
+				$post = Model_Article::forge()->set(array(
+					'user_id'	 => $this->user->id,
+					'car_id'     => $car,
 					'mods' 		 => $mods,
 					'title' 	 => $title,
 					'content' 	 => $content,
@@ -77,46 +118,6 @@ class Controller_Articles extends Controller_App
 				$result = $post->save();
 
 				Response::redirect('world/recent');
-			}
-			else
-			{
-				$search_car_count += 1;
-
-				if(count($search_car) == $search_car_count){
-					
-					$search_make = Model_Vehicle_Make::find_by('name', $make);
-					$search_model = Model_Vehicle_Model::find_by('name', $model);
-
-					if($search_make && $search_model){
-						
-						$add_car = Model_Car::forge()->set(array(
-							'user_id'	 => $this->user->id,
-							'make_id'    => $search_make[1]['id'],
-							'model_id' 	 => $search_model[1]['id'],
-							'year' 	 	 => $year,
-							'image' 	 => $image,
-							'created_at' => time(),
-						));
-
-						$result = $add_car->save();
-
-						$post = Model_Article::forge()->set(array(
-							'user_id'	 => $this->user->id,
-							'car_id'     => $add_car->id,
-							'mods' 		 => $mods,
-							'title' 	 => $title,
-							'content' 	 => $content,
-							'images' 	 => $image,
-							'created_at' => time(),
-						));
-
-						$result = $post->save();
-
-						Response::redirect('world/recent');
-					}
-
-					//var_dump('no match, Add car to user\'s car list if such car exists. If it doesn\'t exist, take user back to the post creation form');	
-				}
 			}
 		}
 	}
