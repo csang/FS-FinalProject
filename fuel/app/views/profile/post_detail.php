@@ -1,21 +1,29 @@
 		<div class="postDetail">
 			<div class="postDImgMask">
-				<?= Asset::img('poster.jpg', array('class' => 'postDImg')) ?>
+				<?= Asset::img("post_images/".$article->images, array('class' => 'postDImg')) ?>
 			</div>
 			<div class="contentDetail">
-				<span class="dLikeNum"><p>20</p><?= Asset::img('icons/tick.png') ?></span>
-				<h2>Title</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+				<div class="dLikeNum">
+					<?= Html::anchor('car/view.php', $article->car->make->name . " " . $article->car->model->name, array('class'=>'postCar')) ?>
+					<?= Asset::img('icons/tick.png') ?><p class="likes"><?= $article->likes ?></p>
+				</div>
+				<h2><?= $article->title ?></h2>
+				<p class="timestamp"><?= date("F j, g:i a", $article->created_at) ?></p>
+				<p><?= $article->content ?></p>
 				<div class="postDUserInfo">
 					<div class="postAvatarMask">
-						<?= Html::anchor('user/profile.php', Asset::img('avatar.jpg', array('class' => 'postAvatar'))) ?>
+						<?= Html::anchor($article->user->profile_url(), Asset::img($article->user->avatar_url(), array('class' => 'postAvatar'))) ?>
 					</div>
-					<a href="<?= Uri::create('car/view') ?>"><h3 class="postCar">Honda Accord, 2008</h3></a>
+					<?= Html::anchor($article->user->profile_url(), $article->user->username, array('class'=>'postUser')) ?>
 				</div>
 			</div>
 			<div class="postButtons">
-				<button type="button">Like</button>
-				<button type="button">Flag</button>
-				<?= Html::anchor('articles/post_edit.php', 'Edit', array('class'=>'editBtn button')) ?>
+				<button type="button" class="likeBtn">Like</button>
+				<button type="button" class="flagBtn">Flag</button>
+				<? if($user->id == $article->user->id){ ?>
+				<?= Html::anchor($article->user->username.'/article/'.$article->id.'/edit', 'Edit', array('class'=>'editBtn button')) ?>
+				<? } ?>
 			</div>
+			<span class="user_id"><?= $user->id ?></span>
+			<span class="article_id"><?= $article->id ?></span>
 		</div>

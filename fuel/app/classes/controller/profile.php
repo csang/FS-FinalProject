@@ -37,9 +37,24 @@ class Controller_Profile extends Controller_App
 
 	}
 
-	public function get_article()
+	public function get_article($username, $article_id)
 	{
-		$this->template->body   = View::forge('profile/post_detail');
+		$article = Model_Article::query()->where('id', $article_id)->get_one();
+
+		$this->template->body   = View::forge('profile/post_detail', array(
+			'article' => $article,
+		));
+	}
+
+	public function get_article_edit($username, $article_id)
+	{
+		$article = Model_Article::query()->where('id', $article_id)->get_one();
+		$user = $this->user;
+
+		$this->template->body = View::forge('profile/post_edit', array(
+			'article' => $article,
+			'user' => $user,
+		));
 	}
  
 	public function get_followers()

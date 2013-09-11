@@ -4,12 +4,6 @@
 				
 				<div class="addedCarForm">
 					<p>Car:</p>
-					<!-- <input type="text" list="cars" placeholder="Make:Model:Year" name="car">
-					<datalist id="cars">
-						<? /*foreach ($cars as $car) { ?>
-							<option value="<?= $car->make() . ":" . $car->model() . ":" . $car->year ?>">
-						<? } */?>
-					</datalist> -->
 					<select class="selectCar" name="car">
 						<option value="NULL">Select your car</option>
 						<? foreach ($cars as $car) { ?>

@@ -1,6 +1,6 @@
 		<div class="feed">
 			<?php if (isset($articles)){ foreach($articles as $article){ ?>	
-			<a href="<?= Uri::create('post_detail') ?>"><div class="post">
+			<a href="<?= Uri::create($article->user->username.'/article/'.$article->id) ?>"><div class="post">
 				<div class="postImgMask">
 					<?= Asset::img("post_images/".$article->images, array('class' => 'articleImg')) ?>
 				</div>

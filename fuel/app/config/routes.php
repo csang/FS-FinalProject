@@ -31,6 +31,7 @@ return array(
 	'(:segment)/followers'  => 'profile/followers/$1',
 
 	'(:segment)/article/(:segment)'  => 'profile/article/$1/$2',
+	'(:segment)/article/(:segment)/edit'  => 'profile/article_edit/$1/$2',
 	'(:segment)/(:any)' => 'car/view/$1/$2',
 	'(:segment)'  => 'profile/view/$1',
 );

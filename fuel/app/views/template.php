@@ -46,6 +46,7 @@
 		</div>
 	</footer>
 	<?= Asset::js('jquery-1.10.2.min.js') ?>
+	<?= Asset::js('lib.js') ?>
 	<?= Asset::js('main.js') ?>
 </body>
 </html>

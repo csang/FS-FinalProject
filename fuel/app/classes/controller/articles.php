@@ -17,11 +17,6 @@ class Controller_Articles extends Controller_App
 		));
 	}
 
-	public function get_post_edit()
-	{
-		$this->template->body = View::forge('articles/post_edit');
-	}
-
 	public function post_create()
 	{
 		$car 	 = Input::post('car');

@@ -27,6 +27,11 @@ h1,h2,h3,h4,h5,h6{
 	color: $dWhite;
 }
 
+button{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
 p,li{
 	font-size: 14px;
 	color: $dWhite;
@@ -270,7 +275,8 @@ a:hover{
 	clear: both;
 
 	p{
-		width: 35px;
+		width: 50px;
+		height: 25px;
 		padding: 3px 0 0 0;
 		margin: 0;
 		font-size: 18px;
@@ -635,6 +641,23 @@ input.submit:active{
 				float: right;
 				width: 330px;
 			}
+
+			h2{
+				margin: 20px 0 0 10px;
+			}
+
+			.followBtn{
+				margin: 15px 0 0 20px;
+				width: 100px;
+				height: 40px;
+				background-color: $black;
+				color: $white;
+				border: solid 1px $gray;
+			}
+
+			.followBtn:hover{
+				color: $blue;
+			}
 		}
 
 		.hLine{
@@ -784,6 +807,12 @@ input.submit:active{
 			height: 29px;
 		}
 
+		.liked{
+			color: #eeeeee;
+			background-color: #1193ff;
+			cursor: none;
+		}
+
 		button:hover, .button:hover{
 			color: $blue;
 		}
@@ -799,8 +828,8 @@ input.submit:active{
 		margin: 0 0 0;
 		padding: 0 0 0;
 
-		p{
-			margin: 10px;
+		p:not(.postCar){
+			margin: 0 0 20px 10px;
 			width: 600px;
 		}
 
@@ -811,27 +840,37 @@ input.submit:active{
 			width: 80%;
 			height: 30px;
 			text-align: right;
-			background-color: rgba(0,0,0,.5);
-			clear: right;
+			background-color: rgba(0,0,0,.7);
+			clear: both;
 
-			p{
+			p:not(.postCar){
+				width: 100px;
 				padding: 3px 0;
 				margin: 0;
 				font-size: 18px;
-				width: 95%;
-				float: left;
+				float: right;
 			}
 
 			img{
-				float: left;
+				float: right;
 				width: 20px;
 				margin: 5px;
 			}
 		}
 
+		.timestamp{
+			color: #aaaaaa;
+			font-size: 12px;
+			height: 10px;
+		}
+
 		.postDUserInfo{
 			position: relative;
 			bottom: 10px;
+
+			.postUser{
+				margin: 25px 0 0 10px;
+			}
 		}
 	}
 }
@@ -879,6 +918,11 @@ input.submit:active{
 
 .list{
 	margin: 15px auto 0;
+}
+
+span{
+	display: none;
+	visibility: hidden;
 }
 
 /*--------------------------------------------------------------------------------*/

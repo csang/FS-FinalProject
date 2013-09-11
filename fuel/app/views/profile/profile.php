@@ -10,7 +10,7 @@
 					<div class="left">
 						<div class="names">
 							<h2><?= $user->name ?> (<?= $user->username ?>)</h2>
-							<?= Asset::img('icons/arrow-right.png') ?>
+							<button class="followBtn">Follow</button>
 						</div>
 					</div>
 					<div class="right">
