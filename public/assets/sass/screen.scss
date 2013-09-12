@@ -813,6 +813,10 @@ input.submit:active{
 			cursor: none;
 		}
 
+		.liked:hover{
+			color: #eeeeee;
+		}
+
 		button:hover, .button:hover{
 			color: $blue;
 		}

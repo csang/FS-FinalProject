@@ -18,7 +18,7 @@
 				</div>
 			</div>
 			<div class="postButtons">
-				<button type="button" class="likeBtn">Like</button>
+				<button type="button" class="<? if($liked){ ?>liked<? }else{ ?>likeBtn<? } ?>"><? if($liked){ ?>Liked<? }else{ ?>Like<? } ?></button>
 				<button type="button" class="flagBtn">Flag</button>
 				<? if($user->id == $article->user->id){ ?>
 				<?= Html::anchor($article->user->username.'/article/'.$article->id.'/edit', 'Edit', array('class'=>'editBtn button')) ?>
