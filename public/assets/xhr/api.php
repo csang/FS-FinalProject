@@ -15,7 +15,25 @@ function like($user_id, $article_id, $total_likes){
 
 	$sql2 = "UPDATE articles 
 			SET likes = :total_likes
-			WHERE id = :article_id";
+			WHERE id = :article_id;";
+	
+	$s = $db->prepare($sql);
+	$s->execute(array(":user_id" => $user_id, ":article_id" => $article_id));
+
+	$s2 = $db->prepare($sql2);
+	$s2->execute(array(":total_likes" => $total_likes, ":article_id" => $article_id));
+}
+
+function dislike($user_id, $article_id, $total_likes){
+
+	$db = new PDO("mysql:hostname=localhost;port=80;dbname=carsignite", "root", "root");
+	
+	$sql = "DELETE FROM likes
+			WHERE user_id = :user_id AND article_id = :article_id;";
+
+	$sql2 = "UPDATE articles 
+			SET likes = :total_likes
+			WHERE id = :article_id;";
 	
 	$s = $db->prepare($sql);
 	$s->execute(array(":user_id" => $user_id, ":article_id" => $article_id));
@@ -58,37 +76,41 @@ if(isset($_GET["action"])){
 
 		$like = like($user_id, $article_id, $total_likes);
 		
-		// $posts = array();
-		
-		// $n = 0;
-		// foreach($postList as $p){
-		// 	$posts[$n] = $p;
-		// 	$n++;
-		// }
-		
-		echo($like);
+		echo(json_encode($like));
 	}
 	
-	// Post Info ------------------------------------------------------------------
+	// Dislike action ------------------------------------------------------------------
 
 	/*
-	Description: Shows one post, the one with the ID you type in the url
+	Description: Dislikes an article
 	
-	Inputs: id
+	Inputs: none
 	
 	URL: 
-	http://localhost:8080/adb/api/api.php?action=postInfo&id=12345
+	http://carsignite.com/public/username/article/id
 	*/
 	
 
-	elseif($_GET["action"] == "postInfo" && isset($_GET["id"])){
-		$postInfo = postInfo((int)$_GET["id"]);
-		
-		if(json_encode($postInfo) != "null"){
-			echo(json_encode($postInfo));
-		}else{
-			echo '{"Error": "Make sure that the id exists"}';	
+	elseif($_GET["action"] == "dislike"){
+
+		$user_id = 0;
+		if(isset($_GET["user_id"])){
+			$user_id = $_GET["user_id"];
 		}
+
+		$article_id = 0;
+		if(isset($_GET["article_id"])){
+			$article_id = $_GET["article_id"];
+		}
+
+		$total_likes = 0;
+		if(isset($_GET["total_likes"])){
+			$total_likes = $_GET["total_likes"];
+		}
+
+		$dislike = dislike($user_id, $article_id, $total_likes);
+		
+		echo(json_encode($dislike));
 	}
 
 	// Post Add ------------------------------------------------------------------

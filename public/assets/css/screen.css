@@ -215,7 +215,7 @@ a:hover {
   background-color: #111111;
   float: left;
   margin: 0 15px 15px 0;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 /* line 197, ../sass/screen.scss */
@@ -869,7 +869,7 @@ input.submit:active {
 .postDetail .postButtons .liked {
   color: #eeeeee;
   background-color: #1193ff;
-  cursor: none;
+  cursor: pointer;
 }
 /* line 816, ../sass/screen.scss */
 .postDetail .postButtons .liked:hover {

@@ -191,7 +191,7 @@ a:hover{
 	background-color: $lBlack;
 	float: left;
 	margin: 0 15px 15px 0;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 
 .content{
@@ -810,7 +810,7 @@ input.submit:active{
 		.liked{
 			color: #eeeeee;
 			background-color: #1193ff;
-			cursor: none;
+			cursor: pointer;
 		}
 
 		.liked:hover{

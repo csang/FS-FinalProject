@@ -1,14 +1,13 @@
 (function(){
 
-	var postBox = 		$(".postBox"),
+	var postBox = 			$(".postBox"),
 		addCarBtn = 		$(".addCarBtn"),
 		hideCarFormBtn = 	$(".hideCarFormBtn"),
 		addedCarForm = 		$(".addedCarForm"),
 		addCarForm = 		$(".addCarForm"),
 		selectCar = 		$(".selectCar"),
 		selectedCar = 		"NULL",
-		likeBtn =			$(".likeBtn"),
-		liked = 			false;
+		likeBtn =			$(".likeBtn");
 
 	addCarBtn.click(function(){
 		addedCarForm.css("display","none");
@@ -27,25 +26,39 @@
 
 	likeBtn.click(function(){
 
-		if(!liked){
-			var likeNum = $(".likes"),
-				user_id = $(".user_id"),
-				article_id = $(".article_id")
-				total_likes = 0;
+		var likeNum = $(".likes"),
+			user_id = $(".user_id"),
+			article_id = $(".article_id")
+			total_likes = 0;
 
-			likeNum.html(parseInt(likeNum.html()) + 1);
+		if(likeBtn.hasClass("liked")){
 
 			total_likes = parseInt(likeNum.html());
 
-			likeBtn.css({
-				"color" : "#eeeeee",
-				"background-color" : "#1193ff",
-				"cursor" : "none"
-			});
+			lib.ajax({
+				url: "../../assets/xhr/api.php",
+				type: "post",
+				data: {
+					action: "dislike",
+					user_id: user_id.html(),
+					article_id: article_id.html(),
+					total_likes: total_likes - 1
+				},
+				success: function(result){
+					console.log(result);
 
-			likeBtn.html("Liked");
+					likeNum.html(parseInt(likeNum.html()) - 1);
+					likeBtn.html("Like");
+					likeBtn.removeClass("liked");
+				},
+				error: function(result){
+					console.log("There was an error!");
+				}
+			})
 
-			liked = true;
+		}else{
+
+			total_likes = parseInt(likeNum.html());
 
 			lib.ajax({
 				url: "../../assets/xhr/api.php",
@@ -54,10 +67,14 @@
 					action: "like",
 					user_id: user_id.html(),
 					article_id: article_id.html(),
-					total_likes: total_likes
+					total_likes: total_likes + 1
 				},
 				success: function(result){
 					console.log(result);
+
+					likeNum.html(parseInt(likeNum.html()) + 1);
+					likeBtn.html("Liked");
+					likeBtn.addClass("liked");
 				},
 				error: function(result){
 					console.log("There was an error!");
@@ -65,5 +82,4 @@
 			})
 		}
 	})
-
 })()
