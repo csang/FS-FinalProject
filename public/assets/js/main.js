@@ -7,7 +7,8 @@
 		addCarForm = 		$(".addCarForm"),
 		selectCar = 		$(".selectCar"),
 		selectedCar = 		"NULL",
-		likeBtn =			$(".likeBtn");
+		likeBtn =			$(".likeBtn"),
+		followBtn =			$(".followBtn");
 
 	addCarBtn.click(function(){
 		addedCarForm.css("display","none");
@@ -28,7 +29,7 @@
 
 		var likeNum = $(".likes"),
 			user_id = $(".user_id"),
-			article_id = $(".article_id")
+			article_id = $(".article_id"),
 			total_likes = 0;
 
 		if(likeBtn.hasClass("liked")){
@@ -80,6 +81,61 @@
 					console.log("There was an error!");
 				}
 			})
+		}
+	})
+
+	followBtn.click(function(){
+
+		var user_id = $(".user_id").html(),
+			follow_id = $(".follow_id").html();
+
+		if(followBtn.hasClass("following")){
+
+			// lib.ajax({
+			// 	url: "../../assets/xhr/api.php",
+			// 	type: "post",
+			// 	data: {
+			// 		action: "unfollow",
+			// 		user_id: user_id,
+			// 		follow_id: follow_id
+			// 	},
+			// 	success: function(result){
+			// 		console.log(result);
+
+			// 		followBtn.removeClass("following");
+			// 		followBtn.html("Follow");
+			// 	},
+			// 	error: function(result){
+			// 		console.log("There was an error!", result);
+			// 	}
+			// })
+
+			followBtn.removeClass("following");
+			followBtn.html("Follow");
+
+		}else{
+
+			// lib.ajax({
+			// 	url: "../../assets/xhr/api.php",
+			// 	type: "post",
+			// 	data: {
+			// 		action: "follow",
+			// 		user_id: parseInt(user_id),
+			// 		follow_id: parseInt(follow_id)
+			// 	},
+			// 	success: function(result){
+			// 		console.log(result);
+
+			// 		followBtn.addClass("following");
+			// 		followBtn.html("Following");
+			// 	},
+			// 	error: function(result){
+			// 		console.log("There was an error!", result);
+			// 	}
+			// })
+
+			followBtn.addClass("following");
+			followBtn.html("Following");
 		}
 	})
 })()

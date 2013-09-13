@@ -42,6 +42,28 @@ function dislike($user_id, $article_id, $total_likes){
 	$s2->execute(array(":total_likes" => $total_likes, ":article_id" => $article_id));
 }
 
+function follow($user_id, $follow_id){
+
+	$db = new PDO("mysql:hostname=localhost;port=80;dbname=carsignite", "root", "root");
+	
+	$sql = "INSERT INTO follows (follower, follow)
+			VALUES (:user_id, :follow_id);";
+	
+	$s = $db->prepare($sql);
+	$s->execute(array(":user_id" => $user_id, ":follow_id" => $follow_id));
+}
+
+function unfollow($user_id, $follow_id){
+
+	$db = new PDO("mysql:hostname=localhost;port=80;dbname=carsignite", "root", "root");
+	
+	$sql = "DELETE FROM follows
+			WHERE follower = :user_id AND follow = :follow_id;";
+	
+	$s = $db->prepare($sql);
+	$s->execute(array(":user_id" => $user_id, ":follow_id" => $follow_id));
+}
+
 if(isset($_GET["action"])){
 	
 // Actions ----------------------------------------------------------------------------
@@ -124,34 +146,21 @@ if(isset($_GET["action"])){
 	http://localhost:8080/adb/api/api.php?action=postAdd&author=Author&title=Title&text=Text&category=database
 	*/
 
-	elseif($_GET["action"] == "postAdd" && 
-		isset($_GET["author"]) && 
-		isset($_GET["title"]) && 
-		isset($_GET["text"]) && 
-		isset($_GET["category"])){
-		
-		$author = $_GET["author"];
-		$title = $_GET["title"];
-		$text = $_GET["text"];
-		$category = explode(",",$_GET["category"]);
-		
-		$postAdd = postAdd($author,$title,$text,$category);
-		
-		$postList = postList();
-		
-		if(json_encode($postList) != "null"){
-			$posts = array();
-			
-			$n = 0;
-			foreach($postList as $p){
-				$posts[$n] = $p;
-				$n++;
-			}
-			echo(json_encode($posts));
-			
-		}else{
-			echo '{"Error": "Make sure you are using all the inputs (author, title, text and category)"}';	
+	elseif($_GET["action"] == "follow"){
+
+		$user_id = 0;
+		if(isset($_GET["user_id"])){
+			$user_id = $_GET["user_id"];
 		}
+
+		$follow_id = 0;
+		if(isset($_GET["follow_id"])){
+			$follow_id = $_GET["follow_id"];
+		}
+
+		$follow = follow($user_id, $follow_id);
+		
+		echo(json_encode($follow));
 	}
 	
 	// Post Comment Add ------------------------------------------------------------------
@@ -165,126 +174,24 @@ if(isset($_GET["action"])){
 	http://localhost:8080/adb/api/api.php?action=postCommentAdd&id=12345&author=Author&text=Comment
 	*/
 	
-	elseif($_GET["action"] == "postCommentAdd" && 
-		isset($_GET["id"]) && 
-		isset($_GET["author"]) && 
-		isset($_GET["text"])){
-				
-		$id = (int)$_GET["id"];
-		$author = $_GET["author"];
-		$text = $_GET["text"];
-				
-		$postAdd = postCommentAdd($id,$author,$text);
-		
-		$postList = postList();
-		$posts = array();
-		
-		$n = 0;
-		foreach($postList as $p){
-			$posts[$n] = $p;
-			$n++;
-		}
-		
-		echo(json_encode($posts));
-	}
-	
-	// Post Update ------------------------------------------------------------------
-	
-	/*
-	Description: Updates the post selected with ID
-	
-	Inputs: id(required), author, categoory, text and title
-	
-	URL: 
-	http://localhost:8080/adb/api/api.php?action=postUpdate&id=12345&text=Text&category=database,vader,post&author=Darth%20Vader&title=Title
-	*/
-	
-	elseif($_GET["action"] == "postUpdate" && 
-		isset($_GET["id"]) && 
-		isset($_GET["author"]) &&
-		isset($_GET["category"]) &&
-		isset($_GET["text"]) &&
-		isset($_GET["title"])){
-			
-		$id = (int)$_GET["id"];
-		
-		$post = postInfo($id);
-		
-		if($post){
-															
-			$id = $post["_id"];
-			
-			$author = $post["author"];
-			if(isset($_GET["author"])){
-				$author = $_GET["author"];
-			}
-									
-			$category = "";
-			if(isset($_GET["category"])){
-				$category = explode(",",$_GET["category"]);
-			}
-			
-			$text = $post["text"];
-			if(isset($_GET["text"])){
-				$text = $_GET["text"];
-			}
-			
-			$title = $post["title"];
-			if(isset($_GET["title"])){
-				$title = $_GET["title"];
-			}
-										
-			if($post["author"] != $author ||
-				$post["category"] != $category ||
-				$post["text"] != $text ||
-				$post["title"] != $title){
-												
-				$postUpdate = postUpdate($id,$author,$category,$text,$title);
-				
-			}
-			
-			$postList = postList();
-			$posts = array();
-		
-			$n = 0;
-			foreach($postList as $p){
-				$posts[$n] = $p;
-				$n++;
-			}
-			
-			echo(json_encode($posts));
-		}
-	}
-	
-	// Category List ------------------------------------------------------------------
-	
-	/*
-	Description: Shows all the categories posted
-	
-	Inputs: none
-	
-	URL: 
-	http://localhost:8080/adb/api/api.php?action=categoryList
-	*/
+	elseif($_GET["action"] == "unfollow"){
 
-	elseif($_GET["action"] == "categoryList"){
-		$postList = postList();
-		
-		$posts = array();
-		$categories = array();
-		
-		$n = 0;
-		foreach($postList as $p){
-			$posts[$n] = $p["category"];
-			$result = call_user_func_array("array_merge", $posts);
-			$n++;
+		$user_id = 0;
+		if(isset($_GET["user_id"])){
+			$user_id = $_GET["user_id"];
 		}
+
+		$follow_id = 0;
+		if(isset($_GET["follow_id"])){
+			$follow_id = $_GET["follow_id"];
+		}
+
+		$unfollow = unfollow($user_id, $follow_id);
 		
-		$categoryList = array_unique($result);
-		
-		echo(json_encode($categoryList));
-		
-	}else{
+		echo(json_encode($unfollow));
+	}
+	
+	else{
 		
 	// Error Messages ----------------------------------------------------------------------
 		

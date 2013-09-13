@@ -27,4 +27,14 @@ class Model_Follow extends \Orm\Model
 			'cascade_delete' => false,
 		)
 	);
+
+	public static function total_followings($id)
+	{
+		return static::query()->where('follower', $id)->count();
+	}
+
+	public static function total_followers($id)
+	{
+		return static::query()->where('follow', $id)->count();
+	}
 }

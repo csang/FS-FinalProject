@@ -50,6 +50,11 @@ class Model_Car extends \Orm\Model
 		)
 	);
 
+	public static function total_cars($id)
+	{
+		return static::query()->where('user_id', $id)->count();
+	}
+
 	public function make()
 	{
 		return $this->make->name;

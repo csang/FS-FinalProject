@@ -1,5 +1,4 @@
 		<div class="postBox">
-			<!-- <form action="" method="post" enctype="multipart/form-data"> -->
 			<?= Form::open(array('action' => 'post/create', 'enctype' => 'multipart/form-data')); ?>
 				
 				<div class="addedCarForm">

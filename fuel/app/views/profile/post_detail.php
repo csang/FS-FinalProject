@@ -24,9 +24,8 @@
 				<?= Html::anchor($article->user->username.'/article/'.$article->id.'/edit', 'Edit', array('class'=>'editBtn button')) ?>
 				<? } ?>
 			</div>
-
-			<? if(isset($user)){ ?>
-			<span class="user_id"><?= $user->id ?></span>
-			<? } ?>
-			<span class="article_id"><?= $article->id ?></span>
 		</div>
+		<? if(isset($user)){ ?>
+		<span class="user_id"><?= $user->id ?></span>
+		<? } ?>
+		<span class="article_id"><?= $article->id ?></span>

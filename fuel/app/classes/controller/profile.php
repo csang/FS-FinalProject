@@ -13,23 +13,38 @@ class Controller_Profile extends Controller_App
 
 	public function get_view($username)
 	{
-		$user = Model_User::query()->where('username', $username)->get_one();
+		$profile 			= Model_User::query()->where('username', $username)->get_one();
+		$articles 			= Model_Article::query()->where('user_id', $profile->id)->get();
+		$total_cars 		= Model_Car::total_cars($profile->id);
+		$total_followings 	= Model_Follow::total_followings($profile->id);
+		$total_followers 	= Model_Follow::total_followers($profile->id);
+		$following 			= "";
 
-		if (! isset($user))
+		if(isset($this->user)){
+			$following = Model_Follow::query()->where(array('follower'=> $this->user->id, 'follow'=> $profile->id))->get_one();			
+		}
+
+		if (! isset($profile))
 		{
 			throw new HttpNotFoundException;
 		}
 
 		$this->template->detail = View::forge('profile/profile', array(
-			'user' => $user,
+			'profile'			=> $profile,
+			'following'			=> $following,
+			'total_cars'		=> $total_cars,
+			'total_followings'	=> $total_followings,
+			'total_followers'	=> $total_followers,
 		));
 
-		$this->template->body 	= View::forge('profile/post_list');
+		$this->template->body 	= View::forge('profile/post_list', array(
+			'articles' => $articles,
+		));
 	}
 
 	public function get_cars($username)
 	{
-		$this->template->body   = View::forge('profile/car_list');
+		$this->template->body = View::forge('profile/car_list');
 	}
 
 	public function get_friends()
@@ -58,8 +73,8 @@ class Controller_Profile extends Controller_App
 		$user = $this->user;
 
 		$this->template->body = View::forge('profile/post_edit', array(
-			'article' => $article,
-			'user' => $user,
+			'article' 	=> $article,
+			'user'		=> $user,
 		));
 	}
  

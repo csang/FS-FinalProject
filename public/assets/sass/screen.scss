@@ -655,8 +655,19 @@ input.submit:active{
 				border: solid 1px $gray;
 			}
 
+			.following{
+				background-color: $blue;
+				color: $white;
+				border: solid 1px $blue;
+			}
+
 			.followBtn:hover{
 				color: $blue;
+			}
+
+			.following:hover{
+				color: $white;
+				border: solid 1px $white;
 			}
 		}
 
