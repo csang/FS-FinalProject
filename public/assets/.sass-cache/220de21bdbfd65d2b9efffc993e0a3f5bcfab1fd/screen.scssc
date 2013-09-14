@@ -1,7 +1,7 @@
 3.2.10 (Media Mark)
-76acbc58872723c54effac6e0e975ddef56347f8
+0b29c8c17d9fdede31e81dec6cfb621030e8d3c6
 o:Sass::Tree::RootNode
-:@template"07/* Welcome to Compass.
+:@template"27/* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
@@ -499,7 +499,7 @@ input.submit:active{
 	clear: both;
 
 	form{
-		width: 290px;
+		width: 585px;
 		float: left;
 	}
 
@@ -542,7 +542,7 @@ input.submit:active{
 
 		.addCarBtn{
 			margin: 0 0 0 10px;
-			width: 50px;
+			width: 150px;
 			height: 25px;
 			color: $dWhite;
 			border: solid 1px $dWhite;
@@ -562,7 +562,7 @@ input.submit:active{
 
 		.hideCarFormBtn{
 			margin: 0 0 0 10px;
-			width: 50px;
+			width: 150px;
 			height: 25px;
 			color: $dWhite;
 			border: solid 1px $dWhite;
@@ -642,7 +642,7 @@ input.submit:active{
 
 			.right{
 				float: right;
-				width: 330px;
+				width: 350px;
 			}
 
 			h2{
@@ -1432,7 +1432,7 @@ width;o;;;;"90%;@;;;@;i ;	[ ;iÍo;;["text-align;o;;;;
 670px;@;;;@;i ;	[ ;iÏo;;["background-color;o;-	;"lBlack;@;iÌ;."lBlack;;;@;i ;	[ ;iÌo;;["margin;o;;;;"30px auto 30px;@;;;@;i ;	[ ;iÓo;;["padding;o;;;;"	20px;@;;;@;i ;	[ ;iÔo;;["
 clear;o;;;;"	both;@;;;@;i ;	[ ;io;;T;@;i ;	[o;;["
 width;o;;;;"
-290px;@;;;@;i ;	[ ;iÛo;;["
+585px;@;;;@;i ;	[ ;iÛo;;["
 float;o;;;;"	left;@;;;@;i ;	[ ;iÙ;iÚ;["	form;o;;[o;;[o;
 ;[o; 	;!0;["	form;"" ;iÚ;"@ç;#o;$;%{ ;iÚ;&0;"@ç;iÚo;;T;@;i ;	[o;;["margin;o;;;;"0;@;;;@;i ;	[ ;i¯;i˜;["p;o;;[o;;[o;
 ;[o; 	;!0;["p;"" ;i˜;"@£;#o;$;%{ ;i˜;&0;"@£;i˜o;;T;@;i ;	[
@@ -1461,7 +1461,8 @@ solid;@;io;5;i;@;6[ ;i;7["px;8"2pxo;-	;"	blue;@;i;."	bl
 white;@;i;."
 white;;;@;i ;	[ ;i;i;[".selectCar;o;;[o;;[o;
 ;[o;,;["selectCar;"" ;i;"@r;#o;$;%{ ;i;&0;"@r;io;;T;@;i ;	[o;;["margin;o;;;;"0 0 0 10px;@;;;@;i ;	[ ;io;;["
-width;o;;;;"	50px;@;;;@;i ;	[ ;io;;["height;o;;;;"	25px;@;;;@;i ;	[ ;io;;["
+width;o;;;;"
+150px;@;;;@;i ;	[ ;io;;["height;o;;;;"	25px;@;;;@;i ;	[ ;io;;["
 color;o;-	;"dWhite;@;i ;."dWhite;;;@;i ;	[ ;i o;;["border;o;2	;3;4;[o;	;;;"
 solid;@;i!o;5;i;@;6[ ;i!;7["px;8"1pxo;-	;"dWhite;@;i!;."dWhite;@;i!;;;@;i ;	[ ;i!o;;["background-color;o;-	;"	blue;@;i";."	blue;;;@;i ;	[ ;i";i;[".addCarBtn;o;;[o;;[o;
 ;[o;,;["addCarBtn;"" ;i;"@≤;#o;$;%{ ;i;&0;"@≤;io;;T;@;i ;	[o;;["
@@ -1471,7 +1472,8 @@ solid;@;i'o;5;i;@;6[ ;i';7["px;8"1pxo;-	;"	blue;@;i';."	bl
 ;00;["
 hover;;1;"@‡;i%;"@‡;#o;$;%{ ;i%;&0;"@‡;i%;i;[".addedCarForm;o;;[o;;[o;
 ;[o;,;["addedCarForm;"" ;i;"@Ò;#o;$;%{ ;i;&0;"@Ò;io;;T;@;i ;	[o;;["display;o;;;;"	none;@;;;@;i ;	[ ;i.o;;T;@;i ;	[o;;["margin;o;;;;"0 0 0 10px;@;;;@;i ;	[ ;i1o;;["
-width;o;;;;"	50px;@;;;@;i ;	[ ;i2o;;["height;o;;;;"	25px;@;;;@;i ;	[ ;i3o;;["
+width;o;;;;"
+150px;@;;;@;i ;	[ ;i2o;;["height;o;;;;"	25px;@;;;@;i ;	[ ;i3o;;["
 color;o;-	;"dWhite;@;i4;."dWhite;;;@;i ;	[ ;i4o;;["border;o;2	;3;4;[o;	;;;"
 solid;@;i5o;5;i;@;6[ ;i5;7["px;8"1pxo;-	;"dWhite;@;i5;."dWhite;@;i5;;;@;i ;	[ ;i5o;;["background-color;o;-	;"	blue;@;i6;."	blue;;;@;i ;	[ ;i6;i0;[".hideCarFormBtn;o;;[o;;[o;
 ;[o;,;["hideCarFormBtn;"" ;i0;"@9;#o;$;%{ ;i0;&0;"@9;i0o;;T;@;i ;	[o;;["
@@ -1526,7 +1528,7 @@ width;o;;;;"
 float;o;;;;"
 right;@;;;@;i ;	[ ;iÅo;;["
 width;o;;;;"
-330px;@;;;@;i ;	[ ;iÇ;iÄ;[".right;o;;[o;;[o;
+350px;@;;;@;i ;	[ ;iÇ;iÄ;[".right;o;;[o;;[o;
 ;[o;,;["
 right;"" ;iÄ;"@·;#o;$;%{ ;iÄ;&0;"@·;iÄo;;T;@;i ;	[o;;["margin;o;;;;"20px 0 0 10px;@;;;@;i ;	[ ;iÜ;iÖ;["h2;o;;[o;;[o;
 ;[o; 	;!0;["h2;"" ;iÖ;"@˜;#o;$;%{ ;iÖ;&0;"@˜;iÖo;;T;@;i ;	[o;;["margin;o;;;;"15px 0 0 20px;@;;;@;i ;	[ ;iäo;;["

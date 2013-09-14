@@ -9,13 +9,13 @@
 						<option value="<?= $car->id ?>"><?= $car->make() . " " . $car->model() . ", " . $car->year ?></option>
 						<? } ?>
 					</select>
-					<button type="button" class="addCarBtn" value="+ Car">+ Car</button>
+					<button type="button" class="addCarBtn" value="Add New Car">Add New Car</button>
 				</div>
 
 				<div class="addCarForm">
 					<p>Make:</p>
 					<input type="text" placeholder="Make" name="make">
-					<button type="button" class="hideCarFormBtn" value="^ Car">^ Car</button>
+					<button type="button" class="hideCarFormBtn" value="Select Existing Car">Select Existing Car</button>
 					<p>Model:</p>
 					<input type="text" placeholder="Model" name="model">
 					<p>Trim:</p>

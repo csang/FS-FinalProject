@@ -10,7 +10,8 @@
 						<?= Asset::img('icons/tick.png') ?><p><?= $article->likes ?></p>
 					</div>
 					<h2><?= $article->title ?></h2>
-					<p><?= $article->content_short(290) ?></p>
+					<p class="timestamp"><?= date("F j, g:i a", $article->created_at) ?></p>
+					<p><?= $article->content_short(270) ?></p>
 				</div>
 			</div></a>
 			<? }} ?>

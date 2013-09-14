@@ -58,16 +58,16 @@ class Model_Article extends \Orm\Model
 
 	public static function get_recent()
 	{
-		return static::query()->order_by('id','desc')->get();
+		return static::query()->order_by('created_at','desc')->get();
 	}
 
 	public static function get_popular()
 	{
-		return static::query()->order_by('likes','desc')->order_by('id','desc')->get();
+		return static::query()->order_by('likes','desc')->order_by('created_at','desc')->get();
 	}
 
 	public static function get_featured()
 	{
-		return static::query()->order_by('likes','desc')->order_by('id','desc')->get();
+		return static::query()->order_by('likes','desc')->order_by('created_at','desc')->get();
 	}
 }

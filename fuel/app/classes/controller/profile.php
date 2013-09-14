@@ -14,7 +14,7 @@ class Controller_Profile extends Controller_App
 	public function get_view($username)
 	{
 		$profile 			= Model_User::query()->where('username', $username)->get_one();
-		$articles 			= Model_Article::query()->where('user_id', $profile->id)->get();
+		$articles 			= Model_Article::query()->where('user_id', $profile->id)->order_by('created_at', 'desc')->get();
 		$total_cars 		= Model_Car::total_cars($profile->id);
 		$total_followings 	= Model_Follow::total_followings($profile->id);
 		$total_followers 	= Model_Follow::total_followers($profile->id);

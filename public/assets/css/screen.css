@@ -544,7 +544,7 @@ input.submit:active {
 }
 /* line 498, ../sass/screen.scss */
 .postBox form {
-  width: 290px;
+  width: 585px;
   float: left;
 }
 /* line 503, ../sass/screen.scss */
@@ -585,7 +585,7 @@ input.submit:active {
 /* line 540, ../sass/screen.scss */
 .postBox .addedCarForm .addCarBtn {
   margin: 0 0 0 10px;
-  width: 50px;
+  width: 150px;
   height: 25px;
   color: #eeeeee;
   border: solid 1px #eeeeee;
@@ -604,7 +604,7 @@ input.submit:active {
 /* line 560, ../sass/screen.scss */
 .postBox .addCarForm .hideCarFormBtn {
   margin: 0 0 0 10px;
-  width: 50px;
+  width: 150px;
   height: 25px;
   color: #eeeeee;
   border: solid 1px #eeeeee;
@@ -685,7 +685,7 @@ input.submit:active {
 /* line 640, ../sass/screen.scss */
 .userId .top .mainInfo .right, .carId .top .mainInfo .right {
   float: right;
-  width: 330px;
+  width: 350px;
 }
 /* line 645, ../sass/screen.scss */
 .userId .top .mainInfo h2, .carId .top .mainInfo h2 {
