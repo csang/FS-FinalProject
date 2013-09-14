@@ -39,9 +39,10 @@ class Controller_User extends Controller_App
 		if($password == Input::post('password_repeat'))
 		{
 			$user = Model_User::forge()->set(array(
-				'username' => $username,
-				'email'    => $email,
-				'password' => MD5($password),
+				'username'	 => $username,
+				'email'		 => $email,
+				'password'	 => MD5($password),
+				'created_at' => time(),
 			));
 
 			$result = $user->save();
@@ -118,10 +119,11 @@ class Controller_User extends Controller_App
 
 		$user = Model_User::get_by_id($this->user->id);
 
-		$user->name		= $name;
-		$user->avatar 	= $avatar;
-		$user->site   	= $site;
-		$user->bio	 	= $bio;
+		$user->name			= $name;
+		$user->avatar 		= $avatar;
+		$user->site   		= $site;
+		$user->bio	 		= $bio;
+		$user->updated_at 	= time();
 
 		$user->save();
 

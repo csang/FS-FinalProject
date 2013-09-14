@@ -77,9 +77,57 @@ class Controller_Profile extends Controller_App
 			'user'		=> $user,
 		));
 	}
+
+	public function get_article_delete($username, $article_id)
+	{
+		$article = Model_Article::query()->where('id', $article_id)->get_one();
+		$article->delete();
+
+		Response::redirect('world/recent');
+	}
+
+	public function post_article_update($username, $article_id)
+	{
+		$poster = NULL;
+
+		$config = array(
+			'path' 			=> DOCROOT.'assets/img/post_images',
+			'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png'),
+			'randomize' 	=> true,
+			'auto_process'	=> false,
+		);
+
+		Upload::process($config);
+
+		if (Upload::is_valid())
+		{
+		    Upload::save();
+
+		    $poster = Upload::get_files(0)['saved_as'];
+
+		    // Image::load(DOCROOT.'assets/img/post_images/'.$avatar)->preset('test');
+		}
+
+		$article = Model_Article::query()->where('id', $article_id)->get_one();
+
+		$article->title 	 = Input::post('title');
+		$article->content 	 = Input::post('content');
+		
+		if($poster != NULL){
+			$article->images = $poster;
+		}
+		
+		$article->updated_at = time();
+
+		$article->save();
+
+		Response::redirect($article->user->username.'/article/'.$article->id);
+	}
  
 	public function get_followers()
 	{
 		$this->template->body   = View::forge('profile/user_list');
 	}
+
+
 }

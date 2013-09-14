@@ -4,13 +4,13 @@
 		<div class="userId">
 			<div class="top">
 				<div class="idAvatarMask">
-					<?= Asset::img($user->avatar_url(), array('class' => 'idAvatar')) ?>
+					<?= Asset::img($profile->avatar_url(), array('class' => 'idAvatar')) ?>
 				</div>
 				<div class="mainInfo">
 					<div class="left">
 						<div class="names">
 							<h2><?= $profile->name ?> (<?= $profile->username ?>)</h2>
-							<? if($profile->id != $user->id){ ?>
+							<? if(isset($user->id) && $profile->id != $user->id){ ?>
 							<button type="button" class="<? if($following){ ?>followBtn following<? }else{ ?> followBtn <? } ?>"><? if($following){ ?>Following<? }else{ ?> Follow <? } ?></button>
 							<? } ?>
 						</div>

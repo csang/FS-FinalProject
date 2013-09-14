@@ -91,51 +91,45 @@
 
 		if(followBtn.hasClass("following")){
 
-			// lib.ajax({
-			// 	url: "../../assets/xhr/api.php",
-			// 	type: "post",
-			// 	data: {
-			// 		action: "unfollow",
-			// 		user_id: user_id,
-			// 		follow_id: follow_id
-			// 	},
-			// 	success: function(result){
-			// 		console.log(result);
+			lib.ajax({
+				url: "assets/xhr/api.php",
+				type: "post",
+				data: {
+					action: "unfollow",
+					user_id: user_id,
+					follow_id: follow_id
+				},
+				success: function(result){
+					console.log(result);
 
-			// 		followBtn.removeClass("following");
-			// 		followBtn.html("Follow");
-			// 	},
-			// 	error: function(result){
-			// 		console.log("There was an error!", result);
-			// 	}
-			// })
-
-			followBtn.removeClass("following");
-			followBtn.html("Follow");
+					followBtn.removeClass("following");
+					followBtn.html("Follow");
+				},
+				error: function(result){
+					console.log("There was an error!", result);
+				}
+			})
 
 		}else{
 
-			// lib.ajax({
-			// 	url: "../../assets/xhr/api.php",
-			// 	type: "post",
-			// 	data: {
-			// 		action: "follow",
-			// 		user_id: parseInt(user_id),
-			// 		follow_id: parseInt(follow_id)
-			// 	},
-			// 	success: function(result){
-			// 		console.log(result);
+			lib.ajax({
+				url: "assets/xhr/api.php",
+				type: "post",
+				data: {
+					action: "follow",
+					user_id: parseInt(user_id),
+					follow_id: parseInt(follow_id)
+				},
+				success: function(result){
+					console.log(result);
 
-			// 		followBtn.addClass("following");
-			// 		followBtn.html("Following");
-			// 	},
-			// 	error: function(result){
-			// 		console.log("There was an error!", result);
-			// 	}
-			// })
-
-			followBtn.addClass("following");
-			followBtn.html("Following");
+					followBtn.addClass("following");
+					followBtn.html("Following");
+				},
+				error: function(result){
+					console.log("There was an error!", result);
+				}
+			})
 		}
 	})
 })()

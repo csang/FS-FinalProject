@@ -8,13 +8,17 @@ class Controller_Articles extends Controller_App
 
 	public function get_post_create()
 	{
-		$cars = Model_Car::find_by('user_id', $this->user->id);
+		if(isset($this->user->id)){
+			$cars = Model_Car::find_by('user_id', $this->user->id);
 
-		// var_dump($cars[1]->make->name);
+			$this->template->body = View::forge('articles/post_create', array(
+				'cars' => $cars,
+			));
+		}else{
+			Response::redirect('world/recent');
+		}
 
-		$this->template->body = View::forge('articles/post_create', array(
-			'cars' => $cars,
-		));
+		
 	}
 
 	public function post_create()
