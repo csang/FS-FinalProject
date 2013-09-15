@@ -95,4 +95,9 @@ class Model_User extends \Orm\Model
 	{
 		return static::query()->where('id', $id)->get_one();
 	}
+
+	public static function get_user($username)
+	{
+		return static::query()->where('username', $username)->get_one();
+	}
 }

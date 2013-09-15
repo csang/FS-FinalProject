@@ -34,7 +34,7 @@
 				</div>
 				<div class="bio">
 					<p><?= $profile->bio ?></p>
-					<?= Html::anchor('profile/profile.php', Asset::img('icons/down.png')) ?>
+					<?= Asset::img('icons/down.png') ?>
 				</div>
 			</div>
 		</div>

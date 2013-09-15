@@ -6,7 +6,7 @@
 				</div>
 				<div class="content">
 					<div class="likeNum">
-						<?= Html::anchor('car/view.php', $article->car->make->name . " " . $article->car->model->name, array('class'=>'postCar')) ?>
+						<?= Html::anchor($article->user->username.'/car/'.$article->car->make()."/".$article->car->model()."/".$article->car->year, $article->car->make() . " " . $article->car->model(), array('class'=>'postCar')) ?>
 						<?= Asset::img('icons/tick.png') ?><p><?= $article->likes ?></p>
 					</div>
 					<h2><?= $article->title ?></h2>

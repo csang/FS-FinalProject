@@ -8,21 +8,30 @@
 		selectCar = 		$(".selectCar"),
 		selectedCar = 		"NULL",
 		likeBtn =			$(".likeBtn"),
-		followBtn =			$(".followBtn");
+		followBtn =			$(".followBtn"),
+		deleteBtn =			$(".deleteBtn");
+
+	deleteBtn.click(function(){
+		if (confirm('Are you sure you want to delete this article?')) {
+
+		} else {
+		    return false;
+		}
+	})
 
 	addCarBtn.click(function(){
 		addedCarForm.css("display","none");
 		addCarForm.css("display","block");
 		selectedCar = selectCar.val();
 		selectCar.val("NULL");
-		postBox.css("height",845)
+		postBox.css("height",865)
 	});
 
 	hideCarFormBtn.click(function(){
 		addedCarForm.css("display","block");
 		addCarForm.css("display","none");
 		selectCar.val(selectedCar);
-		postBox.css("height",670)
+		postBox.css("height",680)
 	});
 
 	likeBtn.click(function(){

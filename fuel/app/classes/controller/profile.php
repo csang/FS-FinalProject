@@ -52,6 +52,39 @@ class Controller_Profile extends Controller_App
 
 	}
 
+	public function get_car($username, $make, $model, $year){
+		
+		$profile = Model_User::get_user($username);
+		$make = Model_Vehicle_Make::get_make($make);
+		$model = Model_Vehicle_Model::get_model($model);
+
+		$car = Model_Car::query()->where(array(
+			'user_id' => $profile->id,
+			'make_id' => $make->id,
+			'model_id' => $model->id,
+			'year' => $year
+		))->get_one();
+
+		$cars = Model_Car::query()->where(array(
+			'user_id' => $profile->id
+		))->get();
+
+		$articles = Model_Article::query()->where(array(
+			'car_id' => $car->id,
+			'user_id' => $profile->id
+		))->get();
+
+		$this->template->detail = View::forge('car/car_detail', array(
+			'car' => $car,
+			'cars' => $cars,
+			'profile' => $profile,
+		));
+
+		$this->template->body = View::forge('car/car_post_list', array(
+			'articles' => $articles,
+		));
+	}
+
 	public function get_article($username, $article_id)
 	{
 		$article = Model_Article::query()->where('id', $article_id)->get_one();

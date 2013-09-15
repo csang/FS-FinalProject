@@ -23,4 +23,9 @@ class Model_Vehicle_Make extends \Orm\Model
 			'cascade_delete' => false,
 		)
 	);
+
+	public static function get_make($make)
+	{
+		return static::query()->where('name', $make)->get_one();
+	}
 }

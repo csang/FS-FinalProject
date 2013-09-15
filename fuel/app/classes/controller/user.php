@@ -136,5 +136,5 @@ class Controller_User extends Controller_App
 
 		Response::redirect('world/recent');
 
-	}	
+	}
 }

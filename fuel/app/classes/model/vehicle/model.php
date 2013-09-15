@@ -27,4 +27,9 @@ class Model_Vehicle_Model extends \Orm\Model
 			'cascade_delete' => false,
 		)
 	);
+
+	public static function get_model($model)
+	{
+		return static::query()->where('name', $model)->get_one();
+	}
 }
