@@ -1,6 +1,6 @@
 <?php
 
-class Controller_App extends Controller_Template
+class Controller_App extends Controller_Base
 {
 	public function before()
 	{
@@ -15,15 +15,6 @@ class Controller_App extends Controller_Template
 	{
 		$user_id    = Session::get('user');
 		$this->user = Model_User::get_by_id($user_id);
-
-		if($this->user)
-		{
-			$this->template->user_nav = View::forge('user/user');
-		}
-		else
-		{
-			$this->template->user_nav = View::forge('user/guest');
-		}
 	}
 
 	protected function _init_template()
@@ -33,6 +24,28 @@ class Controller_App extends Controller_Template
 			return;
 		}
 
+		if ($this->user)
+		{
+			$this->template->user_nav = View::forge('user/user');
+		}
+		else
+		{
+			$this->template->user_nav = View::forge('user/guest');
+		}
+
 		$this->template->set_global('user', $this->user, false);
+	}
+
+	public function is_logged_in()
+	{
+		return isset($this->user);
+	}
+
+	public function require_login($location = 'world/recent', $type = null, $message = null)
+	{
+		if (! $this->is_logged_in())
+		{
+			$this->redirect($location, $type, $message);
+		}
 	}
 }

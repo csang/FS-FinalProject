@@ -42,6 +42,14 @@ class Controller_Profile extends Controller_App
 		));
 	}
 
+	public function get_settings($username)
+	{
+		$profile = Model_User::get_user($username);
+		$this->template->body = View::forge('profile/settings', array(
+			'profile' => $profile,
+		));
+	}
+
 	public function get_cars($username)
 	{
 		$this->template->body = View::forge('profile/car_list');
@@ -59,29 +67,29 @@ class Controller_Profile extends Controller_App
 		$model = Model_Vehicle_Model::get_model($model);
 
 		$car = Model_Car::query()->where(array(
-			'user_id' => $profile->id,
-			'make_id' => $make->id,
-			'model_id' => $model->id,
-			'year' => $year
+			'user_id'	 => $profile->id,
+			'make_id'	 => $make->id,
+			'model_id'	 => $model->id,
+			'year'		 => $year
 		))->get_one();
 
 		$cars = Model_Car::query()->where(array(
-			'user_id' => $profile->id
+			'user_id'	 => $profile->id
 		))->get();
 
 		$articles = Model_Article::query()->where(array(
-			'car_id' => $car->id,
-			'user_id' => $profile->id
+			'car_id'	 => $car->id,
+			'user_id'	 => $profile->id
 		))->get();
 
 		$this->template->detail = View::forge('car/car_detail', array(
-			'car' => $car,
-			'cars' => $cars,
-			'profile' => $profile,
+			'car'		 => $car,
+			'cars'		 => $cars,
+			'profile'	 => $profile,
 		));
 
 		$this->template->body = View::forge('car/car_post_list', array(
-			'articles' => $articles,
+			'articles'	 => $articles,
 		));
 	}
 
@@ -94,7 +102,7 @@ class Controller_Profile extends Controller_App
 			$liked = Model_Like::query()->where(array('article_id'=> $article_id, 'user_id'=> $this->user->id))->get_one();			
 		}
 
-		$this->template->body   = View::forge('profile/post_detail', array(
+		$this->template->body = View::forge('profile/post_detail', array(
 			'article' 	=> $article,
 			'liked'		=> $liked,
 		));
@@ -102,12 +110,13 @@ class Controller_Profile extends Controller_App
 
 	public function get_article_edit($username, $article_id)
 	{
+		$this->require_login($username.'/article/'.$article_id);
+
 		$article = Model_Article::query()->where('id', $article_id)->get_one();
-		$user = $this->user;
 
 		$this->template->body = View::forge('profile/post_edit', array(
 			'article' 	=> $article,
-			'user'		=> $user,
+			'user'		=> $this->user,
 		));
 	}
 
@@ -136,9 +145,11 @@ class Controller_Profile extends Controller_App
 		{
 		    Upload::save();
 
-		    $poster = Upload::get_files(0)['saved_as'];
+		    $image = Upload::get_files(0)['saved_as'];
 
-		    // Image::load(DOCROOT.'assets/img/post_images/'.$avatar)->preset('test');
+		    // $filename = DOCROOT.'assets/img/post_images/'.$image;
+
+		    // Image::load($filename)->crop_resize(960, 640)->save($filename);
 		}
 
 		$article = Model_Article::query()->where('id', $article_id)->get_one();
@@ -146,8 +157,9 @@ class Controller_Profile extends Controller_App
 		$article->title 	 = Input::post('title');
 		$article->content 	 = Input::post('content');
 		
-		if($poster != NULL){
-			$article->images = $poster;
+		if($image != NULL)
+		{
+			$article->images = $image;
 		}
 		
 		$article->updated_at = time();

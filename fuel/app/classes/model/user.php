@@ -54,6 +54,11 @@ class Model_User extends \Orm\Model
 		return Uri::create($this->username);
 	}
 
+	public function settings_url()
+	{
+		return Uri::create($this->username.'/settings');
+	}
+
 	public function avatar_url()
 	{
 		if($this->avatar)

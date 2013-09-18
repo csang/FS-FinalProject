@@ -6,7 +6,7 @@
 				<div class="dropdown">
 					<?= Html::anchor($user->profile_url(), 'Profile', array('class' => 'userBtns'))?>
 					<?= Html::anchor('post', '+ Post', array('class' => 'userBtns'))?>
-					<?= Html::anchor('settings', 'Settings', array('class' => 'userBtns')) ?>
+					<?= Html::anchor($user->settings_url(), 'Settings', array('class' => 'userBtns')) ?>
 					<?= Html::anchor('logout', 'Log out', array('class' => 'userBtns')) ?>
 				</div>
 			</div>

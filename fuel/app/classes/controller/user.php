@@ -95,9 +95,15 @@ class Controller_User extends Controller_App
 	public function post_profile_update()
 	{
 		$name 	= Input::post('name');
+		$email 	= Input::post('email');
 		$avatar = NULL;
 		$site 	= Input::post('site');
 		$bio 	= Input::post('bio');
+
+		// if(isset(Input::post('email')))
+		// {
+		// 	$email = Input::post('email');
+		// }
 
 		$config = array(
 			'path' 			=> DOCROOT.'assets/img/avatars',
@@ -114,7 +120,9 @@ class Controller_User extends Controller_App
 
 		    $avatar = Upload::get_files(0)['saved_as'];
 
-		    // Image::load(DOCROOT.'assets/img/avatars/'.$avatar)->preset('test');
+		    $filename = DOCROOT.'assets/img/avatars/'.$avatar;
+
+		    Image::load($filename)->crop_resize(125,125)->save($filename);
 		}
 
 		$user = Model_User::get_by_id($this->user->id);

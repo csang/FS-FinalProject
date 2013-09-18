@@ -3,6 +3,8 @@ return array(
 	'_root_'  => 'world/recent',  // The default route
 	'_404_'   => 'welcome/404',    // The main 404 route
 	
+	'debug/(:any)'                                      => 'debug/$1',
+
 	'world/recent'										=> 'world/recent',
 	'world/popular'										=> 'world/popular',
 	'world/featured'									=> 'world/featured',
@@ -29,6 +31,7 @@ return array(
 	'(:segment)/cars'									=> 'profile/cars/$1',
 	'(:segment)/friends'								=> 'profile/friends/$1',
 	'(:segment)/followers'								=> 'profile/followers/$1',
+	'(:segment)/settings'								=> 'profile/settings/$1',
 
 	'(:segment)/car/(:segment)/(:segment)/(:segment)'	=> 'profile/car/$1/$2/$3/$4',
 

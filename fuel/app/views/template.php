@@ -12,21 +12,27 @@
 	<header>
 		<?= Html::anchor('world/recent', Asset::img('carsignite.png', array('class' => 'logo'))) ?>
 		<nav>
-			<? if(Uri::segment(1) == 'world'){
-				echo Html::anchor('world/recent', 'World', array('class'=> 'active'));
-			}else{
-				echo Html::anchor('world/recent', 'World');
-			} ?>
-			<? if(Uri::segment(1) == 'friends'){
-				echo Html::anchor('friends/recent', 'Friends', array('class'=> 'active'));
-			}else{
-				echo Html::anchor('friends/recent', 'Friends');
-			} ?>
+			<?php if (Uri::segment(1) == 'world'): ?>
+				<?= Html::anchor('world/recent', 'World', array('class'=> 'active')) ?>
+			<?php else: ?>
+				<?= Html::anchor('world/recent', 'World') ?>
+			<?php endif; ?>
+			
+			<?php if (Uri::segment(1) == 'friends'): ?>
+				<?= Html::anchor('friends/recent', 'Friends', array('class'=> 'active')); ?>
+			<?php else: ?>
+				<?= Html::anchor('friends/recent', 'Friends') ?>
+			<?php endif; ?>
 		</nav>
 
 		<?= isset($user_nav) ? $user_nav : null ?>
 
 	</header>
+
+	<?php if (isset($notice)): ?>
+	<div class="flash-<?= $notice->type ?>"><?= $notice->message ?></div>
+	<?php endif; ?>
+
 	<div class="container">
 		<?= isset($sub_nav) ? $sub_nav : null ?>
 

@@ -17,8 +17,6 @@ class Controller_Articles extends Controller_App
 		}else{
 			Response::redirect('world/recent');
 		}
-
-		
 	}
 
 	public function post_create()
@@ -50,7 +48,9 @@ class Controller_Articles extends Controller_App
 
 		    $image = Upload::get_files(0)['saved_as'];
 
-		    // Image::load(DOCROOT.'assets/img/post_images/'.$avatar)->preset('test');
+		    // $filename = DOCROOT.'assets/img/post_images/'.$image;
+
+		    // Image::load($filename)->crop_resize(960, 640)->save($filename);
 		}
 		
 		if($car == 'NULL')
@@ -58,16 +58,16 @@ class Controller_Articles extends Controller_App
 			$search_make = Model_Vehicle_Make::find_by('name', $make);
 			$search_model = Model_Vehicle_Model::find_by('name', $model);
 
-			foreach ($search_make as $make_id) {
-				$make_id = $make_id['id'];
-			}
-
-			foreach ($search_model as $model_id) {
-				$model_id = $model_id['id'];
-			}
-
 			if($search_make && $search_model){
-				
+
+				foreach ($search_make as $make_id) {
+					$make_id = $make_id['id'];
+				}
+
+				foreach ($search_model as $model_id) {
+					$model_id = $model_id['id'];
+				}
+
 				$add_car = Model_Car::forge()->set(array(
 					'user_id'	 => $this->user->id,
 					'make_id'    => $make_id,
