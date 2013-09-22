@@ -1,0 +1,100 @@
+Id,Story,Labels,Iteration,Iteration Start,Iteration End,Story Type,Estimate,Current State,Created at,Accepted at,Deadline,Requested By,Owned By,Description,URL,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status
+53046431,API,research,1,"Jul 29, 2013","Aug 25, 2013",chore,,accepted,"Jan 15, 2013","Aug 7, 2013",,Carlos,Carlos,Determine what APIs you intend to use and on a higher level how you want to leverage them.,http://www.pivotaltracker.com/story/show/53046431
+53046433,Project Requirements,research,1,"Jul 29, 2013","Aug 25, 2013",chore,,accepted,"Jan 15, 2013","Aug 7, 2013",,Carlos,Carlos,Read all documentation provided for the project and get a firm understanding of what is expected of you.,http://www.pivotaltracker.com/story/show/53046433
+53046437,Visual Frameworks,research,1,"Jul 29, 2013","Aug 25, 2013",chore,,accepted,"Jan 15, 2013","Aug 7, 2013",,Carlos,Carlos,"Determine which visual framework you intent to use for the duration of the project.
+
+Make certain to experiment and play around with multiple frameworks until you find one that suits your needs. 
+
+Get a working knowledge with the code you may be working with so that you choose one that is flexible enough to fit your project.
+
+Here is a list of Visual Frameworks to help you get started.
+
+http://usablica.github.com/front-end-frameworks/compare.html?v=2.0",http://www.pivotaltracker.com/story/show/53046437,Identify Popular Frameworks,not completed,Identify New and Trending Frameworks,not completed,Explore the Code,not completed,Experiment!,not completed,"Choose your Framework, submit to FSO",not completed
+55058338,Learn how to use SASS and Compass,"",2,"Aug 26, 2013","Sep 22, 2013",feature,1,accepted,"Aug 13, 2013","Aug 30, 2013",,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/55058338
+53046435,[1.1] ,"",2,"Aug 26, 2013","Sep 22, 2013",release,,unstarted,"Jan 15, 2013",,,Carlos,,Submit the tasks listed below to FSO.,http://www.pivotaltracker.com/story/show/53046435,Pivotal Link,not completed,Github Link,not completed,Selected Archetype,not completed,Selected API,not completed
+53046439,Chosen Visual Framework,setup,2,"Aug 26, 2013","Sep 22, 2013",feature,2,delivered,"Jan 15, 2013",,,Carlos,Carlos,"Setup the base libraries and visual frameworks you intend to use. (Bootstrap, foundation 3, jeetframework, etc.)",http://www.pivotaltracker.com/story/show/53046439
+53046441,Base File Structure (MVC),setup,2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Jan 15, 2013",,,Carlos,Carlos,Create the primary file structure.,http://www.pivotaltracker.com/story/show/53046441,Models,not completed,Views,not completed,Controllers,not completed,Assets,not completed,Libraries,not completed
+53046445,Database,setup,2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Jan 15, 2013",,,Carlos,Carlos,Create a simple one table database for the purpose of building upon it later. This is so that we can tie it into our project and know that the connection is working properly.,http://www.pivotaltracker.com/story/show/53046445
+53046447,Database Table Structure,setup,2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Jan 15, 2013",,,Carlos,Carlos,Add to the Database the basic tables and structure you anticipate for this project. You will likely refine these later so don't worry about getting them precisely perfect just yet.,http://www.pivotaltracker.com/story/show/53046447
+53046451,Style Tiles (Guide),"design, research",2,"Aug 26, 2013","Sep 22, 2013",feature,3,delivered,"Jan 15, 2013",,,Carlos,Carlos,"This style guide will set the tone for all views. If / when later on in the project a new view is needed to be created you can reuse predesigned elements to achieve the desired look for the view without having to go through the wireframe process, speeding your development time.
+
+Please use the resources linked below for further explanation. These assets you create should be placed into an ASSETS folder in your Github Repo.
+
+http://styletil.es/",http://www.pivotaltracker.com/story/show/53046451
+53046449,[1.2] Initialization Iteration,"",2,"Aug 26, 2013","Sep 22, 2013",release,,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046449
+53046459,Visual Framework utilizing Style Guide ,implement,2,"Aug 26, 2013","Sep 22, 2013",feature,2,delivered,"Jan 15, 2013",,,Carlos,Carlos,"Enhance your chosen visual framework to incorporate the elements defined in your Style Tiles.
+
+Identify the unique elements from your Style Tiles and develop the markup to create those items as needed through your views.",http://www.pivotaltracker.com/story/show/53046459
+54881332,Basic HTML and CSS pages,"",2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Aug 8, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/54881332
+53046469,View for Signup Page,implement,2,"Aug 26, 2013","Sep 22, 2013",feature,2,delivered,"Jan 15, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/53046469
+53046471,View for Listing Page,implement,2,"Aug 26, 2013","Sep 22, 2013",feature,2,delivered,"Jan 15, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/53046471
+53046497,Style guide for User Profile,"archetype, implement",2,"Aug 26, 2013","Sep 22, 2013",feature,2,delivered,"Jan 22, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/53046497
+53046473,View for Detail Page,implement,2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Jan 15, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/53046473
+55057126,design icons,"",2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Aug 12, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/55057126
+55268728,Learn how to use the Fuel framework,"",2,"Aug 26, 2013","Sep 22, 2013",feature,2,delivered,"Aug 15, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/55268728
+53046477, [CRUD],"archetype, content",2,"Aug 26, 2013","Sep 22, 2013",feature,3,started,"Jan 15, 2013",,,Carlos,Carlos,"In a crowdsourced site or service the main focus of the site is generated by the users. Pictures, video, text, or other content, depending on the focus of your specific site need to CRUD as well.",http://www.pivotaltracker.com/story/show/53046477
+53046479,[CRUD],"archetype, user system",2,"Aug 26, 2013","Sep 22, 2013",feature,3,started,"Jan 15, 2013",,,Carlos,Carlos,Develop the base CRUD functionality for your project.,http://www.pivotaltracker.com/story/show/53046479
+53046481,Authentication,"archetype, user system",2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Jan 22, 2013",,,Carlos,Carlos,"Password are easily crackable. Forcing users to create complex passwords is not intuitive for the user sign up process. This is a challenge that, as devs, we face today.
+
+More reading on just how easy passwords are to crack - http://arstechnica.com/security/2013/03/how-i-became-a-password-cracker/",http://www.pivotaltracker.com/story/show/53046481,login,not completed,logout,not completed
+53046499,Users can create public profiles for themselves.,"archetype, user profile",2,"Aug 26, 2013","Sep 22, 2013",feature,2,delivered,"Jan 15, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/53046499,Picture,not completed,Name,not completed,Bio,not completed,Birthdate,not completed,Location (Geolocation),not completed
+53046485,Users should be able to positively signal a piece of content.,"archetype, content",2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Jan 15, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/53046485
+53046489,Users can subscribe to other user's content feeds.,"archetype, user profile",2,"Aug 26, 2013","Sep 22, 2013",feature,1,delivered,"Jan 15, 2013",,,Carlos,Carlos,,http://www.pivotaltracker.com/story/show/53046489
+53046507,"Dashboards should be populated with New, Popular, and Followed Content.","archetype, content discovery",2,"Aug 26, 2013","Sep 22, 2013",feature,3,delivered,"Jan 15, 2013",,,Carlos,Carlos,Home pages are great for displaying popular or fresh content that a user has yet to discover.,http://www.pivotaltracker.com/story/show/53046507,New,not completed,Popular,not completed,Followed,not completed
+55275590,Marketing Plan 3,marketing,2,"Aug 26, 2013","Sep 22, 2013",feature,3,delivered,"Aug 15, 2013",,,Carlos,Carlos,"My third plan is to write a post on Facebook with a link directly to the website. A tweet with hashtags related to the website and the link as well. A post on Google+ similar to Facebook and a video on Youtube showing a little presentation of what it is and how it works.
+
+On the first hour of September 20th I posted on Facebook, Twitter, Google+ and Instagram a message with an image showing that carsignite.com will be launched soon on beta.",http://www.pivotaltracker.com/story/show/55275590
+53046443,API Proof of Concept,setup,3,"Sep 23, 2013","Oct 20, 2013",feature,2,unstarted,"Jan 15, 2013",,,Carlos,Carlos,Implement a simple version of your chosen API. This be a stand alone page in your project that pulls the API's desired information.,http://www.pivotaltracker.com/story/show/53046443
+53046463,Weekly Self Audit,iteration,3,"Sep 23, 2013","Oct 20, 2013",feature,1,unstarted,"Jan 15, 2013",,,Carlos,,"Review your code, designs, and other materials created to ensure they are commented, well formatted, and developed to a a standard that represents your personal best work. 
+
+You will be handing off your project to other developers for review and you should be confident that your work will stand up to their scrutiny in addition to the rubric.",http://www.pivotaltracker.com/story/show/53046463
+53046465,[2.1] Pivotal Tracker Velocity Review,"",3,"Sep 23, 2013","Oct 20, 2013",release,,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046465
+53046467,Peer Review,iteration,3,"Sep 23, 2013","Oct 20, 2013",feature,2,unstarted,"Jan 15, 2013",,,Carlos,,"Full Description of the Peer Review Process
+
+https://docs.google.com/document/d/1FvTSXVRmJD_TdatutzI4NfvlgItXy1nQUQCcEALLCY0/edit?usp=sharing",http://www.pivotaltracker.com/story/show/53046467
+53046475,[2.2] Epic Progress,"",3,"Sep 23, 2013","Oct 20, 2013",release,,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046475
+53046483,Restricting Functionality and Access to Sensitive Areas and Features.,"archetype, user system",3,"Sep 23, 2013","Oct 20, 2013",feature,2,unstarted,"Jan 22, 2013",,,Carlos,,Making certain a user is logged in to preform certain actions.,http://www.pivotaltracker.com/story/show/53046483
+53046487,User should be able to easily report misuse of site.,"archetype, content",3,"Sep 23, 2013","Oct 20, 2013",feature,1,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046487
+53046491,Weekly Self Audit,"",3,"Sep 23, 2013","Oct 20, 2013",feature,1,unstarted,"Jan 15, 2013",,,Carlos,,"Review your code, designs, and other materials created to ensure they are commented, well formatted, and developed to a a standard that represents your personal best work. 
+
+You will be handing off your project to other developers for review and you should be confident that your work will stand up to their, as well as, the project rubric's scrutiny.",http://www.pivotaltracker.com/story/show/53046491
+53046493,[3.1] Pivotal Tracker Velocity Review,"",3,"Sep 23, 2013","Oct 20, 2013",release,,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046493
+53046495,Peer Review,iteration,3,"Sep 23, 2013","Oct 20, 2013",feature,2,unstarted,"Jan 15, 2013",,,Carlos,,"Full Description of the Peer Review Process
+
+https://docs.google.com/document/d/1FvTSXVRmJD_TdatutzI4NfvlgItXy1nQUQCcEALLCY0/edit?usp=sharing",http://www.pivotaltracker.com/story/show/53046495
+53046501,Users should be able to find contact information for support.,base feature,3,"Sep 23, 2013","Oct 20, 2013",feature,1,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046501
+53046503,[3.2],"",3,"Sep 23, 2013","Oct 20, 2013",release,,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046503
+53046505,Error Handling,base feature,3,"Sep 23, 2013","Oct 20, 2013",feature,2,unstarted,"Jan 22, 2013",,,Carlos,,How errors are displayed to users and logged for admin review.,http://www.pivotaltracker.com/story/show/53046505
+53046513,Users should be able to find help in documentation.,base feature,3,"Sep 23, 2013","Oct 20, 2013",feature,2,unstarted,"Jan 15, 2013",,,Carlos,,At minimum a FAQ section,http://www.pivotaltracker.com/story/show/53046513
+53046515,Users should be able to find and read terms and policies.,base feature,3,"Sep 23, 2013","Oct 20, 2013",feature,1,unstarted,"Jan 15, 2013",,,Carlos,,Find a boilerplate Terms and Services agreement and modify it to your needs.,http://www.pivotaltracker.com/story/show/53046515
+53046517,Users should be able to find copyright information.,base feature,3,"Sep 23, 2013","Oct 20, 2013",feature,1,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046517
+53046519,Minified Scripts,mobile feature,3,"Sep 23, 2013","Oct 20, 2013",feature,1,unstarted,"Jan 22, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046519
+53046521,Weekly Self Audit,"",3,"Sep 23, 2013","Oct 20, 2013",feature,1,unstarted,"Jan 15, 2013",,,Carlos,,"Review your code, designs, and other materials created to ensure they are commented, well formatted, and developed to a a standard that represents your personal best work. 
+
+You will be handing off your project to other developers for review and you should be confident that your work will stand up to their scrutiny in addition to the rubric.",http://www.pivotaltracker.com/story/show/53046521
+53046523,[4.1] Pivotal Tracker Velocity Review,"",3,"Sep 23, 2013","Oct 20, 2013",release,,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046523
+53046525,Peer Review,iteration,3,"Sep 23, 2013","Oct 20, 2013",feature,2,unstarted,"Jan 15, 2013",,,Carlos,,"Full Description of the Peer Review Process
+
+https://docs.google.com/document/d/1FvTSXVRmJD_TdatutzI4NfvlgItXy1nQUQCcEALLCY0/edit?usp=sharing",http://www.pivotaltracker.com/story/show/53046525
+53046527,Video Walk through,base feature,3,"Sep 23, 2013","Oct 20, 2013",feature,3,unstarted,"Jan 22, 2013",,,Carlos,,Create an well edited 2 min. video walk through of your app. Draw upon your skills in previous classes.,http://www.pivotaltracker.com/story/show/53046527
+53046529,Final Bug Stomping,base feature,4,"Oct 21, 2013","Nov 17, 2013",feature,2,unstarted,"Jan 22, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046529
+53046531,[4.2] ,"",4,"Oct 21, 2013","Nov 17, 2013",release,,unstarted,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046531
+56926472,Marketing Plan 4,marketing,,,,feature,3,unscheduled,"Sep 12, 2013",,,Carlos,,"Get help from General Motors to advertise my project. I could sell it to them and they might get a good amount of people to use it. I'm not 100% sure how to accomplish this or if there is a better way to do it, but the idea is to contact a big company that could spread the word easily about my project.",http://www.pivotaltracker.com/story/show/56926472
+55272022,Marketing Plan 2,marketing,,,,feature,3,unscheduled,"Aug 15, 2013",,,Carlos,,"My second marketing plan is to have advertisements in car meets and auto parts stores. Hand in some flyers, let people know the website exist. Maybe have flyers on the windshield of the cars. Car tuners are the primary target to have good content for other users to see and enjoy. ",http://www.pivotaltracker.com/story/show/55272022
+55272014,Marketing Plan 1,marketing,,,,feature,3,unscheduled,"Aug 15, 2013",,,Carlos,,"My first marketing plan is to have a presentation on the showcase auditorium. Spread the word and ask people to try it out and talk about it with their friends. Show them how everything works, encourage them to use it and find cars they like.",http://www.pivotaltracker.com/story/show/55272014
+53046533,Forgotten Pwd Featuer,user system,,,,feature,3,unscheduled,"Feb 7, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046533
+53046535,milestone,"",,,,release,,unscheduled,"Jan 22, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046535
+53046537,Users can create and curate lists of content created by other users.,bonus points,,,,feature,3,unscheduled,"Jan 15, 2013",,,Carlos,,"This allows users to essentially create groups or playlists of content.
+
+Example: See Dribble Buckets - http://dribbble.com/_chapman/buckets",http://www.pivotaltracker.com/story/show/53046537
+53046539,User should be able to easily filter content based on meta tags,bonus points,,,,feature,2,unscheduled,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046539
+53046541,Content is required to be tagged with meta information upon submission.,bonus points,,,,feature,1,unscheduled,"Jan 15, 2013",,,Carlos,,Comments are an essential part of any content sharing service.,http://www.pivotaltracker.com/story/show/53046541
+53046543,Users can share content to other social networks,bonus points,,,,feature,2,unscheduled,"Jan 22, 2013",,,Carlos,,"Facebook has created some really easy to use tools to help you out. Here is a direct link to them. Enjoy! 
+
+https://developers.facebook.com/docs/plugins/",http://www.pivotaltracker.com/story/show/53046543
+53046545,Advertisers should be able to show their products or services to make money.,bonus points,,,,feature,3,unscheduled,"Jan 15, 2013",,,Carlos,,Google Ad words and other services offer viable revenue streams.,http://www.pivotaltracker.com/story/show/53046545
+53046547,Email Blast to newsletter subscribers.,bonus points,,,,feature,3,unscheduled,"Jan 22, 2013",,,Carlos,,"The ability to reach out to your audience is key. 
+
+Create the ability for an admin user to send a templated email out to your subscribed users.",http://www.pivotaltracker.com/story/show/53046547
+53046549,Users should be able to see related content to what they are currently viewing.,bonus points,,,,feature,3,unscheduled,"Jan 15, 2013",,,Carlos,,This further promotes content discovery.,http://www.pivotaltracker.com/story/show/53046549
+53046551,Users should be able to access recent activity in a data format such as JSON or RSS.,bonus points,,,,feature,2,unscheduled,"Jan 15, 2013",,,Carlos,,,http://www.pivotaltracker.com/story/show/53046551

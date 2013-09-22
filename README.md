@@ -35,12 +35,25 @@ root/fuel/app/classes/...
 
 Completed CRUD actions:
 
-- Sign up
-	- Add Avatar image
-- Log in
-- Add post
-	- Add image to post
+Create:
+- Users
+- Articles
+- Cars
+
+Read:
+- User's info
+- Articles
+- Car info
+
+Update:
+- User's info
+- Article
+
+Delete:
+- Articles
 
 Other actions:
-
+- Log in
 - Log out
+- Like an article
+- Follow a user
