@@ -75,7 +75,7 @@ class Controller_Profile extends Controller_App
 
 		$cars = Model_Car::query()->where(array(
 			'user_id'	 => $profile->id
-		))->get();
+		))->order_by('id', 'asc')->get();
 
 		$articles = Model_Article::query()->where(array(
 			'car_id'	 => $car->id,
@@ -130,7 +130,7 @@ class Controller_Profile extends Controller_App
 
 	public function post_article_update($username, $article_id)
 	{
-		$poster = NULL;
+		$image = NULL;
 
 		$config = array(
 			'path' 			=> DOCROOT.'assets/img/post_images',

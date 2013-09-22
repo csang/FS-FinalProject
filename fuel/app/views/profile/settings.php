@@ -9,7 +9,8 @@
 				<p>Site:</p>
 				<input type="text" name="site" placeholder="http://www.example.com" value="<?= $profile->site?>"/></br>
 				<p>Bio:</p>
-				<textarea name="bio" rows="7" cols="30" placeholder="Anything you would like to share to the world about yourself?"><?= $profile->bio?></textarea></br>
+				<textarea name="bio" rows="7" cols="30" maxlength="200" placeholder="Anything you would like to share to the world about yourself?"><?= $profile->bio?></textarea></br>
+				<input type="hidden" name="currentAvatar" value="<?= $profile->avatar ?>" />
 				<input type="submit" class="submit" value="Save" />
 			<?= Form::close() ?>
 		</div>

@@ -7,7 +7,7 @@
 				<p>Site:</p>
 				<input type="text" name="site" placeholder="http://www.example.com" /></br>
 				<p>Bio:</p>
-				<textarea name="bio" rows="7" cols="30" placeholder="Anything you would like to share to the world about yourself?"></textarea></br>
+				<textarea name="bio" rows="7" cols="30" maxlength="200" placeholder="Anything you would like to share to the world about yourself?"></textarea></br>
 				<?= Html::anchor('world/recent', 'Skip', array('class' => 'skip')) ?>
 				<input type="submit" class="submit" value="Finish" />
 			<?= Form::close() ?>

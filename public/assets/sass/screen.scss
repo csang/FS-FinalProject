@@ -418,7 +418,7 @@ input.submit:active{
 
 	input{
 		margin: 2px 0 15px;
-		width: 200px;
+		width: 260px;
 	}
 
 	input.submit{
@@ -519,7 +519,7 @@ input.submit:active{
 
 	input{
 		margin: 2px 0 15px;
-		width: 200px;
+		width: 260px;
 	}
 
 	input.submit{
@@ -538,7 +538,7 @@ input.submit:active{
 
 		.selectCar{
 			margin: 2px 0 15px;
-			width: 206px;
+			width: 265px;
 			height: 26px;
 			border: solid 2px $blue;
 			background-color: $white;
@@ -609,6 +609,7 @@ input.submit:active{
 	.bio{
 		float: left;
 		clear: right;
+		height: 64px;
 
 		p{
 			margin: 0;
@@ -620,6 +621,9 @@ input.submit:active{
 		img{
 			float: right;
 			margin: 20px 25px 10px 0;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
 		}
 	} 
 
@@ -646,6 +650,24 @@ input.submit:active{
 			.left{
 				width: 350px;
 				padding: 0 0 0 15px;
+
+				.names img{
+					width: 20px;
+					height: 20px;
+					margin: 22px 0 0 25px;
+				}
+
+				.userSite{
+					float: left;
+					clear: both;
+					font-size: 12px;
+					color: $gray;
+					margin: 0 0 0 10px;
+				}
+
+				.userSite:hover{
+					color: $blue;
+				}
 			}
 
 			.right{
@@ -654,7 +676,7 @@ input.submit:active{
 			}
 
 			h2{
-				margin: 20px 0 0 10px;
+				margin: 18px 0 0 10px;
 			}
 
 			.followBtn{
@@ -683,7 +705,7 @@ input.submit:active{
 		}
 
 		.hLine{
-			height: 3px;
+			height: 1px;
 			background-color: $blue;
 			float: left;
 		}
@@ -698,9 +720,9 @@ input.submit:active{
 	float: left;
 }
 
-.mainInfo img, .bio img{
+.mainInfo img{
 	width: 25px;
-	margin: 20px 0 10px 35px;
+	margin: 18px 0 10px 35px;
 }
 
 /*--------------------------------------------------------------------------------------
@@ -755,10 +777,6 @@ input.submit:active{
 	display: block;
 }
 
-.bio{
-	margin: 0 0 22px 0;
-}
-
 .extra img{
 	float: right;
 	margin: 15px 25px 10px 0;
@@ -778,12 +796,32 @@ input.submit:active{
 	}
 }
 
-.bottom{
-	width: 930px;
-	background-color: $lBlack;
-	padding: 10px 15px;
+.carDropdown{
+	width: 300px;
+	background-color: $dWhite;
 	position: relative;
 	margin: 0;
+	float: left;
+	clear: both;
+	border-top: solid 1px $blue;
+	border-bottom: solid 1px $blue;
+	opacity: 0;
+	display: none;
+
+	a{
+		float: left;
+		clear: both;
+		padding: 10px 0 10px 50px;
+		margin: 0;
+		color: $black;
+		display: inline-block;
+		width: 250px;
+	}
+
+	a:active{
+		color: $white;
+		background-color: $blue;
+	}
 }
 
 /*_Post Detail Page____________________________________________________*/

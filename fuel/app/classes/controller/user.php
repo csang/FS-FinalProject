@@ -96,14 +96,9 @@ class Controller_User extends Controller_App
 	{
 		$name 	= Input::post('name');
 		$email 	= Input::post('email');
-		$avatar = NULL;
+		$avatar = Input::post('currentAvatar');
 		$site 	= Input::post('site');
 		$bio 	= Input::post('bio');
-
-		// if(isset(Input::post('email')))
-		// {
-		// 	$email = Input::post('email');
-		// }
 
 		$config = array(
 			'path' 			=> DOCROOT.'assets/img/avatars',
@@ -128,6 +123,7 @@ class Controller_User extends Controller_App
 		$user = Model_User::get_by_id($this->user->id);
 
 		$user->name			= $name;
+		$user->email 		= $email;
 		$user->avatar 		= $avatar;
 		$user->site   		= $site;
 		$user->bio	 		= $bio;

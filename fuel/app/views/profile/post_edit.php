@@ -3,7 +3,7 @@
 			<div class="postDImgMask">
 				<?= Asset::img("post_images/".$article->images, array('class' => 'postDImg')) ?>
 			</div>
-			<input type="file" class="file" name="poster" accept="image" />
+			<input type="file" class="file" name="image" accept="image" />
 			<div class="contentDetail postEdit">
 				<div class="dLikeNum">
 					<p class="postCar"><?=$article->car->make->name . " " . $article->car->model->name ?></p>

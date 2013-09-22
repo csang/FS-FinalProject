@@ -10,9 +10,10 @@
 					<div class="left">
 						<div class="names">
 							<h2><?= $profile->name ?> (<?= $profile->username ?>)</h2>
-							<? if(isset($user->id) && $profile->id != $user->id){ ?>
+							<?= Html::anchor($profile->site, $profile->site, array('class'=>'userSite')) ?>
+<!-- 							<a href="<?= $profile->site ?>" class="userSite"><?= $profile->site ?></a> -->							<?php if(isset($user->id) && $profile->id != $user->id): ?>
 							<button type="button" class="<? if($following){ ?>followBtn following<? }else{ ?> followBtn <? } ?>"><? if($following){ ?>Following<? }else{ ?> Follow <? } ?></button>
-							<? } ?>
+							<? endif; ?>
 						</div>
 					</div>
 					<div class="right">
@@ -34,7 +35,6 @@
 				</div>
 				<div class="bio">
 					<p><?= $profile->bio ?></p>
-					<?= Asset::img('icons/down.png') ?>
 				</div>
 			</div>
 		</div>

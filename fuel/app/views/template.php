@@ -48,7 +48,7 @@
 			<p>&copy;CARSIGNITE</p>
 		</div>
 		<div class="footerLinks">
-			<p><?= Html::anchor('extra/about_us', 'About Us') ?> | <?= Html::anchor('extra/help', 'Help') ?> | <?= Html::anchor('extra/contact_us', 'Contact Us') ?></p>
+			<p><?= Html::anchor('about_us', 'About Us') ?> | <?= Html::anchor('help', 'Help') ?> | <?= Html::anchor('contact_us', 'Contact Us') ?></p>
 		</div>
 	</footer>
 	<?= Asset::js('jquery-1.10.2.min.js') ?>

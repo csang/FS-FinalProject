@@ -10,19 +10,28 @@
 					<div class="left">
 						<div class="names">
 							<h2><?= $car->make()." ".$car->model()." ".$car->trim.", ".$car->year ?></h2>
+							<?= Asset::img('icons/down.png') ?>
+							<?= Html::anchor($profile->username.'/car/'.$car->make()."/".$car->model()."/".$car->year."/edit", 'Edit', array('class'=>'userSite')) ?>
 							<!-- <select>
 								<? foreach ($cars as $c){ ?>
 									<option value="<?= $c->id ?>"><?= $c->make()." ".$c->model()." ".$c->trim.", ".$c->year ?></option>
 								<? } ?>
 							</select> -->
+							<div class="carDropdown">
+								<? foreach ($cars as $c){ ?>
+									<?= Html::anchor($profile->username.'/car/'.$c->make()."/".$c->model()."/".$c->year, $c->make() . " " . $c->model()." ".$c->trim.", ".$c->year, array('class'=>'postCar')) ?>
+								<? } ?>
+							</div>
 						</div>
 					</div>
 				</div>
+				<?php if($car->about != ""):  ?>
 				<div class="hLine">
 				</div>
+				<?php endif; ?>
 				<div class="bio">
 					<p><?= $car->about ?></p>
-					<?= Asset::img('icons/down.png') ?>
+					<!-- <?= Asset::img('icons/down.png') ?> -->
 				</div>
 			</div>
 		</div>

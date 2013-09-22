@@ -9,7 +9,9 @@
 		selectedCar = 		"NULL",
 		likeBtn =			$(".likeBtn"),
 		followBtn =			$(".followBtn"),
-		deleteBtn =			$(".deleteBtn");
+		deleteBtn =			$(".deleteBtn"),
+		bioArrow =			$(".bio img"),
+		nameArrow = 		$(".names img");
 
 	deleteBtn.click(function(){
 		if (confirm('Are you sure you want to delete this article?')) {
@@ -141,5 +143,47 @@
 				}
 			})
 		}
+	})
+
+	nameArrow.click(function(){
+		var carDropdown = $(".carDropdown");
+
+		if(carDropdown.css("display") == "block")
+		{
+			nameArrow.animate({
+				opacity: 0,
+			}, 100, function(){
+				nameArrow.attr("src", "http://carsignite.dev/public/assets/img/icons/down.png");
+				nameArrow.animate({
+					opacity: 1,
+				},100)
+			})
+			
+			carDropdown.animate({
+				opacity: 0,
+				display: "none"
+			}, 200, function(){
+				carDropdown.css("display", "none");
+			})
+		}
+		else
+		{
+			nameArrow.animate({
+				opacity: 0,
+			}, 100, function(){
+				nameArrow.attr("src", "http://carsignite.dev/public/assets/img/icons/up.png");
+				nameArrow.animate({
+					opacity: 1,
+				},100)
+			})
+
+			carDropdown.css("display", "block");
+
+			carDropdown.animate({
+				opacity: 1,
+				display: "block"
+			},200)
+		};
+
 	})
 })()
