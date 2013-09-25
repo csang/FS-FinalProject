@@ -725,11 +725,6 @@ input.submit:active{
 	margin: 18px 0 10px 35px;
 }
 
-/*--------------------------------------------------------------------------------------
-
-	Don't forget to clear these floats:
-
------------------------------------------------------------------------------------------*/
 .postBtn{
 	float: left;
 }
@@ -738,7 +733,7 @@ input.submit:active{
 	width: 50px;
 	height: 50px;
 	overflow: hidden;
-	float: left;
+	display: inline-block;
 	margin: -3px 0 0 15px;
 
 	img{
@@ -749,6 +744,7 @@ input.submit:active{
 .loggedIn{
 	width: 275px;
 	margin: 15px 0 0 68px;
+	clear: right;
 }
 
 .dropdown{
@@ -771,56 +767,42 @@ input.submit:active{
 	height: 60px;
 	width: 100px;
 	float: right;
+	clear: right;
 }
 
 .dropdownBtn:hover .dropdown{
 	display: block;
 }
 
-.extra img{
-	float: right;
-	margin: 15px 25px 10px 0;
-	width: 30px;
-}
-
-.extra{
-	float: left;
-	margin: -60px 0 15px 125px;
-	padding: 0 0 ;
-	background-color: $lBlack;
-
-	p{
-		float: left;
-		margin: 15px 25px 0 25px;
-		font-size: 14px;
-	}
-}
-
-.carDropdown{
-	width: 300px;
-	background-color: $dWhite;
-	position: relative;
-	margin: 0;
-	float: left;
+.names{
 	clear: both;
-	border-top: solid 1px $blue;
-	border-bottom: solid 1px $blue;
-	opacity: 0;
-	display: none;
 
-	a{
+	.carDropdown{
+		width: 350px;
+		background-color: $dWhite;
+		position: relative;
+		margin: 2px 0 0;
 		float: left;
 		clear: both;
-		padding: 10px 0 10px 50px;
-		margin: 0;
-		color: $black;
-		display: inline-block;
-		width: 250px;
-	}
+		border-top: solid 1px $blue;
+		border-bottom: solid 1px $blue;
+		opacity: 0;
+		display: none;
 
-	a:active{
-		color: $white;
-		background-color: $blue;
+		a{
+			float: left;
+			clear: both;
+			padding: 10px 0 10px 50px;
+			margin: 0;
+			color: $black;
+			display: inline-block;
+			width: 250px;
+		}
+
+		a:active{
+			color: $white;
+			background-color: $blue;
+		}
 	}
 }
 
@@ -829,8 +811,8 @@ input.submit:active{
 .postDetail{
 	width: 80%;
 	background-color: $lBlack;
-	float: left;
 	margin: 15px 10% 80px;
+	display: inline-block;
 
 	.postDImgMask{
 		overflow: hidden;
@@ -978,11 +960,15 @@ input.submit:active{
 	}
 }
 
-.postEditButtons input.submit{
-	width: 100px;
-	height: 40px;
-	float: right;
-	margin: 0;
+.postDetail form, .carDetail form{
+	clear: both;
+
+	.postEditButtons input.submit{
+		width: 100px;
+		height: 40px;
+		float: right;
+		margin: 0;
+	}
 }
 
 /*_Car Detail Page____________________________________________________*/
@@ -993,6 +979,78 @@ input.submit:active{
 	font-size: 18px;
 	background-color: $black;
 	color: $dWhite;
+}
+
+/*_Car Edit Page____________________________________________________*/
+
+.carDetail{
+	padding: 0;
+}
+
+.carDetail form{
+	width: 100%;
+	padding: 0;
+
+	input, textarea{
+		margin: 0 0 0 20px;
+	}
+
+	p{
+		margin: 20px 0 0 20px;
+	}
+}
+
+.postButtons{
+	width: 100%;
+	background-color: $black;
+	height: 40px;
+	margin: 30px 0 0;
+	clear: both;
+
+	button, .button{
+		float: right;
+		width: 100px;
+		height: 40px;
+		background-color: $black;
+		color: $white;
+		border: solid 1px $blue;
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	.button{
+		text-align: center;
+		padding: 9px 0 0;
+		height: 29px;
+	}
+
+	.liked{
+		color: #eeeeee;
+		background-color: #1193ff;
+		cursor: pointer;
+	}
+
+	.liked:hover{
+		color: #eeeeee;
+	}
+
+	button:hover, .button:hover{
+		color: $blue;
+	}
+
+	button:active, .button:active{
+		background-color: $blue;
+		color: $white;
+	}
+
+	.deleteBtn:hover{
+		color: #ff1111;
+	}
+
+	.deleteBtn:active{
+		color: #eeeeee;
+		background-color: #ff1111;
+	}
 }
 
 /*_List Pages____________________________________________________*/
@@ -1024,6 +1082,12 @@ span{
 
 .flash-info{
 	background-color: $blue;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /*--------------------------------------------------------------------------------*/

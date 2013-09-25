@@ -96,6 +96,24 @@ class Model_User extends \Orm\Model
 		return $ids;
 	}
 
+	public function get_car($make, $model, $year)
+	{
+		$make    = Model_Vehicle_Make::get_make($make);
+		$model   = Model_Vehicle_Model::get_model($model);
+
+		if (is_null($make) or is_null($model))
+		{
+			return;
+		}
+
+		return Model_Car::query()->where(array(
+			'user_id'	 => $this->id,
+			'make_id'	 => $make->id,
+			'model_id'	 => $model->id,
+			'year'		 => $year
+		))->get_one();
+	}
+
 	public static function get_by_id($id)
 	{
 		return static::query()->where('id', $id)->get_one();

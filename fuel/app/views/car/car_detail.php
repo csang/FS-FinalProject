@@ -9,23 +9,20 @@
 				<div class="mainInfo">
 					<div class="left">
 						<div class="names">
-							<h2><?= $car->make()." ".$car->model()." ".$car->trim.", ".$car->year ?></h2>
+							<h2><?= $car->make().' '.$car->model().' '.$car->trim.', '.$car->year ?></h2>
 							<?= Asset::img('icons/down.png') ?>
-							<?= Html::anchor($profile->username.'/car/'.$car->make()."/".$car->model()."/".$car->year."/edit", 'Edit', array('class'=>'userSite')) ?>
-							<!-- <select>
-								<? foreach ($cars as $c){ ?>
-									<option value="<?= $c->id ?>"><?= $c->make()." ".$c->model()." ".$c->trim.", ".$c->year ?></option>
-								<? } ?>
-							</select> -->
+							<?php if($user->id == $profile->id): ?>
+								<?= Html::anchor($profile->username.'/car/'.$car->make().'/'.$car->model().'/'.$car->year.'/edit', 'Edit', array('class'=>'userSite')) ?>
+							<?php endif; ?>
 							<div class="carDropdown">
 								<? foreach ($cars as $c){ ?>
-									<?= Html::anchor($profile->username.'/car/'.$c->make()."/".$c->model()."/".$c->year, $c->make() . " " . $c->model()." ".$c->trim.", ".$c->year, array('class'=>'postCar')) ?>
+									<?= Html::anchor($profile->username.'/car/'.$c->make().'/'.$c->model().'/'.$c->year, $c->make() . ' ' . $c->model().' '.$c->trim.', '.$c->year, array('class'=>'postCar')) ?>
 								<? } ?>
 							</div>
 						</div>
 					</div>
 				</div>
-				<?php if($car->about != ""):  ?>
+				<?php if($car->about != ''):  ?>
 				<div class="hLine">
 				</div>
 				<?php endif; ?>

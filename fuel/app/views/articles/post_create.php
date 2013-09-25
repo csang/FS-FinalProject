@@ -24,8 +24,8 @@
 					<input type="number" placeholder="Year" name="year">
 				</div>
 				
-				<p>Mods:</p>
-				<input type="text" class="mods" name="mods" placeholder="eg. spoiler, lip, engine, etc" /></br>
+				<!-- <p>Mods:</p>
+				<input type="text" class="mods" name="mods" placeholder="eg. spoiler, lip, engine, etc" /></br> -->
 				<p>Title:</p>
 				<input type="text" class="title" name="title" placeholder="Title" /></br>
 				<p>Story:</p>

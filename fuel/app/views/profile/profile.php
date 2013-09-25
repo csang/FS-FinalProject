@@ -10,10 +10,10 @@
 					<div class="left">
 						<div class="names">
 							<h2><?= $profile->name ?> (<?= $profile->username ?>)</h2>
-							<?= Html::anchor($profile->site, $profile->site, array('class'=>'userSite')) ?>
-<!-- 							<a href="<?= $profile->site ?>" class="userSite"><?= $profile->site ?></a> -->							<?php if(isset($user->id) && $profile->id != $user->id): ?>
-							<button type="button" class="<? if($following){ ?>followBtn following<? }else{ ?> followBtn <? } ?>"><? if($following){ ?>Following<? }else{ ?> Follow <? } ?></button>
-							<? endif; ?>
+							<?= Html::anchor('http://' . $profile->site, $profile->site, array('class'=>'userSite')) ?>
+							<?php if($user->id != $profile->id):?>
+							<button type="button" class="<?php if($following){ ?>followBtn following<? }else{ ?> followBtn <? } ?>"><?php if($following){ ?>Following<? }else{ ?> Follow <? } ?></button>
+							<?php endif; ?>
 						</div>
 					</div>
 					<div class="right">

@@ -14,6 +14,7 @@ class Model_Car extends \Orm\Model
 		'image',
 		'carname',
 		'created_at',
+		'updated_at',
 	);
 
 	protected static $_has_many = array(
@@ -48,6 +49,19 @@ class Model_Car extends \Orm\Model
 			'cascade_save'	 => true,
 			'cascade_delete' => false,
 		)
+	);
+
+	protected static $_observers = array(
+		'Orm\\Observer_CreatedAt' => array(
+			'events' => array('before_insert'),
+			'mysql_timestamp' => true,
+			'property' => 'created_at',
+		),
+		'Orm\\Observer_UpdatedAt' => array(
+			'events' => array('before_save'),
+			'mysql_timestamp' => true,
+			'property' => 'updated_at',
+		),
 	);
 
 	public static function total_cars($id)
