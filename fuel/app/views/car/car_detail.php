@@ -28,7 +28,6 @@
 				<?php endif; ?>
 				<div class="bio">
 					<p><?= $car->about ?></p>
-					<!-- <?= Asset::img('icons/down.png') ?> -->
 				</div>
 			</div>
 		</div>

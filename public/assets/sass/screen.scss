@@ -712,8 +712,16 @@ input.submit:active{
 	}
 }
 
+.userIdList:first-child, .carIdList:first-child{
+	margin: 15px auto;
+}
+
 .mainInfo, .hLine, .bio, .extra{
 	width: 835px;
+}
+
+.hLineCarList{
+	width: 960px;
 }
 
 .mainInfo, .mainInfo .left, .mainInfo h2, .mainInfo img{

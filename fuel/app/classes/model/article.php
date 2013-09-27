@@ -68,6 +68,7 @@ class Model_Article extends \Orm\Model
 
 	public static function get_featured()
 	{
-		return static::query()->order_by('likes','desc')->order_by('created_at','desc')->get();
+		$last_week = substr(strval(time() - (21 * 24 * 60 * 60)), 0, 4);
+		return static::query()->where('created_at', 'like', $last_week.'%')->order_by('likes','desc')->order_by('created_at','desc')->get();
 	}
 }

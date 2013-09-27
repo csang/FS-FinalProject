@@ -52,17 +52,32 @@ class Controller_Profile extends Controller_App
 
 	public function get_cars($username)
 	{
-		$this->template->body = View::forge('profile/car_list');
+		$profile = Model_User::get_user($username);
+		$cars    = Model_Car::query()->where('user_id', $profile->id)->get();
+		$this->template->body = View::forge('profile/car_list', array(
+			'profile' => $profile,
+			'cars'    => $cars,
+		));
 	}
 
-	public function get_friends()
+	public function get_friends($username)
 	{
-		$this->template->body   = View::forge('profile/user_list');
+		$profile = Model_User::get_user($username);
+		$profiles = $profile->friends();
+
+		$this->template->body   = View::forge('profile/user_list', array(
+			'profiles'  => $profiles,
+		));
 	}
 
-	public function get_followers()
+	public function get_followers($username)
 	{
-		$this->template->body   = View::forge('profile/user_list');
+		$profile = Model_User::get_user($username);
+		$profiles = $profile->followings();
+
+		$this->template->body   = View::forge('profile/user_list', array(
+			'profiles'  => $profiles,
+		));
 	}
 
 	public function get_car($username, $make, $model, $year){

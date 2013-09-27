@@ -11,7 +11,9 @@
 		followBtn =			$(".followBtn"),
 		deleteBtn =			$(".deleteBtn"),
 		bioArrow =			$(".bio img"),
-		nameArrow = 		$(".names img");
+		nameArrow = 		$(".names img"),
+		carInputs =         $(".carInputs input"),
+		feed =              $(".feed");
 
 	deleteBtn.click(function(){
 		if (confirm('Are you sure you want to delete this article?')) {
@@ -99,12 +101,19 @@
 	followBtn.click(function(){
 
 		var user_id = $(".user_id").html(),
-			follow_id = $(".follow_id").html();
+			btn = $(this),
+			follow_id = $(this).next().html(),
+			url = "assets/xhr/api.php";
 
-		if(followBtn.hasClass("following")){
+		if($(".userIdList").length != 0)
+		{
+			url = "../assets/xhr/api.php";								
+		}
+
+		if(btn.hasClass("following")){
 
 			lib.ajax({
-				url: "assets/xhr/api.php",
+				url: url,
 				type: "post",
 				data: {
 					action: "unfollow",
@@ -114,8 +123,8 @@
 				success: function(result){
 					console.log(result);
 
-					followBtn.removeClass("following");
-					followBtn.html("Follow");
+					btn.removeClass("following");
+					btn.html("Follow");
 				},
 				error: function(result){
 					console.log("There was an error!", result);
@@ -125,7 +134,7 @@
 		}else{
 
 			lib.ajax({
-				url: "assets/xhr/api.php",
+				url: url,
 				type: "post",
 				data: {
 					action: "follow",
@@ -135,8 +144,8 @@
 				success: function(result){
 					console.log(result);
 
-					followBtn.addClass("following");
-					followBtn.html("Following");
+					btn.addClass("following");
+					btn.html("Following");
 				},
 				error: function(result){
 					console.log("There was an error!", result);
@@ -185,5 +194,65 @@
 			},200)
 		};
 
+	})
+
+	var filter = function(make, model, year){
+		lib.ajax({
+			url: "../assets/xhr/api.php",
+			type: "get",
+			data: {
+				action: "filter",
+				make: make,
+				model: model,
+				year: year
+			},
+			success: function(result){
+				// console.log(result);
+				var article = "";
+
+				for(var i=0, max=result.length; i<max; i++){
+					article += "<div class='post'>"+
+								"<a href=\"<?= Uri::create($article->user->username.'/article/'.$article->id) ?>\">"+
+									"<div class=\"postImgMask\">"+
+										"<?= Asset::img(\"post_images/\".$article->images, array('class' => 'articleImg')) ?>"+
+									"</div>"+
+								"</a>"+
+								"<div class=\"content\">"+
+									"<div class=\"likeNum\">"+
+										"<?= Html::anchor($article->user->username.'/car/'.$article->car->make().\"/\".$article->car->model().\"/\".$article->car->year, $article->car->make() . \" \" . $article->car->model(), array('class'=>'postCar')) ?>"+
+										"<?= Asset::img('icons/tick.png') ?><p><?= $article->likes ?></p>"+
+									"</div>"+
+									"<h2><?= $article->title ?></h2>"+
+									"<p class=\"timestamp\"><?= date(\"F j, g:i a\", $article->created_at) ?></p>"+
+									"<p><?= $article->content_short() ?></p>"+
+									"<div class=\"postUserInfo\">"+
+										"<div class=\"postAvatarMask\">"+
+											"<?= Html::anchor($article->user->profile_url(), Asset::img($article->user->avatar_url(), array('class' => 'postAvatar'))) ?>"+
+										"</div>"+
+										"<?= Html::anchor($article->user->profile_url(), $article->user->username, array('class'=>'postUser')) ?>"+
+									"</div>"+
+								"</div>"+
+							"</div>"+
+							"<?php }}else if(!$user){;?>"+
+							"<h2>In here you'll see articles from the users you follow. Check out for cars you like and follow it's owner!</h2></br>"+
+							"<div class=\"poster\">"+
+								"<?= Asset::img('poster.jpg'); ?>"+
+							"</div></br>";
+
+					feed.innerHTML = article;
+				}
+			},
+			error: function(result){
+				console.log("There was an error!", result);
+			}
+		})
+	}
+
+	carInputs.change(function(){
+		var make = $(".filterMake")[0].value,
+			model = $(".filterModel")[0].value,
+			year = $(".filterYear")[0].value;
+
+		filter(make, model, year);
 	})
 })()

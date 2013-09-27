@@ -64,6 +64,46 @@ function unfollow($user_id, $follow_id){
 	$s->execute(array(":user_id" => $user_id, ":follow_id" => $follow_id));
 }
 
+function filter($make, $model, $year){
+
+	$db = new PDO("mysql:hostname=localhost;port=80;dbname=carsignite", "root", "root");
+	
+	$sql1 = "SELECT id FROM vehicle_makes
+			WHERE name = :make;";
+
+	$sql2 = "SELECT id FROM vehicle_models
+			WHERE name = :model;";
+
+	$sql3 = "SELECT id FROM cars
+			WHERE make_id = :make_id OR model_id = :model_id OR year = :year";
+
+	$sql4 = "SELECT * FROM articles
+			WHERE car_id = :car_id;";
+	
+	$s1 = $db->prepare($sql1);
+	$s1->execute(array(":make" => $make));
+	$make_id = $s1->fetchAll();
+
+	$s2 = $db->prepare($sql2);
+	$s2->execute(array(":model" => $model));
+	$model_id = $s2->fetchAll();
+
+	$s3 = $db->prepare($sql3);
+	$s3->execute(array(":make_id" => $make_id[0]["id"], ":model_id" => $model_id[0]["id"], ":year" => $year));
+	$car_id = $s3->fetchAll();
+
+	$sql_results = array();
+	$s4 = $db->prepare($sql4);
+	foreach($car_id as $car){
+		
+		$s4->execute(array(":car_id" => $car["id"]));
+		
+		array_push($sql_results, $s4->fetchAll());
+	}
+	
+	return $sql_results;
+}
+
 if(isset($_GET["action"])){
 	
 // Actions ----------------------------------------------------------------------------
@@ -189,6 +229,28 @@ if(isset($_GET["action"])){
 		$unfollow = unfollow($user_id, $follow_id);
 		
 		echo(json_encode($unfollow));
+	}
+
+	elseif($_GET["action"] == "filter"){
+
+		$make = "";
+		if(isset($_GET["make"])){
+			$make = $_GET["make"];
+		}
+
+		$model = "";
+		if(isset($_GET["model"])){
+			$model = $_GET["model"];
+		}
+
+		$year = 0;
+		if(isset($_GET["year"])){
+			$year = $_GET["year"];
+		}
+
+		$filter = filter($make, $model, $year);
+		
+		echo(json_encode($filter));
 	}
 	
 	else{

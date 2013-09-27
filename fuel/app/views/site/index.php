@@ -22,10 +22,10 @@
 					</div>
 				</div>
 			</div>
-			<? }}else if(!$user){;?>
+			<?php }}else if(!$user){;?>
 			<h2>In here you'll see articles from the users you follow. Check out for cars you like and follow it's owner!</h2></br>
 			<div class="poster">
 				<?= Asset::img('poster.jpg'); ?>
 			</div></br>
-			<? } ?>
+			<?php } ?>
 		</div>

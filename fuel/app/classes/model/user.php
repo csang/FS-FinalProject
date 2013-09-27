@@ -76,6 +76,11 @@ class Model_User extends \Orm\Model
 		return Model_Follow::query()->where('follower', $this->id)->get();
 	}
 
+	public function following()
+	{
+		return Model_Follow::query()->where('follow', $this->id)->get();
+	}
+
 	public function friends()
 	{
 		$friends = array();
@@ -86,6 +91,16 @@ class Model_User extends \Orm\Model
 		return $friends;
 	}
 
+	public function followings()
+	{
+		$following = array();
+		foreach ($this->following() as $follow)
+		{
+			array_push($following, $follow->user);
+		}
+		return $following;
+	}
+
 	public function friend_ids()
 	{
 		$ids = array();
@@ -94,6 +109,26 @@ class Model_User extends \Orm\Model
 			array_push($ids, $friend->id);
 		}
 		return $ids;
+	}
+
+	public function check_follow($user_id)
+	{
+		 return Model_Follow::query()->where(array('follower'=> $user_id, 'follow'=> $this->id))->get_one();
+	}
+
+	public function total_cars()
+	{
+		return Model_Car::total_cars($this->id);
+	}
+
+	public function total_followings()
+	{
+		return Model_Follow::total_followings($this->id);
+	}
+
+	public function total_followers()
+	{
+		return Model_Follow::total_followers($this->id);
 	}
 
 	public function get_car($make, $model, $year)

@@ -1,14 +1,18 @@
 		<div class="carSelector">
 			<div class="carInputs">
-				<input list="makes" placeholder="Make">
+				<input class="filterMake" list="makes" placeholder="Make">
 				<datalist id="makes">
-					<option value="Honda">
+					<?php foreach ($makes as $make) { ?>
+						<option value="<?= $make->name ?>">
+					<? } ?>
 				</datalist>
-				<input list="models" placeholder="Model">
+				<input class="filterModel" list="models" placeholder="Model">
 				<datalist id="models">
-					<option value="Accord">
+					<?php foreach ($models as $model) { ?>
+						<option value="<?= $model->name ?>">
+					<? } ?>
 				</datalist>
-				<input list="years" placeholder="Year">
+				<input class="filterYear" list="years" placeholder="Year">
 				<datalist id="years">
 					<option value="2000">
 					<option value="2001">
