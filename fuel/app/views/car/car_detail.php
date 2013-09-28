@@ -1,5 +1,5 @@
 		<div class="poster">
-			<?= Asset::img('poster.jpg') ?>
+			<?= Asset::img($profile->poster_url()) ?>
 		</div>
 		<div class="carId">
 			<div class="top">
