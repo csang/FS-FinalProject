@@ -211,7 +211,7 @@ a:hover {
 /* line 188, ../sass/screen.scss */
 .post {
   width: 300px;
-  height: 450px;
+  height: 392px;
   background-color: #111111;
   float: left;
   margin: 0 15px 15px 0;
@@ -249,25 +249,26 @@ a:hover {
   overflow: hidden;
   width: 300px;
   height: 225px;
+  height: 168px;
 }
-/* line 226, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .postImgMask .articleImg {
   width: 300px;
 }
 
-/* line 231, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 .postImg {
   height: 225px;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 .postUserInfo {
   position: relative;
   bottom: -5px;
   clear: both;
 }
 
-/* line 241, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .postAvatarMask {
   overflow: hidden;
   width: 30px;
@@ -277,33 +278,33 @@ a:hover {
   border: solid 1px #111111;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .postAvatar {
   height: 30px;
 }
 
-/* line 254, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .postCar, .postUser {
   float: left;
 }
 
-/* line 258, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .postCar {
   margin: 5px 0 0 10px;
 }
 
-/* line 262, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 .postUser {
   margin: 25px 0 0 10px;
 }
 
-/* line 266, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 .post:hover .content {
   border-top: solid 1px #1193ff;
   border-bottom: solid 1px #1193ff;
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .likeNum {
   display: block;
   position: absolute;
@@ -314,7 +315,7 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.7);
   clear: both;
 }
-/* line 281, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .likeNum p {
   width: 50px;
   height: 25px;
@@ -323,24 +324,24 @@ a:hover {
   font-size: 18px;
   float: right;
 }
-/* line 290, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 .likeNum img {
   float: right;
   width: 20px;
   margin: 5px;
 }
 
-/* line 297, ../sass/screen.scss */
+/* line 298, ../sass/screen.scss */
 p {
   color: #eeeeee;
 }
 
-/* line 301, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 a:hover {
   color: #1193ff;
 }
 
-/* line 305, ../sass/screen.scss */
+/* line 306, ../sass/screen.scss */
 footer {
   position: fixed;
   background-color: #000000;
@@ -349,35 +350,35 @@ footer {
   bottom: 0;
   clear: both;
 }
-/* line 313, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 footer .copyright {
   float: left;
   margin: 0 0 0 30px;
 }
-/* line 318, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 footer .footerLinks {
   position: relative;
   top: 0px;
 }
-/* line 322, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 footer .footerLinks p {
   width: 100%;
   text-align: center;
 }
 
-/* line 329, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 .carSelector {
   height: 50px;
   margin: 0 auto 20px;
   padding: 0 0 20px 5px;
   background-color: black;
 }
-/* line 335, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 .carSelector .carInputs {
   margin: 0 auto;
   width: 990px;
 }
-/* line 340, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 .carSelector input {
   border: solid 1px #1193ff;
   background-color: white;
@@ -386,23 +387,23 @@ footer .footerLinks p {
   margin: 25px 0 0 25px;
 }
 
-/* line 349, ../sass/screen.scss */
+/* line 350, ../sass/screen.scss */
 .active {
   color: #1193ff;
 }
 
-/* line 353, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 .postCar:hover {
   color: #1193ff;
 }
 
-/* line 357, ../sass/screen.scss */
+/* line 358, ../sass/screen.scss */
 .postAvatarMask:hover {
   border: solid 1px #1193ff;
 }
 
 /*_Login Page____________________________________________________*/
-/* line 363, ../sass/screen.scss */
+/* line 364, ../sass/screen.scss */
 .loginBox {
   width: 300px;
   text-align: center;
@@ -411,19 +412,19 @@ footer .footerLinks p {
   margin: 70px auto 376px;
 }
 
-/* line 371, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 label {
   color: #eeeeee;
 }
 
-/* line 375, ../sass/screen.scss */
+/* line 376, ../sass/screen.scss */
 input {
   margin: 25px 0 0 0;
   border: solid 2px #1193ff;
   font-size: 14px;
 }
 
-/* line 381, ../sass/screen.scss */
+/* line 382, ../sass/screen.scss */
 input.submit {
   background-color: black;
   border: solid 1px #1193ff;
@@ -433,19 +434,19 @@ input.submit {
   cursor: pointer;
 }
 
-/* line 390, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 input.submit:hover {
   color: #1193ff;
 }
 
-/* line 394, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 input.submit:active {
   background-color: #1193ff;
   color: white;
 }
 
 /*_Register Page____________________________________________________*/
-/* line 401, ../sass/screen.scss */
+/* line 402, ../sass/screen.scss */
 .registerBox {
   width: 600px;
   text-align: left;
@@ -455,53 +456,53 @@ input.submit:active {
   padding: 20px;
   clear: both;
 }
-/* line 410, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 .registerBox form {
   width: 290px;
   float: left;
 }
-/* line 415, ../sass/screen.scss */
+/* line 416, ../sass/screen.scss */
 .registerBox p {
   margin: 0;
 }
-/* line 419, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 .registerBox input {
   margin: 2px 0 15px;
   width: 260px;
 }
-/* line 424, ../sass/screen.scss */
+/* line 425, ../sass/screen.scss */
 .registerBox input.submit {
   margin: 20px 25px 0 0;
   width: 100px;
   float: right;
 }
-/* line 430, ../sass/screen.scss */
+/* line 431, ../sass/screen.scss */
 .registerBox .vLine {
   width: 1px;
   height: 290px;
   background-color: #1193ff;
   float: left;
 }
-/* line 437, ../sass/screen.scss */
+/* line 438, ../sass/screen.scss */
 .registerBox .features {
   width: 250px;
   float: left;
 }
-/* line 441, ../sass/screen.scss */
+/* line 442, ../sass/screen.scss */
 .registerBox .features li {
   margin: 10px 0 0;
 }
 
-/* line 447, ../sass/screen.scss */
+/* line 448, ../sass/screen.scss */
 .profileCreateBox {
-  height: 450px;
+  height: 500px;
 }
-/* line 451, ../sass/screen.scss */
+/* line 452, ../sass/screen.scss */
 .profileCreateBox input.file {
   border: none;
   color: #eeeeee;
 }
-/* line 456, ../sass/screen.scss */
+/* line 457, ../sass/screen.scss */
 .profileCreateBox textarea {
   border: solid 2px #1193ff;
   background-color: white;
@@ -509,11 +510,11 @@ input.submit:active {
   resize: none;
   font-size: 14px;
 }
-/* line 464, ../sass/screen.scss */
+/* line 465, ../sass/screen.scss */
 .profileCreateBox .vLine {
   height: 390px;
 }
-/* line 468, ../sass/screen.scss */
+/* line 469, ../sass/screen.scss */
 .profileCreateBox .skip {
   margin: 20px 0 0;
   border: solid 1px #555555;
@@ -526,11 +527,11 @@ input.submit:active {
   text-align: center;
   padding: 3px 0 0;
 }
-/* line 481, ../sass/screen.scss */
+/* line 482, ../sass/screen.scss */
 .profileCreateBox .skip:hover {
   color: #1193ff;
 }
-/* line 485, ../sass/screen.scss */
+/* line 486, ../sass/screen.scss */
 .profileCreateBox .skip:active {
   border: solid 1px #1193ff;
   color: white;
@@ -538,7 +539,7 @@ input.submit:active {
 }
 
 /*_Add Post Page____________________________________________________*/
-/* line 494, ../sass/screen.scss */
+/* line 495, ../sass/screen.scss */
 .postBox {
   width: 90%;
   text-align: left;
@@ -548,16 +549,16 @@ input.submit:active {
   padding: 20px;
   clear: both;
 }
-/* line 503, ../sass/screen.scss */
+/* line 504, ../sass/screen.scss */
 .postBox form {
   width: 585px;
   float: left;
 }
-/* line 508, ../sass/screen.scss */
+/* line 509, ../sass/screen.scss */
 .postBox p {
   margin: 0;
 }
-/* line 512, ../sass/screen.scss */
+/* line 513, ../sass/screen.scss */
 .postBox textarea {
   border: solid 2px #1193ff;
   background-color: white;
@@ -565,26 +566,26 @@ input.submit:active {
   resize: none;
   font-size: 14px;
 }
-/* line 520, ../sass/screen.scss */
+/* line 521, ../sass/screen.scss */
 .postBox input {
   margin: 2px 0 15px;
   width: 260px;
 }
-/* line 525, ../sass/screen.scss */
+/* line 526, ../sass/screen.scss */
 .postBox input.submit {
   margin: 20px 0 0 480px;
   width: 100px;
 }
-/* line 530, ../sass/screen.scss */
+/* line 531, ../sass/screen.scss */
 .postBox input.file {
   border: none;
   color: #eeeeee;
 }
-/* line 535, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 .postBox .addedCarForm {
   padding: 5px 0 0;
 }
-/* line 539, ../sass/screen.scss */
+/* line 540, ../sass/screen.scss */
 .postBox .addedCarForm .selectCar {
   margin: 2px 0 15px;
   width: 265px;
@@ -592,7 +593,7 @@ input.submit:active {
   border: solid 2px #1193ff;
   background-color: white;
 }
-/* line 547, ../sass/screen.scss */
+/* line 548, ../sass/screen.scss */
 .postBox .addedCarForm .addCarBtn {
   margin: 0 0 0 10px;
   width: 150px;
@@ -601,13 +602,13 @@ input.submit:active {
   border: solid 1px #eeeeee;
   background-color: #1193ff;
 }
-/* line 556, ../sass/screen.scss */
+/* line 557, ../sass/screen.scss */
 .postBox .addedCarForm .addCarBtn:hover {
   color: #1193ff;
   border: solid 1px #1193ff;
   background-color: #eeeeee;
 }
-/* line 564, ../sass/screen.scss */
+/* line 565, ../sass/screen.scss */
 .postBox .addCarForm {
   display: none;
   border-top: solid 1px #1193ff;
@@ -615,7 +616,7 @@ input.submit:active {
   padding: 5px 0 0;
   margin: 0 0 10px;
 }
-/* line 571, ../sass/screen.scss */
+/* line 572, ../sass/screen.scss */
 .postBox .addCarForm .hideCarFormBtn {
   margin: 0 0 0 10px;
   width: 150px;
@@ -624,7 +625,7 @@ input.submit:active {
   border: solid 1px #eeeeee;
   background-color: #1193ff;
 }
-/* line 580, ../sass/screen.scss */
+/* line 581, ../sass/screen.scss */
 .postBox .addCarForm .hideCarFormBtn:hover {
   color: #1193ff;
   border: solid 1px #1193ff;
@@ -632,40 +633,40 @@ input.submit:active {
 }
 
 /*_Profile Page____________________________________________________*/
-/* line 590, ../sass/screen.scss */
+/* line 591, ../sass/screen.scss */
 .poster {
   width: 960px;
-  height: 360px;
+  height: 268px;
   overflow: hidden;
   margin: 0 auto;
 }
-/* line 596, ../sass/screen.scss */
+/* line 597, ../sass/screen.scss */
 .poster img {
   width: 960px;
-  margin: -120px 0 0;
+  margin: 0;
 }
 
-/* line 602, ../sass/screen.scss */
+/* line 603, ../sass/screen.scss */
 .userId, .carId {
   width: 960px;
   margin: 0 auto 15px;
   background-color: #111111;
   clear: both;
 }
-/* line 609, ../sass/screen.scss */
+/* line 610, ../sass/screen.scss */
 .userId .bio, .carId .bio {
   float: left;
   clear: right;
   height: 64px;
 }
-/* line 614, ../sass/screen.scss */
+/* line 615, ../sass/screen.scss */
 .userId .bio p, .carId .bio p {
   margin: 0;
   padding: 10px 0 0 10px;
   width: 700px;
   float: left;
 }
-/* line 621, ../sass/screen.scss */
+/* line 622, ../sass/screen.scss */
 .userId .bio img, .carId .bio img {
   float: right;
   margin: 20px 25px 10px 0;
@@ -673,40 +674,40 @@ input.submit:active {
   height: 20px;
   cursor: pointer;
 }
-/* line 630, ../sass/screen.scss */
+/* line 631, ../sass/screen.scss */
 .userId .top, .carId .top {
   height: 125px;
   clear: both;
 }
-/* line 634, ../sass/screen.scss */
+/* line 635, ../sass/screen.scss */
 .userId .top .idAvatarMask, .carId .top .idAvatarMask {
   width: 125px;
   height: 125px;
   overflow: hidden;
   float: left;
 }
-/* line 640, ../sass/screen.scss */
+/* line 641, ../sass/screen.scss */
 .userId .top .idAvatarMask .idAvatar, .carId .top .idAvatarMask .idAvatar {
   height: 125px;
 }
-/* line 645, ../sass/screen.scss */
+/* line 646, ../sass/screen.scss */
 .userId .top .mainInfo, .carId .top .mainInfo {
   height: 50px;
   margin: -5px 0 15px;
   clear: right;
 }
-/* line 650, ../sass/screen.scss */
+/* line 651, ../sass/screen.scss */
 .userId .top .mainInfo .left, .carId .top .mainInfo .left {
   width: 350px;
   padding: 0 0 0 15px;
 }
-/* line 654, ../sass/screen.scss */
+/* line 655, ../sass/screen.scss */
 .userId .top .mainInfo .left .names img, .carId .top .mainInfo .left .names img {
   width: 20px;
   height: 20px;
   margin: 22px 0 0 25px;
 }
-/* line 660, ../sass/screen.scss */
+/* line 661, ../sass/screen.scss */
 .userId .top .mainInfo .left .userSite, .carId .top .mainInfo .left .userSite {
   float: left;
   clear: both;
@@ -714,20 +715,20 @@ input.submit:active {
   color: #555555;
   margin: 0 0 0 10px;
 }
-/* line 668, ../sass/screen.scss */
+/* line 669, ../sass/screen.scss */
 .userId .top .mainInfo .left .userSite:hover, .carId .top .mainInfo .left .userSite:hover {
   color: #1193ff;
 }
-/* line 673, ../sass/screen.scss */
+/* line 674, ../sass/screen.scss */
 .userId .top .mainInfo .right, .carId .top .mainInfo .right {
   float: right;
   width: 350px;
 }
-/* line 678, ../sass/screen.scss */
+/* line 679, ../sass/screen.scss */
 .userId .top .mainInfo h2, .carId .top .mainInfo h2 {
   margin: 18px 0 0 10px;
 }
-/* line 682, ../sass/screen.scss */
+/* line 683, ../sass/screen.scss */
 .userId .top .mainInfo .followBtn, .carId .top .mainInfo .followBtn {
   margin: 15px 0 0 20px;
   width: 100px;
@@ -736,60 +737,60 @@ input.submit:active {
   color: white;
   border: solid 1px #555555;
 }
-/* line 691, ../sass/screen.scss */
+/* line 692, ../sass/screen.scss */
 .userId .top .mainInfo .following, .carId .top .mainInfo .following {
   background-color: #1193ff;
   color: white;
   border: solid 1px #1193ff;
 }
-/* line 697, ../sass/screen.scss */
+/* line 698, ../sass/screen.scss */
 .userId .top .mainInfo .followBtn:hover, .carId .top .mainInfo .followBtn:hover {
   color: #1193ff;
 }
-/* line 701, ../sass/screen.scss */
+/* line 702, ../sass/screen.scss */
 .userId .top .mainInfo .following:hover, .carId .top .mainInfo .following:hover {
   color: white;
   border: solid 1px white;
 }
-/* line 707, ../sass/screen.scss */
+/* line 708, ../sass/screen.scss */
 .userId .top .hLine, .carId .top .hLine {
   height: 1px;
   background-color: #1193ff;
   float: left;
 }
 
-/* line 715, ../sass/screen.scss */
+/* line 716, ../sass/screen.scss */
 .userIdList:first-child, .carIdList:first-child {
   margin: 15px auto;
 }
 
-/* line 719, ../sass/screen.scss */
+/* line 720, ../sass/screen.scss */
 .mainInfo, .hLine, .bio, .extra {
   width: 835px;
 }
 
-/* line 723, ../sass/screen.scss */
+/* line 724, ../sass/screen.scss */
 .hLineCarList {
   width: 960px;
 }
 
-/* line 727, ../sass/screen.scss */
+/* line 728, ../sass/screen.scss */
 .mainInfo, .mainInfo .left, .mainInfo h2, .mainInfo img {
   float: left;
 }
 
-/* line 731, ../sass/screen.scss */
+/* line 732, ../sass/screen.scss */
 .mainInfo img {
   width: 25px;
   margin: 18px 0 10px 35px;
 }
 
-/* line 736, ../sass/screen.scss */
+/* line 737, ../sass/screen.scss */
 .postBtn {
   float: left;
 }
 
-/* line 740, ../sass/screen.scss */
+/* line 741, ../sass/screen.scss */
 .profileAvatar {
   width: 50px;
   height: 50px;
@@ -797,19 +798,19 @@ input.submit:active {
   display: inline-block;
   margin: -3px 0 0 15px;
 }
-/* line 747, ../sass/screen.scss */
+/* line 748, ../sass/screen.scss */
 .profileAvatar img {
   height: 50px;
 }
 
-/* line 752, ../sass/screen.scss */
+/* line 753, ../sass/screen.scss */
 .loggedIn {
   width: 275px;
   margin: 15px 0 0 68px;
   clear: right;
 }
 
-/* line 758, ../sass/screen.scss */
+/* line 759, ../sass/screen.scss */
 .dropdown {
   width: 100px;
   float: right;
@@ -819,7 +820,7 @@ input.submit:active {
   display: none;
 }
 
-/* line 767, ../sass/screen.scss */
+/* line 768, ../sass/screen.scss */
 .dropdownBtn img {
   width: 20px;
   height: 20px;
@@ -827,7 +828,7 @@ input.submit:active {
   margin: 15px 0 0 40px;
 }
 
-/* line 774, ../sass/screen.scss */
+/* line 775, ../sass/screen.scss */
 .dropdownBtn {
   height: 60px;
   width: 100px;
@@ -835,16 +836,16 @@ input.submit:active {
   clear: right;
 }
 
-/* line 781, ../sass/screen.scss */
+/* line 782, ../sass/screen.scss */
 .dropdownBtn:hover .dropdown {
   display: block;
 }
 
-/* line 785, ../sass/screen.scss */
+/* line 786, ../sass/screen.scss */
 .names {
   clear: both;
 }
-/* line 788, ../sass/screen.scss */
+/* line 789, ../sass/screen.scss */
 .names .carDropdown {
   width: 350px;
   background-color: #eeeeee;
@@ -857,42 +858,45 @@ input.submit:active {
   opacity: 0;
   display: none;
 }
-/* line 800, ../sass/screen.scss */
+/* line 801, ../sass/screen.scss */
 .names .carDropdown a {
   float: left;
   clear: both;
-  padding: 10px 0 10px 50px;
+  padding: 10px 50px 10px 50px;
   margin: 0;
   color: black;
   display: inline-block;
   width: 250px;
 }
-/* line 810, ../sass/screen.scss */
+/* line 811, ../sass/screen.scss */
+.names .carDropdown a:hover {
+  color: #1193ff;
+}
+/* line 815, ../sass/screen.scss */
 .names .carDropdown a:active {
   color: white;
   background-color: #1193ff;
 }
 
 /*_Post Detail Page____________________________________________________*/
-/* line 819, ../sass/screen.scss */
+/* line 824, ../sass/screen.scss */
 .postDetail {
   width: 80%;
   background-color: #111111;
   margin: 15px 10% 80px;
   display: inline-block;
 }
-/* line 825, ../sass/screen.scss */
+/* line 830, ../sass/screen.scss */
 .postDetail .postDImgMask {
   overflow: hidden;
   width: 100%;
-  height: 225px;
 }
-/* line 830, ../sass/screen.scss */
+/* line 834, ../sass/screen.scss */
 .postDetail .postDImgMask .postDImg {
   width: 100%;
-  margin: -33% 0 0;
+  margin: 0;
 }
-/* line 836, ../sass/screen.scss */
+/* line 840, ../sass/screen.scss */
 .postDetail .postButtons {
   width: 100%;
   background-color: black;
@@ -900,7 +904,7 @@ input.submit:active {
   margin: 50px 0 0;
   clear: both;
 }
-/* line 843, ../sass/screen.scss */
+/* line 847, ../sass/screen.scss */
 .postDetail .postButtons button, .postDetail .postButtons .button {
   float: right;
   width: 100px;
@@ -911,63 +915,63 @@ input.submit:active {
   cursor: pointer;
   font-size: 14px;
 }
-/* line 854, ../sass/screen.scss */
+/* line 858, ../sass/screen.scss */
 .postDetail .postButtons .button {
   text-align: center;
   padding: 9px 0 0;
   height: 29px;
 }
-/* line 860, ../sass/screen.scss */
+/* line 864, ../sass/screen.scss */
 .postDetail .postButtons .liked {
   color: #eeeeee;
   background-color: #1193ff;
   cursor: pointer;
 }
-/* line 866, ../sass/screen.scss */
+/* line 870, ../sass/screen.scss */
 .postDetail .postButtons .liked:hover {
   color: #eeeeee;
 }
-/* line 870, ../sass/screen.scss */
+/* line 874, ../sass/screen.scss */
 .postDetail .postButtons button:hover, .postDetail .postButtons .button:hover {
   color: #1193ff;
 }
-/* line 874, ../sass/screen.scss */
+/* line 878, ../sass/screen.scss */
 .postDetail .postButtons button:active, .postDetail .postButtons .button:active {
   background-color: #1193ff;
   color: white;
 }
-/* line 879, ../sass/screen.scss */
+/* line 883, ../sass/screen.scss */
 .postDetail .postButtons .deleteBtn:hover {
   color: #ff1111;
 }
-/* line 883, ../sass/screen.scss */
+/* line 887, ../sass/screen.scss */
 .postDetail .postButtons .deleteBtn:active {
   color: #eeeeee;
   background-color: #ff1111;
 }
-/* line 889, ../sass/screen.scss */
+/* line 893, ../sass/screen.scss */
 .postDetail .contentDetail {
   border: solid 1px #111111;
   margin: 0 0 0;
   padding: 0 0 0;
 }
-/* line 894, ../sass/screen.scss */
+/* line 898, ../sass/screen.scss */
 .postDetail .contentDetail p:not(.postCar) {
   margin: 0 0 20px 10px;
   width: 600px;
 }
-/* line 899, ../sass/screen.scss */
+/* line 903, ../sass/screen.scss */
 .postDetail .contentDetail .dLikeNum {
   display: block;
   position: absolute;
-  margin: -31px 0 0 -1px;
+  margin: -36px 0 0 -1px;
   width: 80%;
   height: 30px;
   text-align: right;
   background-color: rgba(0, 0, 0, 0.7);
   clear: both;
 }
-/* line 909, ../sass/screen.scss */
+/* line 913, ../sass/screen.scss */
 .postDetail .contentDetail .dLikeNum p:not(.postCar) {
   width: 100px;
   padding: 3px 0;
@@ -975,61 +979,64 @@ input.submit:active {
   font-size: 18px;
   float: right;
 }
-/* line 917, ../sass/screen.scss */
+/* line 921, ../sass/screen.scss */
 .postDetail .contentDetail .dLikeNum img {
   float: right;
   width: 20px;
   margin: 5px;
 }
-/* line 924, ../sass/screen.scss */
+/* line 928, ../sass/screen.scss */
 .postDetail .contentDetail .timestamp {
   color: #aaaaaa;
   font-size: 12px;
   height: 10px;
 }
-/* line 930, ../sass/screen.scss */
+/* line 934, ../sass/screen.scss */
 .postDetail .contentDetail .postDUserInfo {
   position: relative;
   bottom: 10px;
 }
-/* line 934, ../sass/screen.scss */
+/* line 938, ../sass/screen.scss */
 .postDetail .contentDetail .postDUserInfo .postUser {
   margin: 25px 0 0 10px;
 }
-/* line 940, ../sass/screen.scss */
+/* line 944, ../sass/screen.scss */
 .postDetail .file {
   border: none;
   position: absolute;
   margin: 0;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
   top: 250px;
   left: 14%;
 }
 
 /*_Post Edit Page____________________________________________________*/
-/* line 952, ../sass/screen.scss */
+/* line 959, ../sass/screen.scss */
 .postEdit input, .postEdit textarea {
   background-color: #111111;
   border: solid 1px #1193ff;
   color: #eeeeee;
   margin: 15px 10px 0;
 }
-/* line 959, ../sass/screen.scss */
+/* line 966, ../sass/screen.scss */
 .postEdit input {
   font-size: 18px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: bold;
 }
-/* line 965, ../sass/screen.scss */
+/* line 972, ../sass/screen.scss */
 .postEdit textarea {
   font-size: 14px;
   resize: none;
 }
 
-/* line 971, ../sass/screen.scss */
+/* line 978, ../sass/screen.scss */
 .postDetail form, .carDetail form {
   clear: both;
 }
-/* line 974, ../sass/screen.scss */
+/* line 981, ../sass/screen.scss */
 .postDetail form .postEditButtons input.submit, .carDetail form .postEditButtons input.submit {
   width: 100px;
   height: 40px;
@@ -1038,7 +1045,7 @@ input.submit:active {
 }
 
 /*_Car Detail Page____________________________________________________*/
-/* line 984, ../sass/screen.scss */
+/* line 991, ../sass/screen.scss */
 .mainInfo select {
   margin-top: 22px;
   border: solid 1px #1193ff;
@@ -1048,26 +1055,26 @@ input.submit:active {
 }
 
 /*_Car Edit Page____________________________________________________*/
-/* line 994, ../sass/screen.scss */
+/* line 1001, ../sass/screen.scss */
 .carDetail {
   padding: 0;
 }
 
-/* line 998, ../sass/screen.scss */
+/* line 1005, ../sass/screen.scss */
 .carDetail form {
   width: 100%;
   padding: 0;
 }
-/* line 1002, ../sass/screen.scss */
+/* line 1009, ../sass/screen.scss */
 .carDetail form input, .carDetail form textarea {
   margin: 0 0 0 20px;
 }
-/* line 1006, ../sass/screen.scss */
+/* line 1013, ../sass/screen.scss */
 .carDetail form p {
   margin: 20px 0 0 20px;
 }
 
-/* line 1011, ../sass/screen.scss */
+/* line 1018, ../sass/screen.scss */
 .postButtons {
   width: 100%;
   background-color: black;
@@ -1075,7 +1082,7 @@ input.submit:active {
   margin: 30px 0 0;
   clear: both;
 }
-/* line 1018, ../sass/screen.scss */
+/* line 1025, ../sass/screen.scss */
 .postButtons button, .postButtons .button {
   float: right;
   width: 100px;
@@ -1086,77 +1093,77 @@ input.submit:active {
   cursor: pointer;
   font-size: 14px;
 }
-/* line 1029, ../sass/screen.scss */
+/* line 1036, ../sass/screen.scss */
 .postButtons .button {
   text-align: center;
   padding: 9px 0 0;
   height: 29px;
 }
-/* line 1035, ../sass/screen.scss */
+/* line 1042, ../sass/screen.scss */
 .postButtons .liked {
   color: #eeeeee;
   background-color: #1193ff;
   cursor: pointer;
 }
-/* line 1041, ../sass/screen.scss */
+/* line 1048, ../sass/screen.scss */
 .postButtons .liked:hover {
   color: #eeeeee;
 }
-/* line 1045, ../sass/screen.scss */
+/* line 1052, ../sass/screen.scss */
 .postButtons button:hover, .postButtons .button:hover {
   color: #1193ff;
 }
-/* line 1049, ../sass/screen.scss */
+/* line 1056, ../sass/screen.scss */
 .postButtons button:active, .postButtons .button:active {
   background-color: #1193ff;
   color: white;
 }
-/* line 1054, ../sass/screen.scss */
+/* line 1061, ../sass/screen.scss */
 .postButtons .deleteBtn:hover {
   color: #ff1111;
 }
-/* line 1058, ../sass/screen.scss */
+/* line 1065, ../sass/screen.scss */
 .postButtons .deleteBtn:active {
   color: #eeeeee;
   background-color: #ff1111;
 }
 
 /*_List Pages____________________________________________________*/
-/* line 1066, ../sass/screen.scss */
+/* line 1073, ../sass/screen.scss */
 .list {
   margin: 15px auto 0;
 }
 
-/* line 1070, ../sass/screen.scss */
+/* line 1077, ../sass/screen.scss */
 span {
   display: none;
   visibility: hidden;
 }
 
 /*_Flashes_______________________________________________________*/
-/* line 1077, ../sass/screen.scss */
+/* line 1084, ../sass/screen.scss */
 .flash-error, .flash-success, .flash-info {
   text-align: center;
   color: #eeeeee;
   height: 25px;
 }
 
-/* line 1083, ../sass/screen.scss */
+/* line 1090, ../sass/screen.scss */
 .flash-error {
   background-color: #551111;
 }
 
-/* line 1087, ../sass/screen.scss */
+/* line 1094, ../sass/screen.scss */
 .flash-success {
   background-color: #115511;
 }
 
-/* line 1091, ../sass/screen.scss */
+/* line 1098, ../sass/screen.scss */
 .flash-info {
   background-color: #1193ff;
 }
 
-/* line 1096, ../sass/screen.scss */
+/* line 1103, ../sass/screen.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -1169,56 +1176,56 @@ input[type=number]::-webkit-outer-spin-button {
 /* Large desktop */
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 990px) {
-  /* line 1113, ../sass/screen.scss */
+  /* line 1120, ../sass/screen.scss */
   .feed {
     width: 640px;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (min-width: 671px) and (max-width: 767px) {
-  /* line 1122, ../sass/screen.scss */
+  /* line 1129, ../sass/screen.scss */
   header {
     height: 120px;
   }
 
-  /* line 1126, ../sass/screen.scss */
+  /* line 1133, ../sass/screen.scss */
   .feed {
     width: 640px;
   }
 
-  /* line 1130, ../sass/screen.scss */
+  /* line 1137, ../sass/screen.scss */
   .subNav {
     margin: 50px 0 0 0px;
     padding: 0 0 0 0;
   }
 
-  /* line 1135, ../sass/screen.scss */
+  /* line 1142, ../sass/screen.scss */
   .subNav a {
     margin: 0 0 0 33px;
   }
 
-  /* line 1139, ../sass/screen.scss */
+  /* line 1146, ../sass/screen.scss */
   .buttons {
     margin: 17px 60px 0 0;
   }
 
-  /* line 1143, ../sass/screen.scss */
+  /* line 1150, ../sass/screen.scss */
   nav ul {
     margin: 0 0 0 5px;
   }
 
-  /* line 1147, ../sass/screen.scss */
+  /* line 1154, ../sass/screen.scss */
   .postDImg {
     margin: -20% 0 0;
   }
 
-  /* line 1151, ../sass/screen.scss */
+  /* line 1158, ../sass/screen.scss */
   .contentDetail p {
     margin: 10px;
     width: 90%;
   }
 
-  /* line 1156, ../sass/screen.scss */
+  /* line 1163, ../sass/screen.scss */
   .dLikeNum p {
     padding: 0;
     margin: 3px 0 0 0;
@@ -1226,24 +1233,24 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 @media (min-width: 481px) and (max-width: 670px) {
-  /* line 1166, ../sass/screen.scss */
+  /* line 1173, ../sass/screen.scss */
   .feed {
     width: 320px;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 1175, ../sass/screen.scss */
+  /* line 1182, ../sass/screen.scss */
   .feed {
     width: 320px;
   }
 
-  /* line 1179, ../sass/screen.scss */
+  /* line 1186, ../sass/screen.scss */
   .logo {
     display: none;
   }
 
-  /* line 1183, ../sass/screen.scss */
+  /* line 1190, ../sass/screen.scss */
   .carSelector {
     height: 160px;
     margin: 0 0 20px 0;
@@ -1251,7 +1258,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: black;
   }
 
-  /* line 1190, ../sass/screen.scss */
+  /* line 1197, ../sass/screen.scss */
   .carSelector input {
     border: solid 1px #1193ff;
     background-color: white;
@@ -1259,54 +1266,54 @@ input[type=number]::-webkit-outer-spin-button {
     width: 260px;
   }
 
-  /* line 1197, ../sass/screen.scss */
+  /* line 1204, ../sass/screen.scss */
   .feed {
     padding: 0 0 0 10px;
   }
 
-  /* line 1201, ../sass/screen.scss */
+  /* line 1208, ../sass/screen.scss */
   .registerBox {
     width: 300px;
     margin: 20px auto;
   }
 
-  /* line 1206, ../sass/screen.scss */
+  /* line 1213, ../sass/screen.scss */
   .registerBox input {
     width: 270px;
   }
 
-  /* line 1210, ../sass/screen.scss */
+  /* line 1217, ../sass/screen.scss */
   .registerBox input.submit {
     margin: 20px 0 0;
     width: 285px;
   }
 
-  /* line 1215, ../sass/screen.scss */
+  /* line 1222, ../sass/screen.scss */
   .registerBox .vLine, .registerBox .features {
     display: none;
   }
 
-  /* line 1219, ../sass/screen.scss */
+  /* line 1226, ../sass/screen.scss */
   .postDetail {
     width: 300px;
   }
 
-  /* line 1223, ../sass/screen.scss */
+  /* line 1230, ../sass/screen.scss */
   .postDImg {
     margin: 0;
   }
 
-  /* line 1227, ../sass/screen.scss */
+  /* line 1234, ../sass/screen.scss */
   .dLikeNum {
     width: 300px;
   }
 
-  /* line 1231, ../sass/screen.scss */
+  /* line 1238, ../sass/screen.scss */
   .dLikeNum p {
     width: 270px;
   }
 
-  /* line 1235, ../sass/screen.scss */
+  /* line 1242, ../sass/screen.scss */
   .postDImg {
     height: 225px;
     width: 300px;

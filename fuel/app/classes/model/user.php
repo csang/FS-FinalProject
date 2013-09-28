@@ -63,11 +63,23 @@ class Model_User extends \Orm\Model
 	{
 		if($this->avatar)
 		{
-			return "avatars/".$this->avatar;
+			return "users/".$this->avatar;
 		
 		}else{
 
 			return "icons/avatar.png";
+		}
+	}
+
+	public function poster_url()
+	{
+		if($this->poster)
+		{
+			return "users/".$this->poster;
+		
+		}else{
+
+			return "users/poster.jpg";
 		}
 	}
 

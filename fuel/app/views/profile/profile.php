@@ -1,5 +1,5 @@
 		<div class="poster">
-			<?= Asset::img('poster.jpg') ?>
+			<?= Asset::img($profile->poster_url()) ?>
 		</div>
 		<div class="userId">
 			<div class="top">
@@ -9,7 +9,7 @@
 				<div class="mainInfo">
 					<div class="left">
 						<div class="names">
-							<h2><?= $profile->name ?> (<?= $profile->username ?>)</h2>
+							<h2><?= $profile->name ?> | <?= $profile->username ?></h2>
 							<?php if($profile->site){ ?>
 								<?= Html::anchor('http://' . $profile->site, $profile->site, array('class'=>'userSite')) ?>
 							<?php } ?>
