@@ -16,7 +16,7 @@
 					<p><?= $article->content_short() ?></p>
 					<div class="postUserInfo">
 						<div class="postAvatarMask">
-							<?= Html::anchor($article->user->profile_url(), Asset::img($article->user->avatar_url(), array('class' => 'postAvatar'))) ?>
+							<?= Html::anchor($article->user->profile_url(), Asset::img($article->user->avatar_url(), array('class' => 'postAvatar'))) ?>							
 						</div>
 						<?= Html::anchor($article->user->profile_url(), $article->user->username, array('class'=>'postUser')) ?>
 					</div>

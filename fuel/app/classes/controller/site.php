@@ -2,23 +2,18 @@
 
 class Controller_Site extends Controller_App
 {
-	public function get_friends()
+	public function get_about_us()
 	{
-		$this->template->sub_nav 		= View::forge('nav/filters');
-		$this->template->body   		= View::forge('site/index');
-
-		if(isset($this->user)){
-			$articles = Model_Article::query()->where('user_id', 'in', $this->user->friend_ids())->get();
-			$this->template->body   	= View::forge('site/index', array(
-				'articles' => $articles,
-			));
-		}
+		$this->template->body = View::forge('site/about_us');
 	}
 
-	public function get_search()
+	public function get_help()
 	{
-		$this->template->sub_nav 		= View::forge('nav/filters');
-		$this->template->sub_nav_cars 	= View::forge('nav/cars');
-		$this->template->body    		= View::forge('site/index');
+		$this->template->body = View::forge('site/help');
+	}
+
+	public function get_contact_us()
+	{
+		$this->template->body = View::forge('site/contact_us');
 	}
 }

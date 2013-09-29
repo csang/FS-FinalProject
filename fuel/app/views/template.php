@@ -9,7 +9,7 @@
 	<?= Asset::css('screen.css') ?>
 </head>
 <body>
-	<header>
+	<header class="clearfix">
 		<?= Html::anchor('world/recent', Asset::img('carsignite.png', array('class' => 'logo'))) ?>
 		<nav>
 			<?php if (Uri::segment(1) == 'world'): ?>

@@ -163,14 +163,17 @@ class Controller_Profile extends Controller_App
 	{
 		$article = Model_Article::query()->where('id', $article_id)->get_one();
 		$liked = "";
+		$flagged = "";
 
 		if(isset($this->user)){
-			$liked = Model_Like::query()->where(array('article_id'=> $article_id, 'user_id'=> $this->user->id))->get_one();			
+			$liked = Model_Like::query()->where(array('article_id'=> $article_id, 'user_id'=> $this->user->id))->get_one();
+			$flagged = Model_Flag::query()->where(array('article_id'=> $article_id, 'user_id'=> $this->user->id))->get_one();			
 		}
 
 		$this->template->body = View::forge('profile/post_detail', array(
 			'article' 	=> $article,
 			'liked'		=> $liked,
+			'flagged'   => $flagged,
 		));
 	}
 

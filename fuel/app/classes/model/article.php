@@ -11,6 +11,7 @@ class Model_Article extends \Orm\Model
 		'content',	
 		'images',
 		'likes',
+		'flags',
 		'created_at',
 		'updated_at',
 	);
@@ -39,7 +40,27 @@ class Model_Article extends \Orm\Model
 			'key_to'		 => 'article_id',
 			'cascade_save'	 => true,
 			'cascade_delete' => false,
+		),
+		'flags' => array(
+			'key_from'		 => 'id',
+			'model_to'		 => 'Model_Like',
+			'key_to'		 => 'article_id',
+			'cascade_save'	 => true,
+			'cascade_delete' => false,
 		)
+	);
+
+	protected static $_observers = array(
+		'Orm\\Observer_CreatedAt' => array(
+			'events' => array('before_insert'),
+			'mysql_timestamp' => true,
+			'property' => 'created_at',
+		),
+		'Orm\\Observer_UpdatedAt' => array(
+			'events' => array('before_save'),
+			'mysql_timestamp' => true,
+			'property' => 'updated_at',
+		),
 	);
 
 	public function content_short($length = 175)
@@ -50,11 +71,6 @@ class Model_Article extends \Orm\Model
 			return substr($this->content, 0, $length);
 		}
 	}
-
-	// public function total_likes()
-	// {
-	// 	return Model_Like::query()->where('article_id', $this->id)->count();
-	// }
 
 	public static function get_recent()
 	{

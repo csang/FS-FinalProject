@@ -1,4 +1,4 @@
-		<div class="subNav">
+		<div class="subNav clearfix">
 			<? if(Uri::segment(1) == 'world'): ?>
 				<?php if (Uri::segment(2) == 'recent'): ?>
 				<?= Html::anchor('world/recent', 'Recent', array('class'=>'active')) ?>

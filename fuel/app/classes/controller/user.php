@@ -12,9 +12,16 @@ class Controller_User extends Controller_App
 		$this->template->body = View::forge('user/login');
 	}
 
-	public function get_signup()
+	public function get_signup($flash = "")
 	{
-		$this->template->body = View::forge('user/signup');
+		if($flash != ""){
+			$this->template->body = View::forge('user/signup', array(
+				'flash' => $flash,
+			));
+		}else{
+			$this->template->body = View::forge('user/signup');
+		}
+		
 	}
 
 	public function get_create_profile()
@@ -36,7 +43,9 @@ class Controller_User extends Controller_App
 		$email    = Input::post('email');
 		$password = Input::post('password');
 
-		if($password == Input::post('password_repeat'))
+		if($password == Input::post('password_repeat')
+			and strlen($password) > 6
+			and strlen($username) > 6)
 		{
 			$user = Model_User::forge()->set(array(
 				'username'	 => $username,

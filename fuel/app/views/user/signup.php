@@ -1,12 +1,15 @@
+		<?php if(isset($flash)): ?>
+		<div class="flash-error"><?= $flash ?></div>
+		<?php endif; ?>
 		<div class="registerBox">
 			<?= Form::open('user/create'); ?>
 				<p>Username:</p>
-				<input type="text" name="username" /></br>
+				<input type="text" name="username" placeholder="minimum 6 characters" /></br>
 				<p>Email:</p>
-				<input type="email" name="email" /></br>
+				<input type="email" name="email" placeholder="example@email.com" /></br>
 				<p>Password:</p>
-				<input type="password" name="password" /></br>
-				<p>Password:</p>
+				<input type="password" name="password" placeholder="minimum 6 characters" /></br>
+				<p>Repeat Password:</p>
 				<input type="password" name="password_repeat" placeholder="repeat" /></br>
 				<input type="submit" class="submit" value="Next" />
 			<?= Form::close(); ?>

@@ -5,6 +5,10 @@ return array(
 	
 	'debug/(:any)' => 'debug/$1',
 
+	'about_us'   => 'site/about_us',
+	'help'       => 'site/help',
+	'contact_us' => 'site/contact_us',
+
 	'world/recent'   => 'world/recent',
 	'world/popular'  => 'world/popular',
 	'world/featured' => 'world/featured',

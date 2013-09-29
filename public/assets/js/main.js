@@ -8,6 +8,7 @@
 		selectCar = 		$(".selectCar"),
 		selectedCar = 		"NULL",
 		likeBtn =			$(".likeBtn"),
+		flagBtn =			$(".flagBtn"),
 		followBtn =			$(".followBtn"),
 		deleteBtn =			$(".deleteBtn"),
 		bioArrow =			$(".bio img"),
@@ -46,6 +47,13 @@
 			article_id = $(".article_id"),
 			total_likes = 0;
 
+		if(!user_id.html()){
+			var container = $(".container");
+			container.prepend("<div class='flash-info'>You must be logged in to like an article</div>");
+
+			return;
+		};
+
 		if(likeBtn.hasClass("liked")){
 
 			total_likes = parseInt(likeNum.html());
@@ -60,14 +68,14 @@
 					total_likes: total_likes - 1
 				},
 				success: function(result){
-					console.log(result);
+					// console.log(result);
 
 					likeNum.html(parseInt(likeNum.html()) - 1);
 					likeBtn.html("Like");
 					likeBtn.removeClass("liked");
 				},
 				error: function(result){
-					console.log("There was an error!");
+					// console.log("There was an error!");
 				}
 			})
 
@@ -85,14 +93,80 @@
 					total_likes: total_likes + 1
 				},
 				success: function(result){
-					console.log(result);
+					// console.log(result);
 
 					likeNum.html(parseInt(likeNum.html()) + 1);
 					likeBtn.html("Liked");
 					likeBtn.addClass("liked");
 				},
 				error: function(result){
-					console.log("There was an error!");
+					// console.log("There was an error!");
+				}
+			})
+		}
+	})
+
+	flagBtn.click(function(){
+
+		var flagNum = $(".flags"),
+			user_id = $(".user_id"),
+			article_id = $(".article_id"),
+			total_flags = 0;
+
+		if(!user_id.html()){
+			var container = $(".container");
+			container.prepend("<div class='flash-info'>You must be logged in to flag an article</div>");
+
+			return;
+		};
+
+		if(flagBtn.hasClass("flagged")){
+
+			total_flags = parseInt(flagNum.html());
+
+			lib.ajax({
+				url: "../../assets/xhr/api.php",
+				type: "post",
+				data: {
+					action: "unflag",
+					user_id: user_id.html(),
+					article_id: article_id.html(),
+					total_flags: total_flags - 1
+				},
+				success: function(result){
+					// console.log(result);
+
+					flagNum.html(parseInt(flagNum.html()) - 1);
+					flagBtn.html("Flag");
+					flagBtn.removeClass("flagged");
+				},
+				error: function(result){
+					// console.log("There was an error!");
+				}
+			})
+
+		}else{
+
+			total_flags = parseInt(flagNum.html());
+
+			lib.ajax({
+				url: "../../assets/xhr/api.php",
+				type: "post",
+				data: {
+					action: "flag",
+					user_id: user_id.html(),
+					article_id: article_id.html(),
+					total_flags: total_flags + 1
+				},
+				success: function(result){
+					// console.log(result);
+
+					flagNum.html(parseInt(flagNum.html()) + 1);
+					flagBtn.html("Flagged");
+					flagBtn.addClass("flagged");
+				},
+				error: function(result){
+					// console.log("There was an error!");
 				}
 			})
 		}
@@ -121,13 +195,13 @@
 					follow_id: follow_id
 				},
 				success: function(result){
-					console.log(result);
+					// console.log(result);
 
 					btn.removeClass("following");
 					btn.html("Follow");
 				},
 				error: function(result){
-					console.log("There was an error!", result);
+					// console.log("There was an error!", result);
 				}
 			})
 
@@ -142,13 +216,13 @@
 					follow_id: parseInt(follow_id)
 				},
 				success: function(result){
-					console.log(result);
+					// console.log(result);
 
 					btn.addClass("following");
 					btn.html("Following");
 				},
 				error: function(result){
-					console.log("There was an error!", result);
+					// console.log("There was an error!", result);
 				}
 			})
 		}
@@ -243,7 +317,7 @@
 				}
 			},
 			error: function(result){
-				console.log("There was an error!", result);
+				// console.log("There was an error!", result);
 			}
 		})
 	}
@@ -254,5 +328,26 @@
 			year = $(".filterYear")[0].value;
 
 		filter(make, model, year);
+	})
+
+	// Validation ---------------------------------------------------------------------------------------------
+
+	var submit = $("input.submit");
+
+	submit.click(function(){
+		return;
+		if($("input.password-repeat")){
+			return;
+			if($("input.username")[0].value == "" ||
+				$("input.email")[0].value == "" ||
+				$("input.password")[0].value == "" ||
+				$("input.password-repeat")[0].value == ""){
+
+				var container = $(".container");
+				container.prepend("<div class='flash-error'>All of the inputs are required</div>");
+
+				return;
+			}
+		}
 	})
 })()

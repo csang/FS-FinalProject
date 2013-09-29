@@ -18,14 +18,15 @@
 				</div>
 			</div>
 			<div class="postButtons">
-				<button type="button" class="<? if($liked){ ?>likeBtn liked<? }else{ ?>likeBtn<? } ?>"><? if($liked){ ?>Liked<? }else{ ?>Like<? } ?></button>
-				<button type="button" class="flagBtn">Flag</button>
-				<? if(isset($user) && $user->id == $article->user->id){ ?>
+				<button type="button" class="<?php if($liked){ ?>likeBtn liked<? }else{ ?>likeBtn<? } ?>"><?php if($liked){ ?>Liked<? }else{ ?>Like<? } ?></button>
+				<button type="button" class="<?php if($flagged){ ?>flagBtn flagged<? }else{ ?>flagBtn<? } ?>"><?php if($flagged){ ?>Flagged<? }else{ ?>Flag<? } ?></button>
+				<?php if(isset($user) && $user->id == $article->user->id){ ?>
 				<?= Html::anchor($article->user->username.'/article/'.$article->id.'/edit', 'Edit', array('class'=>'editBtn button')) ?>
-				<? } ?>
+				<?php } ?>
 			</div>
 		</div>
-		<? if(isset($user)){ ?>
+		<?php if(isset($user)){ ?>
 		<span class="user_id"><?= $user->id ?></span>
-		<? } ?>
+		<?php } ?>
 		<span class="article_id"><?= $article->id ?></span>
+		<span class="flags"><?= $article->flags ?></span>

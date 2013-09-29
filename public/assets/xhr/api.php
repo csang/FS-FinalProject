@@ -42,6 +42,42 @@ function dislike($user_id, $article_id, $total_likes){
 	$s2->execute(array(":total_likes" => $total_likes, ":article_id" => $article_id));
 }
 
+function flag($user_id, $article_id, $total_flags){
+
+	$db = new PDO("mysql:hostname=localhost;port=80;dbname=carsignite", "root", "root");
+	
+	$sql = "INSERT INTO flags (user_id,article_id)
+			VALUES (:user_id,:article_id);";
+
+	$sql2 = "UPDATE articles 
+			SET likes = :total_flags
+			WHERE id = :article_id;";
+	
+	$s = $db->prepare($sql);
+	$s->execute(array(":user_id" => $user_id, ":article_id" => $article_id));
+
+	$s2 = $db->prepare($sql2);
+	$s2->execute(array(":total_flags" => $total_flags, ":article_id" => $article_id));
+}
+
+function unflag($user_id, $article_id, $total_flags){
+
+	$db = new PDO("mysql:hostname=localhost;port=80;dbname=carsignite", "root", "root");
+	
+	$sql = "DELETE FROM flags
+			WHERE user_id = :user_id AND article_id = :article_id;";
+
+	$sql2 = "UPDATE articles 
+			SET likes = :total_flags
+			WHERE id = :article_id;";
+	
+	$s = $db->prepare($sql);
+	$s->execute(array(":user_id" => $user_id, ":article_id" => $article_id));
+
+	$s2 = $db->prepare($sql2);
+	$s2->execute(array(":total_flags" => $total_flags, ":article_id" => $article_id));
+}
+
 function follow($user_id, $follow_id){
 
 	$db = new PDO("mysql:hostname=localhost;port=80;dbname=carsignite", "root", "root");
@@ -173,6 +209,50 @@ if(isset($_GET["action"])){
 		$dislike = dislike($user_id, $article_id, $total_likes);
 		
 		echo(json_encode($dislike));
+	}
+
+	elseif($_GET["action"] == "flag"){
+
+		$user_id = 0;
+		if(isset($_GET["user_id"])){
+			$user_id = $_GET["user_id"];
+		}
+
+		$article_id = 0;
+		if(isset($_GET["article_id"])){
+			$article_id = $_GET["article_id"];
+		}
+
+		$total_flags = 0;
+		if(isset($_GET["total_flags"])){
+			$total_flags = $_GET["total_flags"];
+		}
+
+		$flag = flag($user_id, $article_id, $total_flags);
+		
+		echo(json_encode($flag));
+	}
+
+	elseif($_GET["action"] == "unflag"){
+
+		$user_id = 0;
+		if(isset($_GET["user_id"])){
+			$user_id = $_GET["user_id"];
+		}
+
+		$article_id = 0;
+		if(isset($_GET["article_id"])){
+			$article_id = $_GET["article_id"];
+		}
+
+		$total_flags = 0;
+		if(isset($_GET["total_flags"])){
+			$total_flags = $_GET["total_flags"];
+		}
+
+		$unflag = unflag($user_id, $article_id, $total_flags);
+		
+		echo(json_encode($unflag));
 	}
 
 	// Post Add ------------------------------------------------------------------

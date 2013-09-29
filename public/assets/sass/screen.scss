@@ -684,24 +684,25 @@ input.submit:active{
 				margin: 15px 0 0 20px;
 				width: 100px;
 				height: 40px;
-				background-color: $black;
-				color: $white;
-				border: solid 1px $gray;
-			}
-
-			.following{
 				background-color: $blue;
 				color: $white;
 				border: solid 1px $blue;
 			}
 
+			.following{
+				background-color: $black;
+				color: $white;
+				border: solid 1px $gray;
+			}
+
 			.followBtn:hover{
-				color: $blue;
+				color: $white;
+				border: solid 1px $white;
 			}
 
 			.following:hover{
-				color: $white;
-				border: solid 1px $white;
+				color: $blue;
+				border: solid 1px $gray;
 			}
 		}
 
@@ -862,13 +863,23 @@ input.submit:active{
 		}
 
 		.liked{
-			color: #eeeeee;
-			background-color: #1193ff;
+			color: $dWhite;
+			background-color: $blue;
 			cursor: pointer;
 		}
 
 		.liked:hover{
-			color: #eeeeee;
+			color: $dWhite;
+		}
+
+		.flagged{
+			color: $dWhite;
+			background-color: $blue;
+			cursor: pointer;
+		}
+
+		.flagged:hover{
+			color: $dWhite;
 		}
 
 		button:hover, .button:hover{
@@ -1103,6 +1114,14 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
 
 /*--------------------------------------------------------------------------------*/
