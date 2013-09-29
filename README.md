@@ -47,10 +47,12 @@ Read:
 
 Update:
 - User's info
-- Article
+- Articles
+- Cars
 
 Delete:
 - Articles
+- Cars
 
 Other actions:
 - Log in
