@@ -10,9 +10,13 @@ class Controller_Articles extends Controller_App
 	{
 		if(isset($this->user->id)){
 			$cars = Model_Car::find_by('user_id', $this->user->id);
+			$makes = Model_Vehicle_Make::query()->get();
+			$models = Model_Vehicle_Model::query()->get();
 
 			$this->template->body = View::forge('articles/post_create', array(
-				'cars' => $cars,
+				'cars'   => $cars,
+				'makes'  => $makes,
+				'models' => $models,
 			));
 		}else{
 			Response::redirect('world/recent');
@@ -29,7 +33,7 @@ class Controller_Articles extends Controller_App
 		$year	 = Input::post('year');
 
 		$title 	 = Input::post('title');
-		$mods 	 = Input::post('mods');
+		// $mods 	 = Input::post('mods');
 		$content = Input::post('content');
 		$image   = NULL;
 
@@ -83,11 +87,12 @@ class Controller_Articles extends Controller_App
 				$post = Model_Article::forge()->set(array(
 					'user_id'	 => $this->user->id,
 					'car_id'     => $add_car->id,
-					'mods' 		 => $mods,
+					// 'mods' 		 => $mods,
 					'title' 	 => $title,
 					'content' 	 => $content,
-					'images' 	 => $image,
+					'image' 	 => $image,
 					'likes'		 => 0,
+					'flags'      => 0,
 					'created_at' => time(),
 				));
 
@@ -107,10 +112,12 @@ class Controller_Articles extends Controller_App
 				$post = Model_Article::forge()->set(array(
 					'user_id'	 => $this->user->id,
 					'car_id'     => $car,
-					'mods' 		 => $mods,
+					// 'mods' 		 => $mods,
 					'title' 	 => $title,
 					'content' 	 => $content,
-					'images' 	 => $image,
+					'image' 	 => $image,
+					'likes'		 => 0,
+					'flags'      => 0,
 					'created_at' => time(),
 				));
 

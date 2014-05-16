@@ -44,6 +44,7 @@ class Controller_Profile extends Controller_App
 
 	public function get_settings($username)
 	{
+		$this->require_login($username);
 		$profile = Model_User::get_user($username);
 		$this->template->body = View::forge('profile/settings', array(
 			'profile' => $profile,
@@ -116,6 +117,7 @@ class Controller_Profile extends Controller_App
 	public function get_car_edit($username, $make, $model, $year)
 	{
 		$this->require_login($username.'/car/'.$make.'/'.$model.'/'.$year);
+		$this->require_user_verification($this->user->username, $username, $username.'/car/'.$make.'/'.$model.'/'.$year, 'error', 'You are not the owner of this car');
 
 		$car = $this->user->get_car($make, $model, $year);
 
@@ -127,6 +129,7 @@ class Controller_Profile extends Controller_App
 	public function get_car_delete($username, $make, $model, $year)
 	{
 		$this->require_login($username.'/car/'.$make.'/'.$model.'/'.$year);
+		$this->require_user_verification($this->user->username, $username, $username.'/car/'.$make.'/'.$model.'/'.$year, 'error', 'You are not the owner of this car');
 
 		$car = $this->user->get_car($make, $model, $year);
 
@@ -138,7 +141,6 @@ class Controller_Profile extends Controller_App
 	public function post_car_update($username, $make, $model, $year)
 	{
 		$this->require_login("{$username}/car/{$make}/{$model}/{$year}");
-
 
 		$car = $this->user->get_car($make, $model, $year);
 
@@ -180,6 +182,7 @@ class Controller_Profile extends Controller_App
 	public function get_article_edit($username, $article_id)
 	{
 		$this->require_login($username.'/article/'.$article_id);
+		$this->require_user_verification($this->user->username, $username, $username.'/article/'.$article_id, 'error', 'You are not the author of this article');
 
 		$article = Model_Article::query()->where('id', $article_id)->get_one();
 
@@ -191,6 +194,7 @@ class Controller_Profile extends Controller_App
 	public function get_article_delete($username, $article_id)
 	{
 		$this->require_login($username.'/article/'.$article_id);
+		$this->require_user_verification($this->user->username, $username, $username.'/article/'.$article_id, 'error', 'You are not the author of this article');
 
 		$article = Model_Article::query()->where('id', $article_id)->get_one();
 		$article->delete();

@@ -11,7 +11,7 @@
 						<div class="names">
 							<h2><?= $car->make().' '.$car->model().' '.$car->trim.', '.$car->year ?></h2>
 							<?= Asset::img('icons/down.png') ?>
-							<?php if($user->id == $profile->id): ?>
+							<?php if(isset($user) && $user->id == $profile->id): ?>
 								<?= Html::anchor($profile->username.'/car/'.$car->make().'/'.$car->model().'/'.$car->year.'/edit', 'Edit', array('class'=>'userSite')) ?>
 							<?php endif; ?>
 							<div class="carDropdown">

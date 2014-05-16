@@ -2,6 +2,11 @@
 
 class Controller_World extends Controller_App
 {
+	public function get_index()
+	{
+		$this->redirect('world/recent');
+	}
+
 	public function get_recent()
 	{
 		$articles = Model_Article::get_recent();

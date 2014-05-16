@@ -76,9 +76,10 @@ nav{
 }
 
 .subNav{
-	height: 70px;
-	margin: 0 auto;
-	width: 990px;
+	height: 50px;
+	width: 100%;
+	margin: 0 auto 15px;
+	background-color: rgba(26,26,26,.7);
 	clear: both;
 }
 
@@ -101,7 +102,7 @@ nav a{
 }
 
 .subNav a{
-	margin: 27px 20px 0 30px;
+	margin: 15px 20px 0 30px;
 }
 
 a:hover{
@@ -313,7 +314,7 @@ footer{
 
 	.copyright{
 		float: left;
-		margin: 0 0 0 30px;
+		margin: 0 0 0 10px;
 	}
 
 	.footerLinks{
@@ -375,7 +376,11 @@ label{
 
 input{
 	margin: 25px 0 0 0;
-	border: solid 2px $blue;
+	height: 20px;
+	background-color: rgb(26,26,26);
+	color: $white;
+	border: none;
+	border-bottom: solid 2px $blue;
 	font-size: 14px;
 }
 
@@ -455,8 +460,10 @@ input.submit:active{
 	}
 
 	textarea{
-		border: solid 2px $blue;
-		background-color: $white;
+		border: none;
+		border-bottom: solid 2px $blue;
+		background-color: rgb(26,26,26);
+		color: $white;
 		margin: 2px 0 15px;
 		resize: none;
 		font-size: 14px;
@@ -511,8 +518,10 @@ input.submit:active{
 	}
 
 	textarea{
-		border: solid 2px $blue;
-		background-color: $white;
+		border: none;
+		border-bottom: solid 2px $blue;
+		background-color: rgb(26,26,26);
+		color: $white;
 		margin: 2px 0 15px;
 		resize: none;
 		font-size: 14px;
@@ -541,8 +550,10 @@ input.submit:active{
 			margin: 2px 0 15px;
 			width: 265px;
 			height: 26px;
-			border: solid 2px $blue;
-			background-color: $white;
+			border: none;
+			border-bottom: solid 2px $blue;
+			background-color: rgb(26,26,26);
+			color: $white;
 		}
 
 		.addCarBtn{
@@ -564,8 +575,8 @@ input.submit:active{
 
 	.addCarForm{
 		display: none;
-		border-top: solid 1px $blue;
-		border-bottom: solid 1px $blue;
+		border-top: solid 1px $gray;
+		border-bottom: solid 1px $gray;
 		padding: 5px 0 0;
 		margin: 0 0 10px;
 
@@ -600,22 +611,136 @@ input.submit:active{
 	}
 }
 
+// .userId, .carId{
+// 	width: 960px;
+// 	margin: 0 auto 15px;
+// 	background-color: $lBlack;
+// 	clear: both;
+
+
+// 	.bio{
+// 		float: left;
+// 		clear: right;
+// 		height: 64px;
+
+// 		p{
+// 			margin: 0;
+// 			padding: 10px 0 0 10px;
+// 			width: 700px;
+// 			float: left;
+// 		}
+
+// 		img{
+// 			float: right;
+// 			margin: 20px 25px 10px 0;
+// 			width: 20px;
+// 			height: 20px;
+// 			cursor: pointer;
+// 		}
+// 	} 
+
+// 	.top{
+// 		height: 125px;
+// 		clear: both;
+
+// 		.idAvatarMask{
+// 			width: 125px;
+// 			height: 125px;
+// 			overflow: hidden;
+// 			float: left;
+
+// 			.idAvatar{
+// 				height: 125px;
+// 			}
+// 		}
+
+// 		.mainInfo{
+// 			height: 50px;
+// 			margin: -5px 0 15px;
+// 			clear: right;
+
+// 			.left{
+// 				width: 350px;
+// 				padding: 0 0 0 15px;
+
+// 				.names img{
+// 					width: 20px;
+// 					height: 20px;
+// 					margin: 22px 0 0 25px;
+// 				}
+
+// 				.userSite{
+// 					float: left;
+// 					clear: both;
+// 					font-size: 12px;
+// 					color: $gray;
+// 					margin: 0 0 0 10px;
+// 				}
+
+// 				.userSite:hover{
+// 					color: $blue;
+// 				}
+// 			}
+
+// 			.right{
+// 				float: right;
+// 				width: 350px;
+// 			}
+
+// 			h2{
+// 				margin: 18px 0 0 10px;
+// 			}
+
+// 			.followBtn{
+// 				margin: 15px 0 0 20px;
+// 				width: 100px;
+// 				height: 40px;
+// 				background-color: $blue;
+// 				color: $white;
+// 				border: solid 1px $blue;
+// 			}
+
+// 			.following{
+// 				background-color: $black;
+// 				color: $white;
+// 				border: solid 1px $gray;
+// 			}
+
+// 			.followBtn:hover{
+// 				color: $white;
+// 				border: solid 1px $white;
+// 			}
+
+// 			.following:hover{
+// 				color: $blue;
+// 				border: solid 1px $gray;
+// 			}
+// 		}
+
+// 		.hLine{
+// 			height: 1px;
+// 			background-color: $blue;
+// 			float: left;
+// 		}
+// 	}
+// }
+
 .userId, .carId{
 	width: 960px;
 	margin: 0 auto 15px;
 	background-color: $lBlack;
 	clear: both;
 
-
 	.bio{
 		float: left;
 		clear: right;
 		height: 64px;
+		width: 95%;
 
 		p{
 			margin: 0;
 			padding: 10px 0 0 10px;
-			width: 700px;
+			width: 100%;
 			float: left;
 		}
 
@@ -631,31 +756,43 @@ input.submit:active{
 	.top{
 		height: 125px;
 		clear: both;
+		h2, p{
+			font-size: 14px;
+		}
 
 		.idAvatarMask{
-			width: 125px;
-			height: 125px;
+			width: 50px;
+			height: 50px;
 			overflow: hidden;
 			float: left;
 
 			.idAvatar{
-				height: 125px;
+				height: 50px;
 			}
 		}
 
 		.mainInfo{
+			width: 87%;
 			height: 50px;
-			margin: -5px 0 15px;
+			margin: -15px 0 15px;
 			clear: right;
 
 			.left{
-				width: 350px;
-				padding: 0 0 0 15px;
-
+				width: 300px;
+				padding: 5px 0 0 10px;
+				
 				.names img{
-					width: 20px;
-					height: 20px;
+					width: 10px;
+					height: 10px;
 					margin: 22px 0 0 25px;
+				}
+
+				.names h2{
+					margin: 18px 0 0;
+				}
+
+				.names a{
+					margin: 0;
 				}
 
 				.userSite{
@@ -673,17 +810,23 @@ input.submit:active{
 
 			.right{
 				float: right;
-				width: 350px;
-			}
+				width: 180px;
+				margin-top: 17px;
 
-			h2{
-				margin: 18px 0 0 10px;
+				img{
+					width: 25px;
+					margin: 10px 0 10px 12px;
+				}
+
+				h2{
+					margin: 14px 0 0 5px;		
+				}
 			}
 
 			.followBtn{
-				margin: 15px 0 0 20px;
-				width: 100px;
-				height: 40px;
+				margin: 20px 0 0 20px;
+				width: 90px;
+				height: 25px;
 				background-color: $blue;
 				color: $white;
 				border: solid 1px $blue;
@@ -708,6 +851,7 @@ input.submit:active{
 
 		.hLine{
 			height: 1px;
+			width: 100%;
 			background-color: $blue;
 			float: left;
 		}
@@ -902,8 +1046,6 @@ input.submit:active{
 	}
 
 	.contentDetail{
-		border: solid 1px $lBlack;
-		margin: 0 0 0;
 		padding: 0 0 0;
 
 		p:not(.postCar){
@@ -914,7 +1056,7 @@ input.submit:active{
 		.dLikeNum{
 			display: block;
 			position: absolute;
-			margin: -36px 0 0 -1px;
+			margin: -45px 0 0 0;
 			width: 80%;
 			height: 30px;
 			text-align: right;
@@ -922,7 +1064,7 @@ input.submit:active{
 			clear: both;
 
 			p:not(.postCar){
-				width: 100px;
+				width: 90px;
 				padding: 3px 0;
 				margin: 0;
 				font-size: 18px;
@@ -955,21 +1097,23 @@ input.submit:active{
 	.file{
 		border: none;
 		position: absolute;
-		margin: 0;
+		margin-top: -90px;
 		padding: 5px;
 		background-color: rgba(0,0,0,.6);
 		color: $white;
-		top: 250px;
-		left: 14%;
+		// top: 200px;
+		// left: 14%;
 	}
 }
 
 /*_Post Edit Page____________________________________________________*/
 
 .postEdit{
+	margin-top: 10px;
 	input, textarea{
-		background-color: $lBlack;
-		border: solid 1px $blue;
+		background-color: rgb(26,26,26);
+		border: none;
+		border-bottom: solid 1px $blue;
 		color: $dWhite;
 		margin: 15px 10px 0;
 	}
@@ -1129,19 +1273,178 @@ input[type=number]::-webkit-outer-spin-button {
 /*--------------------------------------------------------------------------------*/
 
 /* Large desktop */
-@media (min-width: 1200px) {
+@media (min-width: 991px) and (max-width: 1350px) {
+
+.feed{
+	width: 960px;
+}
 
 }
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 990px) {
 
+
+
+}
+
+/* 960px width */
+@media (max-width: 960px) {
+
 .feed{
 	width: 640px;
 }
 
+.poster{
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	margin: 0 auto;
+
+	img{
+		width: 100%;
+		margin: 0;
+	}
 }
- 
+
+.userId, .carId{
+	width: 100%;
+
+	.bio{
+		float: left;
+		clear: right;
+		height: 64px;
+		width: 95%;
+
+		p{
+			margin: 0;
+			padding: 10px 0 0 10px;
+			width: 100%;
+			float: left;
+		}
+
+		img{
+			float: right;
+			margin: 20px 25px 10px 0;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+		}
+	} 
+
+	.top{
+		clear: both;
+		height: 150px;
+
+		h2, p{
+			font-size: 12px;
+		}
+
+		.idAvatarMask{
+			width: 50px;
+			height: 50px;
+			overflow: hidden;
+			float: left;
+
+			.idAvatar{
+				height: 50px;
+			}
+		}
+
+		.mainInfo{
+			width: 84%;
+			// height: 50px;
+			margin: -15px 0 15px;
+			clear: right;
+
+			.left{
+				width: 65px;
+				padding: 5px 0 0 10px;
+				// display: block;
+				// overflow: hidden;
+				.names{
+					width: 250px;
+				}
+				.names img{
+					width: 10px;
+					height: 10px;
+					margin: 22px 0 0 10px;
+				}
+
+				.names h2{
+					margin: 18px 0 0;
+				}
+
+				.names a{
+					margin: 0;
+					overflow: hidden;
+				}
+
+				.userSite{
+					float: left;
+					clear: both;
+					font-size: 12px;
+					color: $gray;
+					margin: 0 0 0 10px;
+				}
+
+				.userSite:hover{
+					color: $blue;
+				}
+			}
+
+			.right{
+				float: right;
+				width: 180px;
+				margin-top: 10px;
+
+				img{
+					width: 15px;
+					margin: 15px 0 10px 12px;
+				}
+
+				h2{
+					margin: 14px 0 0 5px;		
+				}
+			}
+
+			.followBtn{
+				position: absolute;
+				margin: -20px auto;
+				width: 90px;
+				height: 25px;
+				background-color: $blue;
+				color: $white;
+				border: solid 1px $blue;
+			}
+
+			.following{
+				background-color: $black;
+				color: $white;
+				border: solid 1px $gray;
+			}
+
+			.followBtn:hover{
+				color: $white;
+				border: solid 1px $white;
+			}
+
+			.following:hover{
+				color: $blue;
+				border: solid 1px $gray;
+			}
+		}
+
+		.hLine{
+			height: 1px;
+			width: 100%;
+			background-color: $blue;
+			float: left;
+		}
+	}
+}
+}
+
 /* Landscape phone to portrait tablet */
 @media (min-width: 671px) and (max-width: 767px) {
 
@@ -1153,14 +1456,14 @@ header{
 	width: 640px;
 }
 
-.subNav{
-	margin: 50px 0 0 0px;
-	padding: 0 0 0 0;
-}
+// .subNav{
+// 	margin: 50px 0 0 0px;
+// 	padding: 0 0 0 0;
+// }
 
-.subNav a{
-	margin: 0 0 0 33px;
-}
+// .subNav a{
+// 	margin: 0 0 0 33px;
+// }
 
 .buttons{
 	margin: 17px 60px 0 0;
@@ -1174,16 +1477,16 @@ nav ul{
 	margin: -20% 0 0;
 }
 
-.contentDetail p{
-	margin: 10px;
-	width: 90%;
-}
+// .contentDetail p{
+// 	margin: 10px;
+// 	width: 90%;
+// }
 
-.dLikeNum p{
-	padding: 0;
-	margin: 3px 0 0 0;
-	width: 92%;
-}
+// .dLikeNum p{
+// 	padding: 0;
+// 	margin: 3px 0 0 0;
+// 	width: 92%;
+// }
 
 }
 
@@ -1193,10 +1496,18 @@ nav ul{
 	width: 320px;
 }
 
+.logo{
+	display: none;
+}
+
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+header{
+	height: 120px;
+}
 
 .feed{
 	width: 320px;
@@ -1242,21 +1553,17 @@ nav ul{
 	display: none;
 }
 
-.postDetail{
-	width: 300px;
-}
-
 .postDImg{
 	margin: 0;
 }
 
-.dLikeNum{
-	width: 300px;
-}
+// .dLikeNum{
+// 	width: 300px;
+// }
 
-.dLikeNum p{
-	width: 270px;
-}
+// .dLikeNum p{
+// 	width: 270px;
+// }
 
 .postDImg{
 	height: 225px;

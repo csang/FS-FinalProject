@@ -109,6 +109,7 @@ class Controller_User extends Controller_App
 		$poster = Input::post('currentPoster');
 		$site 	= Input::post('site');
 		$bio 	= Input::post('bio');
+		$user = Model_User::get_by_id($this->user->id);
 
 		$config = array(
 			'path' 			=> DOCROOT.'assets/img/users',
@@ -124,24 +125,21 @@ class Controller_User extends Controller_App
 			Upload::save();
 
 			if(Upload::get_files(0)){
-				$avatar = Upload::get_files(0)['saved_as'];
+				$avatar = Upload::get_files(0);
+				$user->avatar 		= $avatar['saved_as'];
+				// $filename = DOCROOT.'assets/img/users/'.$avatar['saved_as'];
 
-				$filename = DOCROOT.'assets/img/users/'.$avatar;
-
-				Image::load($filename)->crop_resize(125,125)->save($filename);
+				// Image::load($filename)->crop_resize(125,125)->save($filename);
 			}
 
 			if(Upload::get_files(1)){
-				$poster = Upload::get_files(1)['saved_as'];
+				$poster = Upload::get_files(1);
+				$user->poster 		= $poster['saved_as'];
 			}
 		}
 
-		$user = Model_User::get_by_id($this->user->id);
-
 		$user->name			= $name;
-		$user->email 		= $email;
-		$user->avatar 		= $avatar;
-		$user->poster 		= $poster;
+		$user->email 		= $email;		
 		$user->site   		= $site;
 		$user->bio	 		= $bio;
 		$user->updated_at 	= time();

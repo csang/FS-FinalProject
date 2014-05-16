@@ -2,7 +2,7 @@
 			<?php if (isset($articles)){ foreach($articles as $article){ ?>
 			<a href="<?= Uri::create($article->user->username.'/article/'.$article->id) ?>"><div class="post">
 				<div class="postImgMask">
-					<?= Asset::img("post_images/".$article->images, array('class' => 'articleImg')) ?>
+					<?= Asset::img("post_images/".$article->image, array('class' => 'articleImg')) ?>
 				</div>
 				<div class="content">
 					<div class="likeNum">

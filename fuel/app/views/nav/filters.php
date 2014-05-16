@@ -16,12 +16,6 @@
 				<?= Html::anchor('world/featured', 'Featured', array('class'=>'active')) ?>
 				<?php else: ?>
 				<?= Html::anchor('world/featured', 'Featured') ?>
-				<?php endif; ?>
-
-				<?php if (Uri::segment(2) == 'search'): ?>
-				<?= Html::anchor('world/search', 'Search', array('class'=>'active')) ?>
-				<?php else: ?>
-				<?= Html::anchor('world/search', 'Search') ?>
 			<?php endif; endif; ?>
 
 			<? if(Uri::segment(1) == 'friends'): ?>
@@ -41,11 +35,5 @@
 				<?= Html::anchor('friends/featured', 'Featured', array('class'=>'active')) ?>
 				<?php else: ?>
 				<?= Html::anchor('friends/featured', 'Featured') ?>
-				<?php endif; ?>
-
-				<?php if(Uri::segment(2) == 'search'): ?>
-				<?= Html::anchor('friends/search', 'Search', array('class'=>'active')) ?>
-				<?php else: ?>
-				<?= Html::anchor('friends/search', 'Search') ?>
 			<?php endif; endif; ?>
 		</div>

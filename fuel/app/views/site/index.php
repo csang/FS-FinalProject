@@ -3,7 +3,7 @@
 			<div class="post">
 				<a href="<?= Uri::create($article->user->username.'/article/'.$article->id) ?>">
 					<div class="postImgMask">
-						<?= Asset::img("post_images/".$article->images, array('class' => 'articleImg')) ?>
+						<?= Asset::img("post_images/".$article->image, array('class' => 'articleImg')) ?>
 					</div>
 				</a>
 				<div class="content">

@@ -48,4 +48,12 @@ class Controller_App extends Controller_Base
 			$this->redirect($location, $type, $message);
 		}
 	}
+
+	public function require_user_verification($user, $author, $location = 'world/recent', $type = null, $message = null)
+	{
+		if ($user != $author)
+		{
+			$this->redirect($location, $type, $message);
+		}
+	}
 }

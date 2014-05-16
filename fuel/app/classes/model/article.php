@@ -9,7 +9,7 @@ class Model_Article extends \Orm\Model
 		'mods',
 		'title',
 		'content',	
-		'images',
+		'image',
 		'likes',
 		'flags',
 		'created_at',
@@ -86,5 +86,21 @@ class Model_Article extends \Orm\Model
 	{
 		$last_week = substr(strval(time() - (21 * 24 * 60 * 60)), 0, 4);
 		return static::query()->where('created_at', 'like', $last_week.'%')->order_by('likes','desc')->order_by('created_at','desc')->get();
+	}
+
+	public static function get_friends_recent($friends)
+	{
+		return static::query()->where('user_id', 'in', $friends)->order_by('created_at','desc')->get();
+	}
+
+	public static function get_friends_popular($friends)
+	{
+		return static::query()->where('user_id', 'in', $friends)->order_by('likes','desc')->order_by('created_at','desc')->get();
+	}
+
+	public static function get_friends_featured($friends)
+	{
+		$last_week = substr(strval(time() - (21 * 24 * 60 * 60)), 0, 4);
+		return static::query()->where('user_id', 'in', $friends)->where('created_at', 'like', $last_week.'%')->order_by('likes','desc')->order_by('created_at','desc')->get();
 	}
 }

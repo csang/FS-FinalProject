@@ -1,6 +1,6 @@
 		<div class="postDetail">
 			<div class="postDImgMask">
-				<?= Asset::img("post_images/".$article->images, array('class' => 'postDImg')) ?>
+				<?= Asset::img("post_images/".$article->image, array('class' => 'postDImg')) ?>
 			</div>
 			<div class="contentDetail">
 				<div class="dLikeNum">

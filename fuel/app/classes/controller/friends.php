@@ -9,10 +9,15 @@ class Controller_Friends extends Controller_App
 		$this->template->body   		= View::forge('site/index');
 
 		if(isset($this->user)){
-			$articles = Model_Article::query()->where('user_id', 'in', $this->user->friend_ids())->order_by('id','desc')->get();
-			$this->template->body   	= View::forge('site/index', array(
-				'articles' => $articles,
-			));
+			// $articles = Model_Article::query()->where('user_id', 'in', $this->user->friend_ids())->order_by('id','desc')->get();
+			if($this->user->friend_ids() != 0){
+				$articles = Model_Article::get_friends_recent($this->user->friend_ids());
+
+				$this->template->body   	= View::forge('site/index', array(
+					'articles' => $articles,
+
+				));
+			}
 		}
 	}
 
@@ -23,10 +28,14 @@ class Controller_Friends extends Controller_App
 		$this->template->body   		= View::forge('site/index');
 
 		if(isset($this->user)){
-			$articles = Model_Article::query()->where('user_id', 'in', $this->user->friend_ids())->order_by('likes','desc')->order_by('id','desc')->get();
-			$this->template->body   	= View::forge('site/index', array(
-				'articles' => $articles,
-			));
+			// $articles = Model_Article::query()->where('user_id', 'in', $this->user->friend_ids())->order_by('likes','desc')->order_by('id','desc')->get();
+			if($this->user->friend_ids() != 0){
+				$articles = Model_Article::get_friends_popular($this->user->friend_ids());
+				
+				$this->template->body   	= View::forge('site/index', array(
+					'articles' => $articles,
+				));
+			}
 		}
 	}
 
@@ -37,10 +46,13 @@ class Controller_Friends extends Controller_App
 		$this->template->body   		= View::forge('site/index');
 
 		if(isset($this->user)){
-			$articles = Model_Article::query()->where('user_id', 'in', $this->user->friend_ids())->order_by('likes','desc')->order_by('id','desc')->get();
-			$this->template->body   	= View::forge('site/index', array(
-				'articles' => $articles,
-			));
+			// $articles = Model_Article::query()->where('user_id', 'in', $this->user->friend_ids())->order_by('likes','desc')->order_by('id','desc')->get();
+			if($this->user->friend_ids() != 0){
+				$articles = Model_Article::get_friends_featured($this->user->friend_ids());
+				$this->template->body   	= View::forge('site/index', array(
+					'articles' => $articles,
+				));
+			}
 		}
 	}
 

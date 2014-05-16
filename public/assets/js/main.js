@@ -332,22 +332,107 @@
 
 	// Validation ---------------------------------------------------------------------------------------------
 
-	var submit = $("input.submit");
+	var submit = $("input.submit"),
+		container = $(".container");
 
-	submit.click(function(){
-		return;
-		if($("input.password-repeat")){
-			return;
-			if($("input.username")[0].value == "" ||
-				$("input.email")[0].value == "" ||
-				$("input.password")[0].value == "" ||
-				$("input.password-repeat")[0].value == ""){
+	submit.click(function(e){
 
-				var container = $(".container");
-				container.prepend("<div class='flash-error'>All of the inputs are required</div>");
+		if($('.flash-error')){
+			$('.flash-error').remove();
+		};
 
-				return;
+		if($("input.password_repeat").html() != undefined){
+
+			var username = $("input.username").val(),
+				email = $("input.email").val(),
+				password = $("input.password").val(),
+				password_repeat = $("input.password_repeat").val();
+
+			if(username == "" ||
+				email == "" ||
+				password == "" ||
+				password_repeat == ""){
+
+				container.prepend("<div class='flash-error'><p>All inputs are required</p></div>");
+				e.preventDefault();
+			}else{
+				var username_regex = /^[a-zA-Z0-9][a-zA-Z0-9_]{5,29}$/,
+					email_regex = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/igm;
+
+				if(!username_regex.test(username)){
+					container.prepend("<div class='flash-error'><p>Username must be at least 6 characters long and not contain any special character other than the underscore</p></div>");
+					e.preventDefault();
+				}
+
+				if(!email_regex.test(email)){
+					container.prepend("<div class='flash-error'><p>Please enter a valid email</p></div>");
+					e.preventDefault();
+				}
+
+				if(password.length < 7){
+					container.prepend("<div class='flash-error'><p>Password must be at least 7 characters long</p></div>");
+					e.preventDefault();
+				}
+
+				if(password != password_repeat){
+					container.prepend("<div class='flash-error'><p>Password did not match</p></div>");
+					e.preventDefault();
+				}
+			}
+		}else if($("input.avatar_file").html() != undefined){
+
+			if($("input.avatar_file")[0].files[0] != undefined && $("input.avatar_file")[0].files[0].size > 5242880){
+				container.prepend("<div class='flash-error'><p>Avatar file has to be less than 5Mb</p></div>");
+				console.log($("input.avatar_file")[0].files[0]);
+				e.preventDefault();
+			}
+
+			if($("input.poster_file")[0].files[0] != undefined && $("input.poster_file")[0].files[0].size > 5242880*2){
+				container.prepend("<div class='flash-error'><p>Poster file has to be less than 10Mb</p></div>");
+				e.preventDefault();
+			}
+
+		}else if($("input.file").html() != undefined){
+			
+			var car = $("select.selectCar").val(),
+				make = $("input.make").val(),
+				model = $("input.model").val(),
+				trim = $("input.trim").val(),
+				year = $("input.year").val(),
+				title = $("input.title").val(),
+				story = $("input.content").val(),
+				image = $("input.file").val();
+
+			if(addedCarForm.css("display") == "block"){
+
+				if(car == "NULL"){
+					container.prepend("<div class='flash-error'><p>You must select a car or add a car</p></div>");
+					e.preventDefault();
+				}
+
+			}else if(addCarForm.css("display") == "block"){
+
+				if(make == "" ||
+					model == "" ||
+					year == ""){
+					container.prepend("<div class='flash-error'><p>Make, Model and Year are required</p></div>");
+					e.preventDefault();
+				}
+			}
+
+			if(title == "" ||
+				story == ""){
+				container.prepend("<div class='flash-error'><p>The Title and Story are required</p></div>");
+				e.preventDefault();
+			}
+
+			if($("input.file")[0].files[0] != undefined && $("input.file")[0].files[0].size > 5242880*2){
+				container.prepend("<div class='flash-error'><p>Image file has to be less than 10Mb</p></div>");
+				e.preventDefault();
+			}else if(image == ""){
+				container.prepend("<div class='flash-error'><p>Image file is required</p></div>");
+				e.preventDefault();
 			}
 		}
-	})
-})()
+	});
+})();

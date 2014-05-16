@@ -133,7 +133,11 @@ class Model_User extends \Orm\Model
 		{
 			array_push($ids, $friend->id);
 		}
-		return $ids;
+		if(count($ids) == 0){
+			return 0;
+		}else{
+			return $ids;
+		}
 	}
 
 	public function check_follow($user_id)

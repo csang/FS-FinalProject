@@ -4,10 +4,10 @@
 				<input type="text" name="name" value="<?= $profile->name?>" /></br>
 				<p>Email:</p>
 				<input type="text" name="email" value="<?= $profile->email?>" /></br>
-				<p>Avatar:</p>
-				<input type="file" class="file" name="avatar" accept="image" /></br>
-				<p>Poster:</p>
-				<input type="file" class="file" name="poster" accept="image" /></br>
+				<p>Avatar ( &lt; 5MB ):</p>
+				<input type="file" class="file avatar_file" name="avatar" accept="image" /></br>
+				<p>Poster ( &lt; 10MB ):</p>
+				<input type="file" class="file poster_file" name="poster" accept="image" /></br>
 				<p>Site:</p>
 				<input type="text" name="site" placeholder="http://www.example.com" value="<?= $profile->site?>"/></br>
 				<p>Bio:</p>

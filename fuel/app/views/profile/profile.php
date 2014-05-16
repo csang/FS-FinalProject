@@ -9,11 +9,11 @@
 				<div class="mainInfo">
 					<div class="left">
 						<div class="names">
-							<h2><?= $profile->name ?> | <?= $profile->username ?></h2>
+							<h2><?= $profile->username ?></h2>
 							<?php if($profile->site){ ?>
 								<?= Html::anchor('http://' . $profile->site, $profile->site, array('class'=>'userSite')) ?>
 							<?php } ?>
-							<?php if($user->id != $profile->id):?>
+							<?php if(isset($user) && $user->id != $profile->id):?>
 							<button type="button" class="<?php if($following){ ?>followBtn following<? }else{ ?> followBtn <? } ?>"><?php if($following){ ?>Following<? }else{ ?> Follow <? } ?></button>
 							<?php endif; ?>
 							<span class="follow_id"><?= $profile->id ?></span>

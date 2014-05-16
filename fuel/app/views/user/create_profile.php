@@ -2,8 +2,8 @@
 			<?= Form::open(array('action' => 'user/profile/update', 'enctype' => 'multipart/form-data')); ?>
 				<p>Name:</p>
 				<input type="text" name="name" /></br>
-				<p>Avatar:</p>
-				<input type="file" class="file" name="avatar" accept="image" /></br>
+				<p>Avatar ( &lt; 5MB ):</p>
+				<input type="file" class="file avatar_file" name="avatar" accept="image" /></br>
 				<p>Site:</p>
 				<input type="text" name="site" placeholder="http://www.example.com" /></br>
 				<p>Bio:</p>

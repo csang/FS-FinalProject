@@ -2,15 +2,15 @@
 		<div class="flash-error"><?= $flash ?></div>
 		<?php endif; ?>
 		<div class="registerBox">
-			<?= Form::open('user/create'); ?>
+			<?= Form::open(array('action' => 'user/create', 'enctype' => 'multipart/form-data')); ?>
 				<p>Username:</p>
-				<input type="text" name="username" placeholder="minimum 6 characters" /></br>
+				<input class="username" type="text" name="username" placeholder="minimum 6 characters" /></br>
 				<p>Email:</p>
-				<input type="email" name="email" placeholder="example@email.com" /></br>
+				<input class="email" type="email" name="email" placeholder="example@email.com" /></br>
 				<p>Password:</p>
-				<input type="password" name="password" placeholder="minimum 6 characters" /></br>
+				<input class="password" type="password" name="password" placeholder="minimum 6 characters" /></br>
 				<p>Repeat Password:</p>
-				<input type="password" name="password_repeat" placeholder="repeat" /></br>
+				<input class="password_repeat" type="password" name="password_repeat" placeholder="repeat" /></br>
 				<input type="submit" class="submit" value="Next" />
 			<?= Form::close(); ?>
 			<div class="vLine"></div>
